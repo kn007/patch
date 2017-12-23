@@ -3,6 +3,7 @@
 ; Date: 2017/12/23
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
+
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
 *.youtu.be
@@ -116,7 +117,6 @@ HostRegex: ^(sp|www|actress)\.dmm\.co\.jp$
 www.dmm.com
 www.r18.com
 
-
 *.android.com
 *.appspot.com
 *.blogblog.com
@@ -143,7 +143,6 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.gmodules.com
 *.googlesyndication.com
 *.abc.xyz
-
 
 *.1024search.tk
 *.1688.com.au
