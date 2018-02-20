@@ -5,8 +5,8 @@ Add Dynamic TLS Record support.
 Using: patch -p1 < nginx.patch
 
 diff -uNr a/auto/modules b/auto/modules
---- a/auto/modules	2017-10-10 23:22:51.000000000 +0800
-+++ b/auto/modules	2017-10-18 07:26:41.442669499 +0800
+--- a/auto/modules	2018-02-20 22:08:49.000000000 +0800
++++ b/auto/modules	2018-02-21 02:26:04.479832896 +0800
 @@ -134,6 +134,7 @@
      #     ngx_http_header_filter
      #     ngx_http_chunked_filter
@@ -43,7 +43,7 @@ diff -uNr a/auto/modules b/auto/modules
      if :; then
          ngx_module_name=ngx_http_range_header_filter_module
          ngx_module_incs=
-@@ -435,6 +450,23 @@
+@@ -436,6 +451,23 @@
  
          . auto/module
      fi
@@ -68,8 +68,8 @@ diff -uNr a/auto/modules b/auto/modules
      if :; then
          ngx_module_name=ngx_http_static_module
 diff -uNr a/auto/options b/auto/options
---- a/auto/options	2017-10-10 23:22:51.000000000 +0800
-+++ b/auto/options	2017-10-18 07:26:41.469669499 +0800
+--- a/auto/options	2018-02-20 22:08:49.000000000 +0800
++++ b/auto/options	2018-02-21 02:27:53.167733555 +0800
 @@ -58,7 +58,9 @@
  HTTP_CHARSET=YES
  HTTP_GZIP=YES
@@ -101,8 +101,8 @@ diff -uNr a/auto/options b/auto/options
    --with-http_addition_module        enable ngx_http_addition_module
    --with-http_xslt_module            enable ngx_http_xslt_module
 diff -uNr a/src/core/ngx_connection.h b/src/core/ngx_connection.h
---- a/src/core/ngx_connection.h	2017-10-10 23:22:51.000000000 +0800
-+++ b/src/core/ngx_connection.h	2017-10-18 07:26:41.477669499 +0800
+--- a/src/core/ngx_connection.h	2018-02-20 22:08:49.000000000 +0800
++++ b/src/core/ngx_connection.h	2018-02-21 02:26:04.480832895 +0800
 @@ -116,6 +116,7 @@
  #define NGX_LOWLEVEL_BUFFERED  0x0f
  #define NGX_SSL_BUFFERED       0x01
@@ -112,8 +112,8 @@ diff -uNr a/src/core/ngx_connection.h b/src/core/ngx_connection.h
  
  struct ngx_connection_s {
 diff -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
---- a/src/core/ngx_murmurhash.c	2017-10-10 23:22:51.000000000 +0800
-+++ b/src/core/ngx_murmurhash.c	2017-10-18 07:26:41.477669499 +0800
+--- a/src/core/ngx_murmurhash.c	2018-02-20 22:08:49.000000000 +0800
++++ b/src/core/ngx_murmurhash.c	2018-02-21 02:25:59.141837775 +0800
 @@ -50,3 +50,63 @@
  
      return h;
@@ -179,8 +179,8 @@ diff -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
 +    return h;
 +}
 diff -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
---- a/src/core/ngx_murmurhash.h	2017-10-10 23:22:51.000000000 +0800
-+++ b/src/core/ngx_murmurhash.h	2017-10-18 07:26:41.481669499 +0800
+--- a/src/core/ngx_murmurhash.h	2018-02-20 22:08:49.000000000 +0800
++++ b/src/core/ngx_murmurhash.h	2018-02-21 02:25:59.141837775 +0800
 @@ -15,5 +15,7 @@
  
  uint32_t ngx_murmur_hash2(u_char *data, size_t len);
@@ -190,8 +190,8 @@ diff -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
  
  #endif /* _NGX_MURMURHASH_H_INCLUDED_ */
 diff -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
---- a/src/event/ngx_event_openssl.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/event/ngx_event_openssl.c	2017-10-18 07:26:41.483669499 +0800
+--- a/src/event/ngx_event_openssl.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/event/ngx_event_openssl.c	2018-02-21 02:28:21.858707331 +0800
 @@ -1174,6 +1174,7 @@
  
      sc->buffer = ((flags & NGX_SSL_BUFFER) != 0);
@@ -253,9 +253,9 @@ diff -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
  
              c->read->handler = c->ssl->saved_read_handler;
 diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
---- a/src/event/ngx_event_openssl.h	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/event/ngx_event_openssl.h	2017-10-18 07:26:41.484669499 +0800
-@@ -59,10 +59,19 @@
+--- a/src/event/ngx_event_openssl.h	2018-02-20 22:08:50.000000000 +0800
++++ b/src/event/ngx_event_openssl.h	2018-02-21 02:28:21.858707331 +0800
+@@ -60,10 +60,19 @@
  #endif
  
  
@@ -275,7 +275,7 @@ diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
  };
  
  
-@@ -85,6 +94,10 @@
+@@ -86,6 +95,10 @@
      unsigned                    no_wait_shutdown:1;
      unsigned                    no_send_shutdown:1;
      unsigned                    handshake_buffer_set:1;
@@ -286,7 +286,7 @@ diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
  };
  
  
-@@ -94,7 +107,7 @@
+@@ -95,7 +108,7 @@
  #define NGX_SSL_DFLT_BUILTIN_SCACHE  -5
  
  
@@ -296,8 +296,8 @@ diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
  typedef struct ngx_ssl_sess_id_s  ngx_ssl_sess_id_t;
  
 diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_ssl_module.c
---- a/src/http/modules/ngx_http_ssl_module.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.c	2017-10-18 07:26:41.484669499 +0800
+--- a/src/http/modules/ngx_http_ssl_module.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/modules/ngx_http_ssl_module.c	2018-02-21 02:28:21.859707331 +0800
 @@ -234,6 +234,41 @@
        offsetof(ngx_http_ssl_srv_conf_t, stapling_verify),
        NULL },
@@ -508,8 +508,8 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_s
  }
  
 diff -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ngx_http_ssl_module.h
---- a/src/http/modules/ngx_http_ssl_module.h	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.h	2017-10-18 07:26:41.484669499 +0800
+--- a/src/http/modules/ngx_http_ssl_module.h	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/modules/ngx_http_ssl_module.h	2018-02-21 02:28:21.859707331 +0800
 @@ -57,6 +57,12 @@
  
      u_char                         *file;
@@ -524,8 +524,8 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ngx_http_s
  
  
 diff -uNr a/src/http/ngx_http.c b/src/http/ngx_http.c
---- a/src/http/ngx_http.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http.c	2017-10-18 07:26:41.484669499 +0800
+--- a/src/http/ngx_http.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http.c	2018-02-21 02:26:04.481832894 +0800
 @@ -1199,6 +1199,9 @@
  #if (NGX_HTTP_V2)
      ngx_uint_t             http2;
@@ -596,8 +596,8 @@ diff -uNr a/src/http/ngx_http.c b/src/http/ngx_http.c
  
          if (addr[i].hash.buckets == NULL
 diff -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_module.c
---- a/src/http/ngx_http_core_module.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http_core_module.c	2017-10-18 07:26:41.485669499 +0800
+--- a/src/http/ngx_http_core_module.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http_core_module.c	2018-02-21 02:26:04.482832893 +0800
 @@ -1933,6 +1933,13 @@
          return NGX_DECLINED;
      }
@@ -622,7 +622,7 @@ diff -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_module.c
  
      sr->method = NGX_HTTP_GET;
      sr->http_version = r->http_version;
-@@ -3964,11 +3974,15 @@
+@@ -3965,11 +3975,15 @@
          }
  
          if (ngx_strcmp(value[n].data, "spdy") == 0) {
@@ -643,8 +643,8 @@ diff -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_module.c
  
          if (ngx_strncmp(value[n].data, "so_keepalive=", 13) == 0) {
 diff -uNr a/src/http/ngx_http_core_module.h b/src/http/ngx_http_core_module.h
---- a/src/http/ngx_http_core_module.h	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http_core_module.h	2017-10-18 07:26:41.485669499 +0800
+--- a/src/http/ngx_http_core_module.h	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http_core_module.h	2018-02-21 02:26:04.482832893 +0800
 @@ -74,6 +74,9 @@
      unsigned                   wildcard:1;
      unsigned                   ssl:1;
@@ -666,8 +666,8 @@ diff -uNr a/src/http/ngx_http_core_module.h b/src/http/ngx_http_core_module.h
  };
  
 diff -uNr a/src/http/ngx_http.h b/src/http/ngx_http.h
---- a/src/http/ngx_http.h	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http.h	2017-10-18 07:26:41.485669499 +0800
+--- a/src/http/ngx_http.h	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http.h	2018-02-21 02:26:04.481832894 +0800
 @@ -19,6 +19,9 @@
  typedef struct ngx_http_file_cache_s  ngx_http_file_cache_t;
  typedef struct ngx_http_log_ctx_s     ngx_http_log_ctx_t;
@@ -693,8 +693,8 @@ diff -uNr a/src/http/ngx_http.h b/src/http/ngx_http.h
  #include <ngx_http_cache.h>
  #endif
 diff -uNr a/src/http/ngx_http_request_body.c b/src/http/ngx_http_request_body.c
---- a/src/http/ngx_http_request_body.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http_request_body.c	2017-10-18 07:26:41.486669499 +0800
+--- a/src/http/ngx_http_request_body.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http_request_body.c	2018-02-21 02:26:04.484832892 +0800
 @@ -84,6 +84,12 @@
          goto done;
      }
@@ -722,8 +722,8 @@ diff -uNr a/src/http/ngx_http_request_body.c b/src/http/ngx_http_request_body.c
      if (ngx_http_test_expect(r) != NGX_OK) {
          return NGX_HTTP_INTERNAL_SERVER_ERROR;
 diff -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
---- a/src/http/ngx_http_request.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http_request.c	2017-10-18 07:26:41.486669499 +0800
+--- a/src/http/ngx_http_request.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http_request.c	2018-02-21 02:26:04.483832893 +0800
 @@ -319,6 +319,11 @@
      rev->handler = ngx_http_wait_request_handler;
      c->write->handler = ngx_http_empty_handler;
@@ -771,7 +771,7 @@ diff -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
          c->log->action = "waiting for request";
  
          c->read->handler = ngx_http_wait_request_handler;
-@@ -2573,6 +2606,12 @@
+@@ -2580,6 +2613,12 @@
          return;
      }
  #endif
@@ -784,7 +784,7 @@ diff -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
  
      clcf = ngx_http_get_module_loc_conf(r, ngx_http_core_module);
  
-@@ -2782,6 +2821,18 @@
+@@ -2789,6 +2828,18 @@
      }
  
  #endif
@@ -803,7 +803,7 @@ diff -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
  
  #if (NGX_HAVE_KQUEUE)
  
-@@ -3445,6 +3496,12 @@
+@@ -3452,6 +3503,12 @@
          return;
      }
  #endif
@@ -817,9 +817,9 @@ diff -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
      ngx_http_free_request(r, rc);
      ngx_http_close_connection(c);
 diff -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
---- a/src/http/ngx_http_request.h	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http_request.h	2017-10-18 07:26:41.486669499 +0800
-@@ -429,6 +429,9 @@
+--- a/src/http/ngx_http_request.h	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http_request.h	2018-02-21 02:26:04.483832893 +0800
+@@ -430,6 +430,9 @@
      int                              *captures;
      u_char                           *captures_data;
  #endif
@@ -831,7 +831,7 @@ diff -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
      size_t                            limit_rate_after;
 diff -uNr a/src/http/ngx_http_spdy.c b/src/http/ngx_http_spdy.c
 --- a/src/http/ngx_http_spdy.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/ngx_http_spdy.c	2017-10-18 07:26:41.488669499 +0800
++++ b/src/http/ngx_http_spdy.c	2018-02-21 02:26:04.485832891 +0800
 @@ -0,0 +1,3701 @@
 +
 +/*
@@ -4536,7 +4536,7 @@ diff -uNr a/src/http/ngx_http_spdy.c b/src/http/ngx_http_spdy.c
 +}
 diff -uNr a/src/http/ngx_http_spdy_filter_module.c b/src/http/ngx_http_spdy_filter_module.c
 --- a/src/http/ngx_http_spdy_filter_module.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/ngx_http_spdy_filter_module.c	2017-10-18 07:26:41.488669499 +0800
++++ b/src/http/ngx_http_spdy_filter_module.c	2018-02-21 02:26:04.486832890 +0800
 @@ -0,0 +1,1222 @@
 +
 +/*
@@ -5762,7 +5762,7 @@ diff -uNr a/src/http/ngx_http_spdy_filter_module.c b/src/http/ngx_http_spdy_filt
 +}
 diff -uNr a/src/http/ngx_http_spdy.h b/src/http/ngx_http_spdy.h
 --- a/src/http/ngx_http_spdy.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/ngx_http_spdy.h	2017-10-18 07:26:41.488669499 +0800
++++ b/src/http/ngx_http_spdy.h	2018-02-21 02:26:04.486832890 +0800
 @@ -0,0 +1,261 @@
 +/*
 + * Copyright (C) Nginx, Inc.
@@ -6027,7 +6027,7 @@ diff -uNr a/src/http/ngx_http_spdy.h b/src/http/ngx_http_spdy.h
 +#endif /* _NGX_HTTP_SPDY_H_INCLUDED_ */
 diff -uNr a/src/http/ngx_http_spdy_module.c b/src/http/ngx_http_spdy_module.c
 --- a/src/http/ngx_http_spdy_module.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/ngx_http_spdy_module.c	2017-10-18 07:26:41.488669499 +0800
++++ b/src/http/ngx_http_spdy_module.c	2018-02-21 02:26:04.486832890 +0800
 @@ -0,0 +1,408 @@
 +
 +/*
@@ -6439,7 +6439,7 @@ diff -uNr a/src/http/ngx_http_spdy_module.c b/src/http/ngx_http_spdy_module.c
 +}
 diff -uNr a/src/http/ngx_http_spdy_module.h b/src/http/ngx_http_spdy_module.h
 --- a/src/http/ngx_http_spdy_module.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/ngx_http_spdy_module.h	2017-10-18 07:26:41.489669499 +0800
++++ b/src/http/ngx_http_spdy_module.h	2018-02-21 02:26:04.487832889 +0800
 @@ -0,0 +1,41 @@
 +
 +/*
@@ -6483,9 +6483,9 @@ diff -uNr a/src/http/ngx_http_spdy_module.h b/src/http/ngx_http_spdy_module.h
 +
 +#endif /* _NGX_HTTP_SPDY_MODULE_H_INCLUDED_ */
 diff -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
---- a/src/http/ngx_http_upstream.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/ngx_http_upstream.c	2017-10-18 07:26:41.489669499 +0800
-@@ -514,6 +514,12 @@
+--- a/src/http/ngx_http_upstream.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/ngx_http_upstream.c	2018-02-21 02:26:04.488832888 +0800
+@@ -515,6 +515,12 @@
          return;
      }
  #endif
@@ -6498,7 +6498,7 @@ diff -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
  
      if (c->read->timer_set) {
          ngx_del_timer(c->read);
-@@ -1328,6 +1334,11 @@
+@@ -1329,6 +1335,11 @@
          return;
      }
  #endif
@@ -6511,9 +6511,9 @@ diff -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
  #if (NGX_HAVE_KQUEUE)
  
 diff -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
---- a/src/http/v2/ngx_http_v2.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.c	2017-10-18 07:26:41.490669499 +0800
-@@ -247,6 +247,8 @@
+--- a/src/http/v2/ngx_http_v2.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/v2/ngx_http_v2.c	2018-02-21 02:25:59.142837774 +0800
+@@ -274,6 +274,8 @@
  
      h2c->table_update = 1;
  
@@ -6521,9 +6521,9 @@ diff -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
 +
      h2scf = ngx_http_get_module_srv_conf(hc->conf_ctx, ngx_http_v2_module);
  
-     h2c->pool = ngx_create_pool(h2scf->pool_size, h2c->connection->log);
-@@ -2020,6 +2022,17 @@
-             h2c->frame_size = value;
+     h2c->concurrent_pushes = h2scf->concurrent_pushes;
+@@ -2074,6 +2076,17 @@
+             h2c->concurrent_pushes = ngx_min(value, h2scf->concurrent_pushes);
              break;
  
 +        case NGX_HTTP_V2_HEADER_TABLE_SIZE_SETTING:
@@ -6541,9 +6541,9 @@ diff -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
              break;
          }
 diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_filter_module.c
---- a/src/http/v2/ngx_http_v2_filter_module.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_filter_module.c	2017-10-18 07:28:37.779669499 +0800
-@@ -25,11 +25,6 @@
+--- a/src/http/v2/ngx_http_v2_filter_module.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_filter_module.c	2018-02-21 02:25:59.143837773 +0800
+@@ -26,11 +26,6 @@
  #define ngx_http_v2_indexed(i)      (128 + (i))
  #define ngx_http_v2_inc_indexed(i)  (64 + (i))
  
@@ -6555,9 +6555,9 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
  #define NGX_HTTP_V2_ENCODE_RAW            0
  #define NGX_HTTP_V2_ENCODE_HUFF           0x80
  
-@@ -53,10 +48,6 @@
- #define NGX_HTTP_V2_NO_TRAILERS           (ngx_http_v2_out_frame_t *) -1
- 
+@@ -93,10 +88,6 @@
+ static ngx_int_t ngx_http_v2_push_resource(ngx_http_request_t *r,
+     ngx_str_t *path, ngx_str_t *binary);
  
 -static u_char *ngx_http_v2_string_encode(u_char *dst, u_char *src, size_t len,
 -    u_char *tmp, ngx_uint_t lower);
@@ -6565,8 +6565,8 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
 -    ngx_uint_t value);
  static ngx_http_v2_out_frame_t *ngx_http_v2_create_headers_frame(
      ngx_http_request_t *r, u_char *pos, u_char *end, ngx_uint_t fin);
- static ngx_http_v2_out_frame_t *ngx_http_v2_create_trailers_frame(
-@@ -151,11 +142,9 @@
+ static ngx_http_v2_out_frame_t *ngx_http_v2_create_push_frame(
+@@ -196,11 +187,9 @@
  #endif
  
      static size_t nginx_ver_len = ngx_http_v2_literal_size(NGINX_VER);
@@ -6576,9 +6576,9 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
                                    ngx_http_v2_literal_size(NGINX_VER_BUILD);
 -    static u_char nginx_ver_build[ngx_http_v2_literal_size(NGINX_VER_BUILD)];
  
-     if (!r->stream) {
-         return ngx_http_next_header_filter(r);
-@@ -420,7 +409,7 @@
+     stream = r->stream;
+ 
+@@ -476,7 +465,7 @@
      }
  
      tmp = ngx_palloc(r->pool, tmp_len);
@@ -6587,7 +6587,7 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
  
      if (pos == NULL || tmp == NULL) {
          return NGX_ERROR;
-@@ -428,11 +417,16 @@
+@@ -484,11 +473,16 @@
  
      start = pos;
  
@@ -6609,7 +6609,7 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
      }
  
      ngx_log_debug1(NGX_LOG_DEBUG_HTTP, fc->log, 0,
-@@ -443,67 +437,28 @@
+@@ -499,67 +493,28 @@
          *pos++ = status;
  
      } else {
@@ -6684,7 +6684,7 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
          if (r->headers_out.content_type_len == r->headers_out.content_type.len
              && r->headers_out.charset.len)
          {
-@@ -529,64 +484,36 @@
+@@ -585,64 +540,36 @@
              r->headers_out.content_type.data = p - len;
          }
  
@@ -6761,7 +6761,7 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
      }
  #endif
  
-@@ -609,23 +536,10 @@
+@@ -665,23 +592,10 @@
              continue;
          }
  
@@ -6776,19 +6776,19 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
 -#endif
 -
 -        *pos++ = 0;
+-
+-        pos = ngx_http_v2_write_name(pos, header[i].key.data,
+-                                     header[i].key.len, tmp);
 +        pos = ngx_http_v2_write_header(h2c, pos, header[i].key.data,
 +                                       header[i].key.len, header[i].value.data,
 +                                       header[i].value.len, tmp);
  
--        pos = ngx_http_v2_write_name(pos, header[i].key.data,
--                                     header[i].key.len, tmp);
--
 -        pos = ngx_http_v2_write_value(pos, header[i].value.data,
 -                                      header[i].value.len, tmp);
      }
  
      frame = ngx_http_v2_create_headers_frame(r, start, pos, r->header_only);
-@@ -764,7 +678,7 @@
+@@ -1111,7 +1025,7 @@
  }
  
  
@@ -6797,7 +6797,7 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
  ngx_http_v2_string_encode(u_char *dst, u_char *src, size_t len, u_char *tmp,
      ngx_uint_t lower)
  {
-@@ -790,7 +704,7 @@
+@@ -1137,7 +1051,7 @@
  }
  
  
@@ -6807,9 +6807,9 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
  {
      if (value < prefix) {
 diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
---- a/src/http/v2/ngx_http_v2.h	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.h	2017-10-18 07:26:41.491669499 +0800
-@@ -49,6 +49,13 @@
+--- a/src/http/v2/ngx_http_v2.h	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/v2/ngx_http_v2.h	2018-02-21 02:25:59.142837774 +0800
+@@ -51,6 +51,14 @@
  #define NGX_HTTP_V2_MAX_WINDOW           ((1U << 31) - 1)
  #define NGX_HTTP_V2_DEFAULT_WINDOW       65535
  
@@ -6820,10 +6820,11 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
 +
 +#define NGX_HTTP_V2_DEFAULT_HPACK_TABLE_SIZE     4096
 +#define NGX_HTTP_V2_MAX_HPACK_TABLE_SIZE         16384 /* < 64k */
++
+ #define NGX_HTTP_V2_DEFAULT_WEIGHT       16
  
- typedef struct ngx_http_v2_connection_s   ngx_http_v2_connection_t;
- typedef struct ngx_http_v2_node_s         ngx_http_v2_node_t;
-@@ -110,6 +117,46 @@
+ 
+@@ -114,6 +122,46 @@
  } ngx_http_v2_hpack_t;
  
  
@@ -6870,7 +6871,7 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
  struct ngx_http_v2_connection_s {
      ngx_connection_t                *connection;
      ngx_http_connection_t           *http_connection;
-@@ -122,6 +169,8 @@
+@@ -129,6 +177,8 @@
  
      size_t                           frame_size;
  
@@ -6879,10 +6880,10 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
      ngx_queue_t                      waiting;
  
      ngx_http_v2_state_t              state;
-@@ -147,6 +196,11 @@
-     unsigned                         table_update:1;
+@@ -156,6 +206,11 @@
      unsigned                         blocked:1;
      unsigned                         goaway:1;
+     unsigned                         push_disabled:1;
 +    unsigned                         indicate_resize:1;
 +
 +#if (NGX_HTTP_V2_HPACK_ENC)
@@ -6891,7 +6892,16 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
  };
  
  
-@@ -348,4 +402,31 @@
+@@ -197,6 +252,8 @@
+ 
+     ngx_array_t                     *cookies;
+ 
++    size_t                           header_limit;
++
+     ngx_pool_t                      *pool;
+ 
+     unsigned                         waiting:1;
+@@ -357,4 +414,31 @@
  
  #define ngx_http_v2_write_sid  ngx_http_v2_write_uint32
  
@@ -6924,9 +6934,9 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
 +
  #endif /* _NGX_HTTP_V2_H_INCLUDED_ */
 diff -uNr a/src/http/v2/ngx_http_v2_module.c b/src/http/v2/ngx_http_v2_module.c
---- a/src/http/v2/ngx_http_v2_module.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_module.c	2017-10-18 07:26:41.491669499 +0800
-@@ -34,8 +34,6 @@
+--- a/src/http/v2/ngx_http_v2_module.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_module.c	2018-02-21 02:26:04.488832888 +0800
+@@ -36,8 +36,6 @@
  static char *ngx_http_v2_streams_index_mask(ngx_conf_t *cf, void *post,
      void *data);
  static char *ngx_http_v2_chunk_size(ngx_conf_t *cf, void *post, void *data);
@@ -6935,9 +6945,9 @@ diff -uNr a/src/http/v2/ngx_http_v2_module.c b/src/http/v2/ngx_http_v2_module.c
  
  
  static ngx_conf_post_t  ngx_http_v2_recv_buffer_size_post =
-@@ -129,62 +127,6 @@
-       offsetof(ngx_http_v2_loc_conf_t, chunk_size),
-       &ngx_http_v2_chunk_size_post },
+@@ -152,62 +150,6 @@
+       0,
+       NULL },
  
 -    { ngx_string("spdy_recv_buffer_size"),
 -      NGX_HTTP_MAIN_CONF|NGX_CONF_TAKE1,
@@ -6998,7 +7008,7 @@ diff -uNr a/src/http/v2/ngx_http_v2_module.c b/src/http/v2/ngx_http_v2_module.c
        ngx_null_command
  };
  
-@@ -496,14 +438,3 @@
+@@ -597,14 +539,3 @@
  
      return NGX_CONF_OK;
  }
@@ -7014,8 +7024,8 @@ diff -uNr a/src/http/v2/ngx_http_v2_module.c b/src/http/v2/ngx_http_v2_module.c
 -    return NGX_CONF_OK;
 -}
 diff -uNr a/src/http/v2/ngx_http_v2_table.c b/src/http/v2/ngx_http_v2_table.c
---- a/src/http/v2/ngx_http_v2_table.c	2017-10-10 23:22:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_table.c	2017-10-18 07:26:41.491669499 +0800
+--- a/src/http/v2/ngx_http_v2_table.c	2018-02-20 22:08:50.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_table.c	2018-02-21 02:25:59.143837773 +0800
 @@ -347,3 +347,434 @@
  
      return NGX_OK;
