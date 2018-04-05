@@ -14,3 +14,8 @@ Test pass: 1.13.11
 
 Test pass: 1.13.11
 
+
+## nginx_auto_using_PRIORITIZE_CHACHA.patch
+* Using SSL_OP_PRIORITIZE_CHACHA when support (For OpenSSL 1.1.1)
+
+Test pass: 1.13.11
