@@ -1,0 +1,64 @@
+From 4be7f3188f18c64ef3de6cc35331220195de2b94 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=E6=9D=8E=E9=80=9A=E6=B4=B2?= <carter.li@eoitek.com>
+Date: Sat, 19 May 2018 22:08:47 +0800
+Subject: [PATCH] Support OSCP stapling on BoringSSL
+
+---
+ src/event/ngx_event_openssl_stapling.c | 42 ++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+diff --git a/src/event/ngx_event_openssl_stapling.c b/src/event/ngx_event_openssl_stapling.c
+index 0bea5e7..334f1c2 100644
+--- a/src/event/ngx_event_openssl_stapling.c
++++ b/src/event/ngx_event_openssl_stapling.c
+@@ -1874,8 +1874,50 @@ ngx_int_t
+ ngx_ssl_stapling(ngx_conf_t *cf, ngx_ssl_t *ssl, ngx_str_t *file,
+     ngx_str_t *responder, ngx_uint_t verify)
+ {
++#ifdef BORINGSSL_MAKE_DELETER
++    ngx_log_error(NGX_LOG_WARN, ssl->log, 0,
++                  "using boringssl, currently only \"ssl_stapling_file\" is supported. use it as your own risk");
++
++    BIO            *bio;
++    int             len;
++    u_char          buf[1024];
++
++    if (ngx_conf_full_name(cf->cycle, file, 1) != NGX_OK) {
++        return NGX_ERROR;
++    }
++
++    bio = BIO_new_file((char *) file->data, "r");
++    if (bio == NULL) {
++        ngx_ssl_error(NGX_LOG_EMERG, ssl->log, 0,
++                      "BIO_new_file(\"%s\") failed", file->data);
++        return NGX_ERROR;
++    }
++
++    len = BIO_read(bio, buf, sizeof(buf) / sizeof(u_char));
++    BIO_free(bio);
++    bio = NULL;
++
++    if (len <= 0) {
++        ngx_ssl_error(NGX_LOG_EMERG, ssl->log, 0,
++                      "Read OCSP response file \"%s\" failed: %d", file->data, len);
++        return NGX_ERROR;
++    }
++
++    if (len >= 1000) {
++        ngx_ssl_error(NGX_LOG_EMERG, ssl->log, 0,
++                      "Unexpected OCSP response file length: %d", len);
++        return NGX_ERROR;
++    }
++
++    if (!SSL_CTX_set_ocsp_response(ssl->ctx, buf, len)) {
++        ngx_ssl_error(NGX_LOG_EMERG, ssl->log, 0,
++                      "SSL_CTX_set_ocsp_response(ssl->ctx, buf, %d) failed", len);
++        return NGX_ERROR;
++    }
++#else
+     ngx_log_error(NGX_LOG_WARN, ssl->log, 0,
+                   "\"ssl_stapling\" ignored, not supported");
++#endif
+ 
+     return NGX_OK;
+ }
