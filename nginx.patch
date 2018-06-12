@@ -4131,7 +4131,7 @@ diff -uNr a/src/http/ngx_http_spdy.c b/src/http/ngx_http_spdy.c
 +        return NGX_HTTP_INTERNAL_SERVER_ERROR;
 +    }
 +
-+    if (!r->request_body && ngx_http_spdy_init_request_body(r) != NGX_OK) {
++    if (!r->request_body->buf && ngx_http_spdy_init_request_body(r) != NGX_OK) {
 +        stream->skip_data = NGX_SPDY_DATA_INTERNAL_ERROR;
 +        return NGX_HTTP_INTERNAL_SERVER_ERROR;
 +    }
