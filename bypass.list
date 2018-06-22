@@ -109,6 +109,9 @@
 *.cloudconvert.com
 *.steamcommunity.com
 *.steampowered.com
+*.steam-api.com
+*.akamaihd.net
+*.keycdn.com
 *.pumpcloud.net
 *.mega.nz
 *.telesco.pe
