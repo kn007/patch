@@ -60,6 +60,7 @@
 *.github.io
 *.github.com
 *.githubusercontent.com
+*.ssl-images-amazon.com
 *.awsstatic.com
 *.googlecode.com
 *.live.com
