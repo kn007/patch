@@ -121,6 +121,9 @@
 *.discordapp.com
 *.discord.gg
 *.discordapp.net
+*.reddit.com
+*.redditstatic.com
+*.redditmedia.com
 
 
 ; ==============================================================================
