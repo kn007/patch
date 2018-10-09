@@ -68,3 +68,4 @@ index 7dd28b8c..5e5bbed1 100644
      }
  
      hc->ssl_servername = ngx_palloc(c->pool, sizeof(ngx_str_t));
+
