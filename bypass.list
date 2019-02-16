@@ -133,36 +133,15 @@
 ; ==============================================================================
 ; https://github.com/xinhugo/Free-List
 
-HostRegex: ^(sp|www|actress)\.dmm\.co\.jp$
+HostRegex: ^(sp|www|actress|pics)\.dmm\.co\.jp$
 www.dmm.com
 www.r18.com
 
-*.android.com
-*.appspot.com
-*.blogblog.com
-*.chrome.com
-*.chromium.org
-*.feedburner.com
-*.g.co
-*.ggpht.com
-*.gmail.com
-*.goo.gl
-*.google
-*.googlecode.com
-*.googlesource.com
-*.googletagmanager.com
-*.panoramio.com
-*.youtube.com
-*.ytimg.com
-*.googleusercontent.com
-HostRegex: ^(.*\.|)google\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|com\.au|com\.bd|com\.bh|com\.bn|com\.bo|com\.br|co\.bw|com\.bz|co\.ck|com\.co|co\.cr|com\.cu|com\.cy|com\.do|com\.ec|com\.eg|com\.et|com\.fj|com\.gh|com\.gi|com\.gt|com\.hk|co\.id|co\.il|co\.in|com\.jm|co\.jp|co\.ke|com\.kh|co\.kr|com\.kw|com\.lb|co\.ls|com\.ly|co\.ma|com\.mm|com\.mt|com\.mx|com\.my|co\.mz|com\.na|com\.nf|com\.ng|com\.ni|com\.np|co\.nz|com\.om|com\.pa|com\.pe|com\.pg|com\.ph|com\.pk|com\.pr|com\.py|com\.qa|com\.sa|com\.sb|com\.sg|com\.sl|com\.sv|co\.th|com\.tj|com\.tr|com\.tw|co\.tz|com\.ua|co\.ug|co\.uk|com\.uy|co\.uz|com\.vc|co\.ve|co\.vi|com\.vn|co\.za|co\.zm|co\.zw|cat|ad|ae|al|am|as|at|az|ba|be|bf|bg|bi|bj|bs|bt|by|ca|cd|cf|cg|ch|ci|cl|cm|com|cv|cz|de|dj|dk|dm|dz|ee|es|fi|fm|fr|ga|ge|gg|gl|gm|gp|gr|gy|hn|hr|ht|hu|ie|im|iq|is|it|je|jo|kg|ki|kz|la|li|lk|lt|lu|lv|md|me|mg|mk|ml|mn|ms|mu|mv|mw|ne|nl|no|nr|nu|pl|pn|ps|pt|ro|rs|ru|rw|sc|se|sh|si|sk|sm|sn|so|sr|st|td|tg|tk|tl|tm|tn|to|tt|vg|vu|ws|jp|tw|hk)$
-HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|com\.au|com\.bd|com\.bh|com\.bn|com\.bo|com\.br|co\.bw|com\.bz|co\.ck|com\.co|co\.cr|com\.cu|com\.cy|com\.do|com\.ec|com\.eg|com\.et|com\.fj|com\.gh|com\.gi|com\.gt|com\.hk|co\.id|co\.il|co\.in|com\.jm|co\.jp|co\.ke|com\.kh|co\.kr|com\.kw|com\.lb|co\.ls|com\.ly|co\.ma|com\.mm|com\.mt|com\.mx|com\.my|co\.mz|com\.na|com\.nf|com\.ng|com\.ni|com\.np|co\.nz|com\.om|com\.pa|com\.pe|com\.pg|com\.ph|com\.pk|com\.pr|com\.py|com\.qa|com\.sa|com\.sb|com\.sg|com\.sl|com\.sv|co\.th|com\.tj|com\.tr|com\.tw|co\.tz|com\.ua|co\.ug|co\.uk|com\.uy|co\.uz|com\.vc|co\.ve|co\.vi|com\.vn|co\.za|co\.zm|co\.zw|cat|ad|ae|al|am|as|at|az|ba|be|bf|bg|bi|bj|bs|bt|by|ca|cd|cf|cg|ch|ci|cl|cm|com|cv|cz|de|dj|dk|dm|dz|ee|es|fi|fm|fr|ga|ge|gg|gl|gm|gp|gr|gy|hn|hr|ht|hu|ie|im|iq|is|it|je|jo|kg|ki|kz|la|li|lk|lt|lu|lv|md|me|mg|mk|ml|mn|ms|mu|mv|mw|ne|nl|no|nr|nu|pl|pn|ps|pt|ro|rs|ru|rw|sc|se|sh|si|sk|sm|sn|so|sr|st|td|tg|tk|tl|tm|tn|to|tt|vg|vu|ws|jp|tw|hk|sg)$
 *.gvt2.com
 *.gstatic.com
 *.googleapis.com
 *.gmodules.com
 *.googlesyndication.com
-*.abc.xyz
 
 *.1024search.tk
 *.1688.com.au
@@ -177,6 +156,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.64wiki.com
 *.666kb.com
 *.6park.com
+*.abc.xyz
 *.ablwang.com
 *.aboluowang.com
 *.actimes.com.au
@@ -194,6 +174,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.amnesty.org
 *.amnesty.tw
 *.ananass.fr
+*.android.com
+*.androidfilehost.com
 *.animecrazy.net
 *.anti1984.com
 *.anygoing.com
@@ -201,6 +183,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.aoqinet.com
 *.apkmirror.com
 *.app2.hkatv.com
+*.appspot.com
 *.archive.org
 *.asahichinese.com
 *.asianews.it
@@ -229,20 +212,26 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.bet365.com
 *.beyondfirewall.com
 *.bind9.net
+*.binux.me
 *.bit.ly
 *.bitshare.com
+*.bitsnoop.com
 *.biz.tm
 *.bjs.org
 *.bjzc.org
 *.blinkx.com
+*.blog.jp
 *.blog.xuite.net
 *.blog.yam.com
+*.blogblog.com
 *.blogcatalog.com
 *.blogcity.me
 *.blogimg.jp
 *.bloglines.com
 *.bloglovin.com
 *.blogs.com
+*.blogspot.in
+*.blogspot.kr
 *.bmvflorida.us
 *.bod.asia
 *.books.com.tw
@@ -253,6 +242,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.boxun.us
 *.break.com
 *.brizzly.com
+*.btdigg.org
 *.btku.org
 *.btn.weather.ca
 *.bud.org.tw
@@ -309,6 +299,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.christianstudy.com
 *.christiantimes.org.hk
 *.chrlawyers.hk
+*.chrome.com
+*.chromium.org
 *.chubun.com
 *.citizenlab.org
 *.citizensradio.org
@@ -316,6 +308,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.civicparty.hk
 *.civilhrfront.org
 *.civilmedia.tw
+*.clickme.net
 *.cna.com.tw
 *.cnd.org
 *.cnliberals.com
@@ -349,10 +342,12 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.dieneueepoche.com
 *.digg.com
 *.digitalocean.com
+*.digitalvolcano.co.uk
 *.diigo.com
 *.dipity.com
 *.discuss.com.hk
 *.disp.cc
+*.disqus.com
 *.djjsq.com
 *.djorz.com
 *.dnscrypt.org
@@ -360,9 +355,12 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.dolc.de
 *.dolf.org.hk
 *.dongtaiwang.com
+*.doub.io
 *.download.aircrack-ng.org
 *.dphk.org
 *.dpp.org.tw
+*.dropbox.com
+*.dropboxusercontent.com
 *.drsunacademy.com
 *.dtiblog.com
 *.duga.jp
@@ -396,7 +394,6 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.extremetube.com
 *.extremetube.phncdn.com
 *.facebook.com
-*.facebook.net
 *.fangeming.com
 *.fanqianghou.com
 *.farxian.com
@@ -407,11 +404,14 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.fbcdn.net
 *.fc2.com
 *.fdc89.jp
+*.feedburner.com
 *.feedjit.com
 *.feedsportal.com
 *.felixcat.net
+*.filecroco.com
 *.filesor.com
 *.filestube.com
+*.firebaseio.com
 *.firepic.org
 *.fmnnow.com
 *.foofind.is
@@ -429,11 +429,13 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.fring.com
 *.frontlinedefenders.org
 *.fukugan.com
+*.fuli.ba
 *.fullyillustrated.com
 *.fungchiwood.com
 *.funp.com*
 *.fw.cm
 *.fw.com
+*.g.co
 *.gaeproxy.com
 *.gamebase.com.tw
 *.gameclub.tw
@@ -443,11 +445,21 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.getfoxyproxy.org
 *.getgom.com
 *.getsync.com
+*.ggpht.com
 *.gigacircle.com
 *.git-scm.com
 *.gittigidiyor.com
+*.globalvoices.org
 *.globalvoicesonline.org
+*.gmail.com
 *.goagent.biz
+*.goo.gl
+*.google
+*.google.com
+*.googlecode.com
+*.googlesource.com
+*.googletagmanager.com
+*.googleusercontent.com
 *.gopetition.com
 *.gospelherald.com
 *.gospelherald.com.hk
@@ -466,7 +478,6 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.h-china.org
 *.hcocoa.com
 *.hd1080.org
-*.hdtongzhi.com
 *.hdtransform.com
 *.hechaji.com
 *.helpzhuling.org
@@ -496,10 +507,12 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.hkptu.org
 *.hk-pub.com
 *.hkreporter.com
+*.hksilicon.com
 *.hkumall.com
 *.hkupop.hku.hk
 *.hkusu.org
 *.hkwcc.org.hk
+*.hongkongfp.com
 *.hongkongtibetfilmfestival2015.com
 *.hotchyx.com
 *.hotspotshield.com
@@ -527,6 +540,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.igossip.com
 *.ihao.org
 *.ihd1080.org
+*.ihktv.com
 *.imagebam.com
 *.imageshack.us
 *.imagestorming.com
@@ -544,6 +558,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.inmediahk.net
 *.inote.tw
 *.inside.com.tw
+*.instagram.com
+*.insynchq.com
 *.intermargins.net
 *.internet.org
 *.internetfreedom.org
@@ -595,6 +611,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.lesoir.be
 *.letscorp.net
 *.libertytimes.com.tw
+*.lineageosrom.com
 *.linkbucks.com
 *.listhub.net
 *.liuxiaobo.net
@@ -610,12 +627,15 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.lrip.org
 *.lsd.org.hk
 *.lsj1080.cc
+*.lsj1080.net
+*.lsj1080.tv
 *.ltn.com.tw
 *.lvv2.com
 *.mail-archive.com
 *.maiplus.com
 *.malaysiakini.com
 *.mattwilcox.net
+*.medium.com
 *.mefeedia.com
 *.memehk.com
 *.merit-times.com
@@ -632,22 +652,25 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.mirrorbooks.com
 *.mitbbs.com
 *.mkini.net
+*.mlxiaoshuo.com
 *.mobile01.com
 *.mobileways.de
 *.mobypicture.com
 *.moedict.tw
+*.mojim.com
+*.mokeedev.com
 *.molihua.org
+*.moonbbs.com
+*.mozilla.net
 *.mp3ye.eu
 *.mpfinance.com
 *.msguancha.com
 *.myca168.com
 *.mychinanews.com
-*.mychinese.news
 *.mycnnews.com
 *.mycould.com
 *.myfreecams.com
 *.myfreshnet.com
-*.myhd1080.tv
 *.myradio.com.hk
 *.myradio.hk
 *.mysinablog.com
@@ -656,6 +679,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.ncchinesenews.com
 *.ndr.de
 *.net1.hkbu.edu.hk
+*.netgear.com
 *.netme.cc
 *.network54.com
 *.networkedblogs.com
@@ -680,16 +704,19 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.ntd.tv
 *.nuzcom.com
 *.nvquan.org
+*.nyt.com
 *.nytcn.me
 *.nyti.ms
 *.nytimes.com
 *.nytimg.com
+*.nytstyle.com
 *.observechina.net
 *.oclp.hk
 *.ogaoga.org
 *.oiktv.com
 *.olx.com.br
 *.on.cc
+*.onedrive.live.com
 *.onlinestuffs.com
 *.open.com.hk
 *.opendemocracy.net
@@ -703,6 +730,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.oyou.com.au
 *.page2rss.com
 *.pageflakes.com
+*.panoramio.com
 *.pao-pao.net
 *.paper.li
 *.passiontimes.hk
@@ -718,6 +746,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.pfd.org.hk
 *.picpar.com
 *.picrar.com
+*.piebridge.me
 *.pimgs.com
 *.ping.fm
 *.pinterest.com
@@ -725,6 +754,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.piring.com
 *.pixshock.net
 *.playno1.com
+*.playno1.com.tw
 *.popvote.hk
 *.popyard.com
 *.popyard.org
@@ -732,6 +762,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.pornhub.com
 *.post852.com
 *.posterous.com
+*.potatso.com
+*.potatsocontent.com
 *.premeforwindows.com
 *.prestige-av.com
 *.prettyvirgin.com
@@ -754,6 +786,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.relink.us
 *.rendsmap.com
 *.renminbao.com
+*.resilio.com
 *.restorehk.com
 *.reuters.com
 *.rfa.org
@@ -771,6 +804,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.rthk.hk
 *.rthk.org.hk
 *.rti.org.tw
+*.s3.amazonaws.com
 *.sadpanda.us
 *.sanmin.com.tw
 *.sanminjiaoliu.net
@@ -783,6 +817,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.secretchina.com
 *.securityinabox.org
 *.securitykiss.com
+*.sendspace.com
+*.setn.com
 *.sex.com
 *.sexinsex.net
 *.shadow.ma
@@ -803,7 +839,6 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.sitebro.tw
 *.slideshare.net
 *.smhric.org
-*.smtianxia.com
 *.softether-download.com
 *.sohcradio.com
 *.sondelespoir.org
@@ -814,6 +849,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.soup-dev.com
 *.southnews.com.tw
 *.spankwire.com
+*.spring4u.info
+*.startpage.com
 *.stgloballink.com
 *.stickeraction.com
 *.stooorage.com
@@ -826,6 +863,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.sucuri.net
 *.sugarsync.com
 *.sun1911.com
+*.supersu.com
 *.swagbucks.com
 *.sydneytoday.com
 *.t.co
@@ -839,6 +877,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.tca.org.tw
 *.techinasia.com
 *.technorati.com
+*.telegram.me
 *.tenacy.com
 *.tenacy-free.com
 *.theblaze.com
@@ -848,6 +887,8 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.theglobalmail.org
 *.theguardian.com
 *.thehousenews.com
+*.theinitium.com
+*.thenewslens.com
 *.the-sun.on.cc
 *.thetibetpost.com
 *.thetimenow.com
@@ -860,6 +901,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.tibet.net
 *.time.com
 *.timer-tab.com
+*.tiny.cc
 *.tinychat.com
 *.tmagazine.com
 *.tmu.edu.tw
@@ -881,12 +923,14 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.tsu.org.tw
 *.tube8.com
 *.tuiyun.net
+*.tumblr.com
 *.tv.com
 *.tvboxnow.com
 *.twbbs.org
 *.twbbs.tw
 *.tweetdeck.com
 *.tweettunnel.com
+*.tweez.net
 *.twicsy.com
 *.twilk.com
 *.twimg.com
@@ -911,6 +955,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.ultrareach.com
 *.unblock.cn.com
 *.uncyclopedia.tw
+*.upmedia.mg
 *.uproxy.org
 *.ustream.tv
 *.utorrent.com
@@ -928,6 +973,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.viber.com
 *.video.pbs.org
 *.vietdaikynguyen.com
+*.vinmusic.com
 *.visiontimes.ca
 *.vjmedia.com.hk
 *.vot.org
@@ -987,6 +1033,7 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.xn--fiq681d48s.org
 *.xpics.us
 *.xtube.com
+*.xuehua.us
 *.xunluvpn.com
 *.xvideosmatome.net
 *.xys.org
@@ -998,10 +1045,14 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.yibaochina.com
 *.yidio.com
 *.yorkbbs.ca
+*.you2go.me
 *.youjizz.com
 *.youmaker.com
 *.youporn.com
 *.youthwant.com.tw
+*.youtu.be
+*.youtube.com
+*.ytimg.com
 *.yzzk.com
 *.zhengjian.org
 *.zhenlibu1984.com
@@ -1016,32 +1067,50 @@ HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|co
 *.zuola.com
 *.zxing.org
 *.zyzc.greatzhonghua.org
+.cdninstagram.com
+.myhd1080.com
 \bhttp://(.[^/])*\.*\bdelicious\.com/
 ^http://search\.aol\.com/
 184.154.128.246
 75.119.209.87
+ad.dmm.com
+addons-amo.cdn.mozilla.net
 bbs.51.ca
 bufferapp.com
 c.statcounter.com
 cdn.media.abc.com
+cdn.rawgit.com
 cdn.viafoura.net
 cdns.gigya.com
 chinese.engadget.com
 community.emc.com
+dl.xda-developers.com
 download.documentfoundation.org
+download.lineageos.org
 download.tuxfamily.org
 downloadap1.teamviewer.com
+download-cdn.resilio.com
+forum.gamer.com.tw
 forum.games.hinet.net
+fpdownload.macromedia.com
 hcd-1.imgbox.com
 hk03dl.com
+HostRegex: ^((.+\.c\.doc-0-0-sj\.|)sj|ci\d{1,2}|oauth|webcache|\d-ps|uds|producer|lh\d|s\d|.+-opensocial|clients\d|translate|mail-attachment|.+-docs)\.googleusercontent\.com$
+HostRegex: ^((id|scholar|news|accounts|adwords|books|images|khms\d|www|blogsearch|cse|encrypted|m|translate)\.|)google\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|com\.au|com\.bd|com\.bh|com\.bn|com\.bo|com\.br|co\.bw|com\.bz|co\.ck|com\.co|co\.cr|com\.cu|com\.cy|com\.do|com\.ec|com\.eg|com\.et|com\.fj|com\.gh|com\.gi|com\.gt|com\.hk|co\.id|co\.il|co\.in|com\.jm|co\.jp|co\.ke|com\.kh|co\.kr|com\.kw|com\.lb|co\.ls|com\.ly|co\.ma|com\.mm|com\.mt|com\.mx|com\.my|co\.mz|com\.na|com\.nf|com\.ng|com\.ni|com\.np|co\.nz|com\.om|com\.pa|com\.pe|com\.pg|com\.ph|com\.pk|com\.pr|com\.py|com\.qa|com\.sa|com\.sb|com\.sg|com\.sl|com\.sv|co\.th|com\.tj|com\.tr|com\.tw|co\.tz|com\.ua|co\.ug|co\.uk|com\.uy|co\.uz|com\.vc|co\.ve|co\.vi|com\.vn|co\.za|co\.zm|co\.zw|cat|ad|ae|al|am|as|at|az|ba|be|bf|bg|bi|bj|bs|bt|by|ca|cd|cf|cg|ch|ci|cl|cm|com|cv|cz|de|dj|dk|dm|dz|ee|es|fi|fm|fr|ga|ge|gg|gl|gm|gp|gr|gy|hn|hr|ht|hu|ie|im|iq|is|it|je|jo|kg|ki|kz|la|li|lk|lt|lu|lv|md|me|mg|mk|ml|mn|ms|mu|mv|mw|ne|nl|no|nr|nu|pl|pn|ps|pt|ro|rs|ru|rw|sc|se|sh|si|sk|sm|sn|so|sr|st|td|tg|tk|tl|tm|tn|to|tt|vg|vu|ws|jp|tw|hk)$
+HostRegex: ^(csi|maps|encrypted-tbn\d|ssl|www|t\d|play-music)\.gstatic\.com$
 HostRegex: ^(daily|)news\.sina\.com(\.(hk|tw)|)$
+HostRegex: ^(feedproxy|feedburner|hangouts|keep)\.google\.com$
+HostRegex: ^(maps|www|translate|plus|ajax|mts\d|commondatastorage|chart|storage|fonts)\.googleapis\.com$
+HostRegex: ^(skins|www(|\.ig))\.gmodules\.com$
 HostRegex: ^(space|bbs)\.qoos\.com$
+HostRegex: ^.*\b(blogger|blogspot)\.(^|com\.af|com\.ag|com\.ai|co\.ao|com\.ar|com\.au|com\.bd|com\.bh|com\.bn|com\.bo|com\.br|co\.bw|com\.bz|co\.ck|com\.co|co\.cr|com\.cu|com\.cy|com\.do|com\.ec|com\.eg|com\.et|com\.fj|com\.gh|com\.gi|com\.gt|com\.hk|co\.id|co\.il|co\.in|com\.jm|co\.jp|co\.ke|com\.kh|co\.kr|com\.kw|com\.lb|co\.ls|com\.ly|co\.ma|com\.mm|com\.mt|com\.mx|com\.my|co\.mz|com\.na|com\.nf|com\.ng|com\.ni|com\.np|co\.nz|com\.om|com\.pa|com\.pe|com\.pg|com\.ph|com\.pk|com\.pr|com\.py|com\.qa|com\.sa|com\.sb|com\.sg|com\.sl|com\.sv|co\.th|com\.tj|com\.tr|com\.tw|co\.tz|com\.ua|co\.ug|co\.uk|com\.uy|co\.uz|com\.vc|co\.ve|co\.vi|com\.vn|co\.za|co\.zm|co\.zw|cat|ad|ae|al|am|as|at|az|ba|be|bf|bg|bi|bj|bs|bt|by|ca|cd|cf|cg|ch|ci|cl|cm|com|cv|cz|de|dj|dk|dm|dz|ee|es|fi|fm|fr|ga|ge|gg|gl|gm|gp|gr|gy|hn|hr|ht|hu|ie|im|iq|is|it|je|jo|kg|ki|kz|la|li|lk|lt|lu|lv|md|me|mg|mk|ml|mn|ms|mu|mv|mw|ne|nl|no|nr|nu|pl|pn|ps|pt|ro|rs|ru|rw|sc|se|sh|si|sk|sm|sn|so|sr|st|td|tg|tk|tl|tm|tn|to|tt|vg|vu|ws|jp|tw|hk|sg)$
 HostRegex: ^.*\b(scmp(chinese|)|nanzao)\.com$
 HostRegex: ^.*\balanleong\.(net|com)$
 HostRegex: ^.*\bappledaily\.com(|\.(tw|hk))$
 HostRegex: ^.*\bavlang\d+\.com$
 HostRegex: ^.*\bbbc(i|)\.co\.uk$
 HostRegex: ^.*\bbbc\.(com|in)$
+HostRegex: ^.*\bbeacons(|\d)\.gvt2\.com$
 HostRegex: ^.*\bbloomberg\.(com|(i|c)n)$
 HostRegex: ^.*\bcdp(|2006|wu|site|1998)\.org$
 HostRegex: ^.*\bdwnews\.(com|net(:\d+|))$
@@ -1065,13 +1134,16 @@ images.secdns.com
 international.sueddeutsche.de
 irs0.4sqi.net
 libs.pixfs.net
+mirrorbits.lineageos.org
 pds.nasa.gov
 plaza.jp.rakuten-static.com
 s1.pir.fm
+support.mozilla.org
 times.hinet.net
 torrent.ubuntu.com
 tweets.seraph.me
 twimg.edgesuite.net
+UrlRegex: ^http(|s)://\d+\.client-channel\.google\.com/client-channel/js/
 UrlRegex: ^http://(.[^/])*\.*\b(home|forum)\.gamer\.com\.tw
 UrlRegex: ^http://(.[^/])*\.*\b(news|blog)\.cnyes\.com/
 UrlRegex: ^http://(.[^/])*\.*\b(news|popblog)\.tvbs\.com\.tw/
@@ -1087,6 +1159,8 @@ UrlRegex: ^http://(.[^/])*\.*\barchive\.is/
 UrlRegex: ^http://(.[^/])*\.*\barchive\.org/
 UrlRegex: ^http://(.[^/])*\.*\bavast\.com/
 UrlRegex: ^http://(.[^/])*\.*\bbitly\.com/
+UrlRegex: ^http://(.[^/])*\.*\bbitsnoop\.com/
+UrlRegex: ^http://(.[^/])*\.*\bblog\.livedoor\.jp/
 UrlRegex: ^http://(.[^/])*\.*\bblogsys\.jp/
 UrlRegex: ^http://(.[^/])*\.*\bbluekai.com/
 UrlRegex: ^http://(.[^/])*\.*\bbtdigg.org/
@@ -1114,9 +1188,11 @@ UrlRegex: ^http://(.[^/])*\.*\bflip\.it/
 UrlRegex: ^http://(.[^/])*\.*\bfout.jp/
 UrlRegex: ^http://(.[^/])*\.*\bgetemoji\.com/cdn-cgi/pe/
 UrlRegex: ^http://(.[^/])*\.*\bgetpocket\.com/
+UrlRegex: ^http://(.[^/])*\.*\bgooglesyndication\.com/
 UrlRegex: ^http://(.[^/])*\.*\bhaxx\.se/
 UrlRegex: ^http://(.[^/])*\.*\bhkxforce\.net/wordpress/
 UrlRegex: ^http://(.[^/])*\.*\bhootsuite\.com/
+UrlRegex: ^http://(.[^/])*\.*\bimage\.blozoo\.info/
 UrlRegex: ^http://(.[^/])*\.*\bimgur\.com/
 UrlRegex: ^http://(.[^/])*\.*\bimrworldwide.com/
 UrlRegex: ^http://(.[^/])*\.*\binstagram\.com/
@@ -1242,11 +1318,14 @@ UrlRegex: ^http://www\.linkedin\.com/countserv/count/
 UrlRegex: ^http://www\.manictime\.com/setup/
 UrlRegex: ^http://www\.marxists\.org/chinese
 UrlRegex: ^https://(.[^/])*\.*\bonebitbug\.me/
+UrlRegex: ^https://www\.gstatic\.cn/onebox/weather/
 UrlRegex: ^https://www\.wireshark\.org/
 vlog.xuite.net
+wenda.google.com.hk
 woeser.middle-way.net
 www.blockedinchina.net
 www.hbogo.com
 www.melauto.it
+www.resilio.com
 www.savetube.com
 yuming.flnet.org
