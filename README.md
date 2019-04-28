@@ -5,7 +5,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.15.8
+Test pass: 1.15.12
 
 
 ### nginx_auto_using_PRIORITIZE_CHACHA.patch
