@@ -1,0 +1,14 @@
+--- /pre_fix/dropbox.py 2019-06-19 03:02:17.000000000 +0800
++++ /after/dropbox.py   2019-07-10 01:31:14.000000000 +0800
+@@ -748,6 +748,11 @@
+     return newmeth
+
+ def start_dropbox():
++    lib_path = os.path.join(DROPBOX_DIST_PATH, "libdropbox_fs_fix.so")
++    if os.path.exists(lib_path):
++        console_print(u"\ndropbox: load filesystem fix library")
++        os.environ["LD_PRELOAD"] = lib_path
++
+     if os.access(DROPBOXD_PATH, os.X_OK):
+         f = open("/dev/null", "w")
+         # we don't reap the child because we're gonna die anyway, let init do it
