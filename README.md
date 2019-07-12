@@ -31,4 +31,6 @@ Test pass: 2019.02.14 version
 ## Other
 [我的Nginx编译之旅](https://kn007.net/topics/my-nginx-compilation-tour/) 
 
+[解决Dropbox Linux客户端因文件系统导致无法同步问题](https://kn007.net/topics/fix-dropbox-filesystem-sync-problem-for-linux-client/) 
+
 [kn007的个人博客](https://kn007.net) 
