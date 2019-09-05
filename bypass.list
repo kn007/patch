@@ -136,6 +136,10 @@
 *.wonderpush.com
 *.akamaihd.net
 *.goo.gl
+*.similarweb.com
+*.similarcdn.com
+*.intercom.io
+*.intercomcdn.com
 
 
 ; ==============================================================================
