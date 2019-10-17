@@ -5,7 +5,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.0
+Test pass: 1.17.4
 
 
 ### nginx_strict-sni.patch
