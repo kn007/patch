@@ -61,6 +61,8 @@
 *.github.com
 *.githubusercontent.com
 *.ssl-images-amazon.com
+*.associates-amazon.com
+*.media-amazon.com
 *.awsstatic.com
 *.googlecode.com
 *.live.com
