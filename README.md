@@ -7,6 +7,14 @@
 
 Test pass: 1.17.7
 
+### nginx_with_spdy_quic.patch
+* Add SPDY Support.
+* Add HTTP3(QUIC) Support.
+* Add HTTP2 HPACK Encoding Support.
+* Add Dynamic TLS Record support.
+
+Test pass: 1.17.7
+
 ### nginx_with_quic.patch
 * Add QUIC Support.
 * Add HTTP2 HPACK Encoding Support.
