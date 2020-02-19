@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2017/12/23
+; Date: 2020/2/19
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -144,6 +144,7 @@
 *.similarcdn.com
 *.intercom.io
 *.intercomcdn.com
+*.regex101.com
 
 
 ; ==============================================================================
@@ -161,6 +162,7 @@ www.r18.com
 *.googlesyndication.com
 
 *.1024search.tk
+*.1080.tw
 *.1688.com.au
 *.1dpw.com
 *.2008xianzhang.info
@@ -179,6 +181,7 @@ www.r18.com
 *.actimes.com.au
 *.adultblogranking.com
 *.aforcemorepowerful.org
+*.ahd1080.com
 *.aisex.com
 *.ait.org.tw
 *.alabout.com
@@ -187,6 +190,7 @@ www.r18.com
 *.alliance.org.hk
 *.allinfa.com
 *.am730.com.hk
+*.amazon.co.jp
 *.amazonwebapps.com
 *.amnesty.org
 *.amnesty.tw
@@ -200,6 +204,7 @@ www.r18.com
 *.aoqinet.com
 *.apkmirror.com
 *.app2.hkatv.com
+*.appledaily.hk
 *.appspot.com
 *.archive.org
 *.asahichinese.com
@@ -227,6 +232,7 @@ www.r18.com
 *.bcchinese.net
 *.beijingspring.com
 *.bet365.com
+*.betanews.com
 *.beyondfirewall.com
 *.bind9.net
 *.binux.me
@@ -237,6 +243,7 @@ www.r18.com
 *.bjs.org
 *.bjzc.org
 *.blinkx.com
+*.blockedinchina.net
 *.blog.jp
 *.blog.xuite.net
 *.blog.yam.com
@@ -340,9 +347,11 @@ www.r18.com
 *.crazys.cc
 *.creaders.net
 *.creadersnet.com
+*.crwdcntrl.net
 *.c--spanarchives.-org
 *.c-spanvideo.org
 *.cts.com.tw
+*.cw.com.tw
 *.d100.net
 *.d2pass.com
 *.dadazim.com
@@ -411,6 +420,7 @@ www.r18.com
 *.extremetube.com
 *.extremetube.phncdn.com
 *.facebook.com
+*.facebook.net
 *.fangeming.com
 *.fanqianghou.com
 *.farxian.com
@@ -418,6 +428,7 @@ www.r18.com
 *.favstar.fm
 *.faydao.com
 *.fb.me
+*.fbcdn.net
 *.fc2.com
 *.fdc89.jp
 *.feedburner.com
@@ -436,10 +447,12 @@ www.r18.com
 *.forum.tvb.com
 *.fqrouter.com
 *.free4u.com.ar
+*.freebrowser.org
 *.freedomhouse.org
 *.freeproxyserver.net
 *.freeshadow.info
 *.freetufu.com
+*.freewechat.com
 *.freeweibo.com
 *.friendfeed.com
 *.fring.com
@@ -463,10 +476,12 @@ www.r18.com
 *.getsync.com
 *.ggpht.com
 *.gigacircle.com
+*.github.com
 *.git-scm.com
 *.gittigidiyor.com
 *.globalvoices.org
 *.globalvoicesonline.org
+*.glorystar.me
 *.gmail.com
 *.goagent.biz
 *.goo.gl
@@ -506,6 +521,7 @@ www.r18.com
 *.hitwister.com
 *.hjav.org
 *.hjclub.info
+*.hk01.com
 *.hkatvnews.com
 *.hkchurch.org
 *.hkci.org.hk
@@ -588,6 +604,7 @@ www.r18.com
 *.ithelp.ithome.com.tw
 *.ixxx.com
 *.iyouport.com
+*.iyouport.org
 *.j.mp
 *.jasonsavard.com
 *.jav008.com
@@ -637,6 +654,7 @@ www.r18.com
 *.localpresshk.com
 *.lockerz.com
 *.lolbin.net
+*.loli.net
 *.longhair.hk
 *.lookpic.com
 *.loved.hk
@@ -650,6 +668,7 @@ www.r18.com
 *.mail-archive.com
 *.maiplus.com
 *.malaysiakini.com
+*.matters.news
 *.mattwilcox.net
 *.medium.com
 *.mefeedia.com
@@ -687,6 +706,7 @@ www.r18.com
 *.mycould.com
 *.myfreecams.com
 *.myfreshnet.com
+*.myhd1080.tv
 *.myradio.com.hk
 *.myradio.hk
 *.mysinablog.com
@@ -707,6 +727,7 @@ www.r18.com
 *.newstapa.org
 *.newtaiwan.com.tw
 *.newtalk.tw
+*.nextdigital.com.hk
 *.nextmag.com.tw
 *.nextmedia.com
 *.ngensis.com
@@ -780,6 +801,7 @@ www.r18.com
 *.posterous.com
 *.potatso.com
 *.potatsocontent.com
+*.powerlinks.com
 *.premeforwindows.com
 *.prestige-av.com
 *.prettyvirgin.com
@@ -825,6 +847,7 @@ www.r18.com
 *.sanmin.com.tw
 *.sanminjiaoliu.net
 *.savemedia.com
+*.savetube.com
 *.savevid.com
 *.saveyoutube.com
 *.scholarism.com
@@ -867,6 +890,7 @@ www.r18.com
 *.spankwire.com
 *.spring4u.info
 *.startpage.com
+*.steemit.com
 *.stgloballink.com
 *.stickeraction.com
 *.stooorage.com
@@ -894,6 +918,8 @@ www.r18.com
 *.techinasia.com
 *.technorati.com
 *.telegram.me
+*.telegram.org
+*.telesco.pe
 *.tenacy.com
 *.tenacy-free.com
 *.theblaze.com
@@ -1068,6 +1094,7 @@ www.r18.com
 *.youthwant.com.tw
 *.youtu.be
 *.youtube.com
+*.youtubeinmp3.com
 *.ytimg.com
 *.yzzk.com
 *.zhengjian.org
@@ -1139,7 +1166,6 @@ HostRegex: ^.*\bkagoya\.(net|jp)$
 HostRegex: ^.*\bkanzhongguo\.(com(\.au|)|eu)$
 HostRegex: ^.*\bmingpao(|ny|tor|van|canada|news|monthly)\.com$
 HostRegex: ^.*\bnext(tv|vod)\.com\.tw$
-HostRegex: ^.*\bntdtv(|-dc)\.com$
 HostRegex: ^.*\bthepiratebay\.(s(e|x)|org)$
 HostRegex: ^.*\bthywords\.com(|\.tw)$
 HostRegex: ^.*\bvoa(fanti|chinese|cantonese|tibetan(|english))\.com$
@@ -1339,9 +1365,42 @@ UrlRegex: ^https://www\.wireshark\.org/
 vlog.xuite.net
 wenda.google.com.hk
 woeser.middle-way.net
-www.blockedinchina.net
 www.hbogo.com
 www.melauto.it
 www.resilio.com
-www.savetube.com
 yuming.flnet.org
+*.stimme-de.de
+*.reutersmedia.net
+*.book.com.tw
+*.reddit.com
+*.line-scdn.net
+*.mtlmp4.com
+*.6do.news
+*.six-degrees.io
+*.hkcnews.com
+*.vocus.cc
+*.newhighlandvision.com
+*.chinatcc.gov.cn
+*.mono.sh
+*.mono.ac
+*.a1080hd.com
+*.discuss.com.hk
+*.zhongzilou.com
+*.limbopro.xyz
+*.doubibackup.com
+*.flyzy2005.com
+*.hzy.pw
+*.fastly.net
+*.pinimg.com
+*.scdn.co
+www.asus.com
+*.t.me
+*.quora.com
+*.quoracdn.net
+*.ghd1080.com
+*.c080.me
+*.tdesktop.com
+*.ulifestyle.com.hk
+*.hketgroup.com
+*.ntdtv.com
+*.ntdtv-dc.com
