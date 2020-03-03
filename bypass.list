@@ -30,6 +30,7 @@
 *.bit.ly
 *.newrelic.com
 *.paypal.com
+*.paypalobjects.com
 *.cloudfront.net
 *.googlepages.com
 *.twimg.com
