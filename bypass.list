@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2020/2/19
+; Date: 2020/3/9
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -146,6 +146,8 @@
 *.intercom.io
 *.intercomcdn.com
 *.regex101.com
+*.jsfiddle.net
+*.jshell.net
 
 
 ; ==============================================================================
