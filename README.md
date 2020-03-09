@@ -1,11 +1,11 @@
 ## Patches
 
-### nginx.patch
+### nginx_with_spdy.patch
 * Add SPDY Support.
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.8
+Test pass: 1.17.9
 
 ### nginx_with_spdy_quic.patch
 * Add SPDY Support.
@@ -13,14 +13,14 @@ Test pass: 1.17.8
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.8
+Test pass: 1.17.9
 
 ### nginx_with_quic.patch
 * Add QUIC Support.
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.8
+Test pass: 1.17.9
 
 ### nginx_strict-sni.patch
 * Enable Strict-SNI, Protect your site ip without exposing your certificate (From [here](https://github.com/hakasenyang/openssl-patch/issues/1#issuecomment-421551872))
