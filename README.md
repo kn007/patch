@@ -1,5 +1,11 @@
 ## Patches
 
+### nginx.patch
+* Add HTTP2 HPACK Encoding Support.
+* Add Dynamic TLS Record support.
+
+Test pass: 1.17.9
+
 ### nginx_with_spdy.patch
 * Add SPDY Support.
 * Add HTTP2 HPACK Encoding Support.
