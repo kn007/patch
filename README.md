@@ -7,11 +7,11 @@
 Test pass: 1.17.9
 
 ### nginx_with_quic.patch
-* Add QUIC Support.
+* Add HTTP3(QUIC) Support.
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.9 with cloudflare/quiche 2f2dfab
+Test pass: 1.17.9 with [cloudflare/quiche 2f2dfab](https://github.com/cloudflare/quiche/tree/2f2dfab7b156ddc95485025e8c0f7cdb6f655a0d)
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
@@ -26,7 +26,7 @@ Test pass: 1.17.9
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.9 with cloudflare/quiche 9a8b3b
+Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/quiche/tree/9a8b3b12d007715cd4cc254362db51d5a01de9f2)
 
 ### nginx_strict-sni.patch (Deprecated)
 * Enable Strict-SNI, Protect your site ip without exposing your certificate (From [here](https://github.com/hakasenyang/openssl-patch/issues/1#issuecomment-421551872))
