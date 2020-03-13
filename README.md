@@ -1,4 +1,6 @@
-## Patches
+# Patches
+
+## Nginx
 
 ### nginx.patch
 * Add HTTP2 HPACK Encoding Support.
@@ -42,6 +44,8 @@ Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/
 
 Test pass: 1.15.5
 
+## Other
+
 ### dropbox_fs_fix.patch
 * For Dropbox Linux users. This patch could let official python script auto-load `libdropbox_fs_fix.so` library before start dropboxd.
     - Using [Dropbox filesystem fix for Linux Repo](https://github.com/dark/dropbox-filesystem-fix) and make `libdropbox_fs_fix.so`.
@@ -51,7 +55,9 @@ Test pass: 1.15.5
 
 Test pass: 2019.02.14 version
 
-## Other
+## Links
+[博客终止使用TLS 1.0和TLS 1.1协议](https://kn007.net/topics/deprecating-tls-1-0-and-tls-1-1-protocols/) 
+
 [小试HTTP3](https://kn007.net/topics/try-http3/) 
 
 [我的Nginx编译之旅](https://kn007.net/topics/my-nginx-compilation-tour/) 
