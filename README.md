@@ -35,18 +35,21 @@ Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/
 
 Test pass: 1.15.5
 
-
 ### dropbox_fs_fix.patch
 * For Dropbox Linux users. This patch could let official python script auto-load `libdropbox_fs_fix.so` library before start dropboxd.
     - Using [Dropbox filesystem fix for Linux Repo](https://github.com/dark/dropbox-filesystem-fix) and make `libdropbox_fs_fix.so`.
     - After compiled, copy `libdropbox_fs_fix.so` to `$HOME/.dropbox-dist/libdropbox_fs_fix.so`.
     - Download Dropbox official python script, put it with patch file together.
     - Patch, enjoy.
-    
-
 
 Test pass: 2019.02.14 version
 
+### use_openssl_md5_sha1.patch
+* Use the OpenSSL library instead of the original function.
+* Repack it because "patch unexpectedly ends in middle of line".
+    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
+
+Test pass: 1.17.9
 
 ## Other
 [小试HTTP3](https://kn007.net/topics/try-http3/) 
