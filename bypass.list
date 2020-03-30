@@ -6,6 +6,7 @@
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+*.ietf.org
 *.schema.org
 *.youtu.be
 *.google.cn
