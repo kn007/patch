@@ -3,7 +3,7 @@ Add HTTP2 HPACK Encoding Support.
 Add Dynamic TLS Record support.
 
 Using: patch -p1 < nginx.patch
-Test pass with cloudflare/quiche dacad7f2.
+Test pass with cloudflare/quiche dacad7f.
 
 diff -uNr a/auto/lib/conf b/auto/lib/conf
 --- a/auto/lib/conf	2020-03-03 23:04:21.000000000 +0800
