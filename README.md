@@ -10,11 +10,11 @@ Test pass: 1.17.9
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
-    - For OCSP stapling, maybe you need [this](https://raw.githubusercontent.com/kn007/patch/35f2b0decbc510f2c8adab9261e3d46ba1398e33/Enable_BoringSSL_OCSP.patch).
+    - For OCSP stapling, maybe you need [this](https://raw.githubusercontent.com/kn007/patch/35f2b0decbc510f2c8adab9261e3d46ba1398e33/Enable_BoringSSL_OCSP.patch). Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.9 with [cloudflare/quiche dacad7f2](https://github.com/cloudflare/quiche/tree/dacad7f73b57e4152cd8e0563c7e571f2f9a05df)
+Test pass: 1.17.9 with [cloudflare/quiche dacad7f](https://github.com/cloudflare/quiche/tree/dacad7f73b57e4152cd8e0563c7e571f2f9a05df)
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
