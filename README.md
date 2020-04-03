@@ -66,7 +66,7 @@ Test pass: 1.14.0
 Test pass: 2019.02.14 version
 
 ## Links
-[让Nginx使用BoringSSL时支持OCSP](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)
+[让Nginx使用BoringSSL时支持OCSP Stapling](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)
 
 [博客终止使用TLS 1.0和TLS 1.1协议](https://kn007.net/topics/deprecating-tls-1-0-and-tls-1-1-protocols/)
 
