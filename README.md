@@ -47,6 +47,9 @@ Test pass: 1.15.5
 
 ### Enable_BoringSSL_OCSP.patch (Deprecated)
 * For BoringSSL support OCSP stapling.
+    - Using "ssl_stapling_file" to support.
+    - Only "ssl_stapling_file" with single cert is supported.
+    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need translater).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
 Test pass: 1.14.0
@@ -63,12 +66,14 @@ Test pass: 1.14.0
 Test pass: 2019.02.14 version
 
 ## Links
-[博客终止使用TLS 1.0和TLS 1.1协议](https://kn007.net/topics/deprecating-tls-1-0-and-tls-1-1-protocols/) 
+[让Nginx使用BoringSSL时支持OCSP](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)
 
-[小试HTTP3](https://kn007.net/topics/try-http3/) 
+[博客终止使用TLS 1.0和TLS 1.1协议](https://kn007.net/topics/deprecating-tls-1-0-and-tls-1-1-protocols/)
 
-[我的Nginx编译之旅](https://kn007.net/topics/my-nginx-compilation-tour/) 
+[小试HTTP3](https://kn007.net/topics/try-http3/)
 
-[解决Dropbox Linux客户端因文件系统导致无法同步问题](https://kn007.net/topics/fix-dropbox-filesystem-sync-problem-for-linux-client/) 
+[我的Nginx编译之旅](https://kn007.net/topics/my-nginx-compilation-tour/)
+
+[解决Dropbox Linux客户端因文件系统导致无法同步问题](https://kn007.net/topics/fix-dropbox-filesystem-sync-problem-for-linux-client/)
 
 [kn007的个人博客](https://kn007.net) 
