@@ -10,7 +10,7 @@ Test pass: 1.17.9
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
-    - For OCSP stapling, maybe you need [this](https://raw.githubusercontent.com/kn007/patch/35f2b0decbc510f2c8adab9261e3d46ba1398e33/Enable_BoringSSL_OCSP.patch). Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
+    - For OCSP stapling, maybe you need [this](https://github.com/kn007/patch/blob/master/Enable_BoringSSL_OCSP.patch)(Not tested).
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
@@ -44,6 +44,12 @@ Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/
     - It does not matter what kind of certificate or duplicate.
 
 Test pass: 1.15.5
+
+### Enable_BoringSSL_OCSP.patch (Deprecated)
+* For BoringSSL support OCSP stapling.
+    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
+
+Test pass: 1.14.0
 
 ## Other
 
