@@ -1,11 +1,9 @@
-From 4be7f3188f18c64ef3de6cc35331220195de2b94 Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?=E6=9D=8E=E9=80=9A=E6=B4=B2?= <carter.li@eoitek.com>
+From: CarterLi <carter.li@eoitek.com>
 Date: Sat, 19 May 2018 22:08:47 +0800
 Subject: [PATCH] Support OSCP stapling on BoringSSL
+Link: https://github.com/kn007/patch/issues/4
+Modified: kn007
 
----
- src/event/ngx_event_openssl_stapling.c | 42 ++++++++++++++++++++++++++
- 1 file changed, 42 insertions(+)
 
 diff --git a/src/event/ngx_event_openssl_stapling.c b/src/event/ngx_event_openssl_stapling.c
 index 0bea5e7..334f1c2 100644
