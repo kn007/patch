@@ -23,6 +23,15 @@ Test pass: 1.17.9 with [cloudflare/quiche dacad7f](https://github.com/cloudflare
 
 Test pass: 1.17.9
 
+### Enable_BoringSSL_OCSP.patch
+* For BoringSSL support OCSP stapling.
+    - Using "ssl_stapling_file" to support.
+    - Only "ssl_stapling_file" with single cert is supported.
+    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need translater).
+    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
+
+Test pass: 1.17.9
+
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
 * Add HTTP2 HPACK Encoding Support.
@@ -44,15 +53,6 @@ Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/
     - It does not matter what kind of certificate or duplicate.
 
 Test pass: 1.15.5
-
-### Enable_BoringSSL_OCSP.patch (Deprecated)
-* For BoringSSL support OCSP stapling.
-    - Using "ssl_stapling_file" to support.
-    - Only "ssl_stapling_file" with single cert is supported.
-    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need translater).
-    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
-
-Test pass: 1.14.0
 
 ## Other
 
