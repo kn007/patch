@@ -14,7 +14,7 @@ index 0bea5e7..334f1c2 100644
      ngx_str_t *responder, ngx_uint_t verify)
  {
 +#ifdef BORINGSSL_MAKE_DELETER
-+    ngx_log_error(NGX_LOG_WARN, ssl->log, 0,
++    ngx_log_error(NGX_LOG_NOTICE, ssl->log, 0,
 +                  "using boringssl, currently only \"ssl_stapling_file\" is supported. use it as your own risk");
 +
 +    BIO            *bio;
