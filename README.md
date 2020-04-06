@@ -27,7 +27,7 @@ Test pass: 1.17.9
 * For BoringSSL support OCSP stapling.
     - Using "ssl_stapling_file" to support.
     - Only "ssl_stapling_file" with single cert is supported.
-    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need translater).
+    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
 Test pass: 1.17.9
