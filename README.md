@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.10
+Test pass: 1.19.0
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -21,7 +21,7 @@ Test pass: 1.17.10 with [cloudflare/quiche 1c5fe75](https://github.com/cloudflar
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.17.10
+Test pass: 1.19.0
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
