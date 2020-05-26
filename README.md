@@ -14,7 +14,7 @@ Test pass: 1.19.0
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.17.10 with [cloudflare/quiche 1c5fe75](https://github.com/cloudflare/quiche/tree/1c5fe75c258702abb97a070e2ab12859872e49cc)
+Test pass: 1.19.0 with [cloudflare/quiche 98757ca](https://github.com/cloudflare/quiche/tree/98757caf1f36ac4236174d9ebae09ac027e78df6)
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
@@ -30,7 +30,7 @@ Test pass: 1.19.0
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.17.10
+Test pass: 1.19.0
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
