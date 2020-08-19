@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2020/3/9
+; Date: 2020/8/19
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -151,6 +151,9 @@
 *.jshell.net
 *.tunemymusic.com
 *.unsplash.com
+*.ping.pe
+*.spotify.com
+*.scdn.co
 
 
 ; ==============================================================================
