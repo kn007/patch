@@ -14,7 +14,7 @@ Test pass: 1.19.3
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.3 with [cloudflare/quiche b4222de](https://github.com/cloudflare/quiche/tree/b4222de5d096bf50f42877a2d27c9a903454754a)
+Test pass: 1.19.3 with [cloudflare/quiche 9d06b4c](https://github.com/cloudflare/quiche/tree/9d06b4c65c70fb515797c789d32b10e7deef295f)
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
