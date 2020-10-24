@@ -3,11 +3,11 @@ Add HTTP2 HPACK Encoding Support.
 Add Dynamic TLS Record support.
 
 Using: patch -p1 < nginx.patch
-Test pass with cloudflare/quiche b4222de.
+Test pass with cloudflare/quiche 9d06b4c.
 
 diff --color -uNr a/auto/lib/conf b/auto/lib/conf
 --- a/auto/lib/conf	2020-09-29 22:32:10.000000000 +0800
-+++ b/auto/lib/conf	2020-10-15 20:06:21.622026353 +0800
++++ b/auto/lib/conf	2020-10-24 12:56:51.329268832 +0800
 @@ -25,6 +25,10 @@
      . auto/lib/openssl/conf
  fi
@@ -21,7 +21,7 @@ diff --color -uNr a/auto/lib/conf b/auto/lib/conf
  fi
 diff --color -uNr a/auto/lib/make b/auto/lib/make
 --- a/auto/lib/make	2020-09-29 22:32:10.000000000 +0800
-+++ b/auto/lib/make	2020-10-15 20:06:21.622026353 +0800
++++ b/auto/lib/make	2020-10-24 12:56:51.329268832 +0800
 @@ -11,6 +11,10 @@
      . auto/lib/openssl/make
  fi
@@ -35,7 +35,7 @@ diff --color -uNr a/auto/lib/make b/auto/lib/make
  fi
 diff --color -uNr a/auto/lib/openssl/make b/auto/lib/openssl/make
 --- a/auto/lib/openssl/make	2020-09-29 22:32:10.000000000 +0800
-+++ b/auto/lib/openssl/make	2020-10-15 20:06:21.623026377 +0800
++++ b/auto/lib/openssl/make	2020-10-24 12:56:51.329268832 +0800
 @@ -49,11 +49,13 @@
          cat << END                                            >> $NGX_MAKEFILE
  
@@ -57,7 +57,7 @@ diff --color -uNr a/auto/lib/openssl/make b/auto/lib/openssl/make
  
 diff --color -uNr a/auto/lib/quiche/conf b/auto/lib/quiche/conf
 --- a/auto/lib/quiche/conf	1970-01-01 08:00:00.000000000 +0800
-+++ b/auto/lib/quiche/conf	2020-10-15 20:06:21.623026377 +0800
++++ b/auto/lib/quiche/conf	2020-10-24 12:56:51.329268832 +0800
 @@ -0,0 +1,23 @@
 +
 +# Copyright (C) Cloudflare, Inc.
@@ -84,7 +84,7 @@ diff --color -uNr a/auto/lib/quiche/conf b/auto/lib/quiche/conf
 +fi
 diff --color -uNr a/auto/lib/quiche/make b/auto/lib/quiche/make
 --- a/auto/lib/quiche/make	1970-01-01 08:00:00.000000000 +0800
-+++ b/auto/lib/quiche/make	2020-10-15 20:06:21.623026377 +0800
++++ b/auto/lib/quiche/make	2020-10-24 12:56:51.329268832 +0800
 @@ -0,0 +1,22 @@
 +
 +# Copyright (C) Cloudflare, Inc.
@@ -110,7 +110,7 @@ diff --color -uNr a/auto/lib/quiche/make b/auto/lib/quiche/make
 +END
 diff --color -uNr a/auto/make b/auto/make
 --- a/auto/make	2020-09-29 22:32:10.000000000 +0800
-+++ b/auto/make	2020-10-15 20:06:21.623026377 +0800
++++ b/auto/make	2020-10-24 12:56:51.329268832 +0800
 @@ -7,7 +7,8 @@
  
  mkdir -p $NGX_OBJS/src/core $NGX_OBJS/src/event $NGX_OBJS/src/event/modules \
@@ -123,7 +123,7 @@ diff --color -uNr a/auto/make b/auto/make
           $NGX_OBJS/src/stream \
 diff --color -uNr a/auto/modules b/auto/modules
 --- a/auto/modules	2020-09-29 22:32:10.000000000 +0800
-+++ b/auto/modules	2020-10-15 20:06:34.941342198 +0800
++++ b/auto/modules	2020-10-24 12:57:13.621795598 +0800
 @@ -119,6 +119,7 @@
      #     ngx_http_header_filter
      #     ngx_http_chunked_filter
@@ -209,7 +209,7 @@ diff --color -uNr a/auto/modules b/auto/modules
  if [ $USE_PCRE = YES ]; then
 diff --color -uNr a/auto/options b/auto/options
 --- a/auto/options	2020-09-29 22:32:10.000000000 +0800
-+++ b/auto/options	2020-10-15 20:06:34.941342198 +0800
++++ b/auto/options	2020-10-24 12:57:13.623795645 +0800
 @@ -59,6 +59,8 @@
  HTTP_GZIP=YES
  HTTP_SSL=NO
@@ -259,7 +259,7 @@ diff --color -uNr a/auto/options b/auto/options
    --with-http_xslt_module            enable ngx_http_xslt_module
 diff --color -uNr a/src/core/ngx_connection.h b/src/core/ngx_connection.h
 --- a/src/core/ngx_connection.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/core/ngx_connection.h	2020-10-15 20:06:21.624026400 +0800
++++ b/src/core/ngx_connection.h	2020-10-24 12:56:51.330268855 +0800
 @@ -79,6 +79,9 @@
      unsigned            deferred_accept:1;
      unsigned            delete_deferred:1;
@@ -283,7 +283,7 @@ diff --color -uNr a/src/core/ngx_connection.h b/src/core/ngx_connection.h
  
 diff --color -uNr a/src/core/ngx_core.h b/src/core/ngx_core.h
 --- a/src/core/ngx_core.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/core/ngx_core.h	2020-10-15 20:06:21.624026400 +0800
++++ b/src/core/ngx_core.h	2020-10-24 12:56:51.330268855 +0800
 @@ -83,6 +83,9 @@
  #if (NGX_OPENSSL)
  #include <ngx_event_openssl.h>
@@ -296,7 +296,7 @@ diff --color -uNr a/src/core/ngx_core.h b/src/core/ngx_core.h
  #include <ngx_module.h>
 diff --color -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
 --- a/src/core/ngx_murmurhash.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/core/ngx_murmurhash.c	2020-10-15 20:06:34.942342222 +0800
++++ b/src/core/ngx_murmurhash.c	2020-10-24 12:57:13.623795645 +0800
 @@ -50,3 +50,63 @@
  
      return h;
@@ -363,7 +363,7 @@ diff --color -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
 +}
 diff --color -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
 --- a/src/core/ngx_murmurhash.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/core/ngx_murmurhash.h	2020-10-15 20:06:34.942342222 +0800
++++ b/src/core/ngx_murmurhash.h	2020-10-24 12:57:13.623795645 +0800
 @@ -15,5 +15,7 @@
  
  uint32_t ngx_murmur_hash2(u_char *data, size_t len);
@@ -374,7 +374,7 @@ diff --color -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
  #endif /* _NGX_MURMURHASH_H_INCLUDED_ */
 diff --color -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
 --- a/src/event/ngx_event_openssl.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/event/ngx_event_openssl.c	2020-10-15 20:06:34.944342269 +0800
++++ b/src/event/ngx_event_openssl.c	2020-10-24 12:57:13.626795716 +0800
 @@ -1518,6 +1518,7 @@
  
      sc->buffer = ((flags & NGX_SSL_BUFFER) != 0);
@@ -437,7 +437,7 @@ diff --color -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.
              c->read->handler = c->ssl->saved_read_handler;
 diff --color -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
 --- a/src/event/ngx_event_openssl.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/event/ngx_event_openssl.h	2020-10-15 20:06:34.944342269 +0800
++++ b/src/event/ngx_event_openssl.h	2020-10-24 12:57:13.627795739 +0800
 @@ -67,10 +67,19 @@
  typedef struct ngx_ssl_ocsp_s  ngx_ssl_ocsp_t;
  
@@ -480,8 +480,8 @@ diff --color -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.
  
 diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 --- a/src/event/ngx_event_quic.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/event/ngx_event_quic.c	2020-10-15 20:06:21.625026424 +0800
-@@ -0,0 +1,589 @@
++++ b/src/event/ngx_event_quic.c	2020-10-24 12:56:51.385270155 +0800
+@@ -0,0 +1,575 @@
 +
 +/*
 + * Copyright (C) Cloudflare, Inc.
@@ -696,10 +696,6 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +        return NGX_ERROR;
 +    }
 +
-+    if (ngx_handle_read_event(c->read, 0) != NGX_OK) {
-+        return NGX_ERROR;
-+    }
-+
 +    c->read->handler = ngx_quic_read_handler;
 +    c->write->handler = ngx_quic_write_handler;
 +
@@ -772,11 +768,6 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +
 +    ngx_log_debug0(NGX_LOG_DEBUG_EVENT, c->log, 0, "quic done reading");
 +
-+    if (ngx_handle_read_event(c->read, 0) != NGX_OK) {
-+        ngx_quic_finalize_connection(c, NGX_QUIC_INTERNAL_ERROR);
-+        return;
-+    }
-+
 +    ngx_post_event(c->write, &ngx_posted_events);
 +}
 +
@@ -831,11 +822,6 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +            ngx_quic_finalize_connection(c, NGX_QUIC_INTERNAL_ERROR);
 +            return;
 +        }
-+    }
-+
-+    if (ngx_handle_write_event(c->write, 0) != NGX_OK) {
-+        ngx_quic_finalize_connection(c, NGX_QUIC_INTERNAL_ERROR);
-+        return;
 +    }
 +
 +    expiry = quiche_conn_timeout_as_millis(c->quic->conn);
@@ -1073,7 +1059,7 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +}
 diff --color -uNr a/src/event/ngx_event_quic.h b/src/event/ngx_event_quic.h
 --- a/src/event/ngx_event_quic.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/event/ngx_event_quic.h	2020-10-15 20:06:21.625026424 +0800
++++ b/src/event/ngx_event_quic.h	2020-10-24 12:56:51.386270179 +0800
 @@ -0,0 +1,49 @@
 +
 +/*
@@ -1126,7 +1112,7 @@ diff --color -uNr a/src/event/ngx_event_quic.h b/src/event/ngx_event_quic.h
 +#endif /* _NGX_EVENT_QUIC_H_INCLUDED_ */
 diff --color -uNr a/src/event/ngx_event_udp.c b/src/event/ngx_event_udp.c
 --- a/src/event/ngx_event_udp.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/event/ngx_event_udp.c	2020-10-15 20:06:21.625026424 +0800
++++ b/src/event/ngx_event_udp.c	2020-10-24 12:56:51.386270179 +0800
 @@ -276,6 +276,14 @@
          (void) ngx_atomic_fetch_add(ngx_stat_accepted, 1);
  #endif
@@ -1144,7 +1130,7 @@ diff --color -uNr a/src/event/ngx_event_udp.c b/src/event/ngx_event_udp.c
  
 diff --color -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_ssl_module.c
 --- a/src/http/modules/ngx_http_ssl_module.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.c	2020-10-15 20:06:34.945342293 +0800
++++ b/src/http/modules/ngx_http_ssl_module.c	2020-10-24 12:57:13.628795763 +0800
 @@ -280,6 +280,41 @@
        offsetof(ngx_http_ssl_srv_conf_t, early_data),
        NULL },
@@ -1287,7 +1273,7 @@ diff --color -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ng
  
 diff --color -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ngx_http_ssl_module.h
 --- a/src/http/modules/ngx_http_ssl_module.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.h	2020-10-15 20:06:34.947342340 +0800
++++ b/src/http/modules/ngx_http_ssl_module.h	2020-10-24 12:57:13.629795787 +0800
 @@ -65,6 +65,12 @@
  
      u_char                         *file;
@@ -1303,7 +1289,7 @@ diff --color -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ng
  
 diff --color -uNr a/src/http/ngx_http.c b/src/http/ngx_http.c
 --- a/src/http/ngx_http.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http.c	2020-10-15 20:06:21.626026448 +0800
++++ b/src/http/ngx_http.c	2020-10-24 12:56:51.387270203 +0800
 @@ -1141,6 +1141,7 @@
  ngx_http_add_listen(ngx_conf_t *cf, ngx_http_core_srv_conf_t *cscf,
      ngx_http_listen_opt_t *lsopt)
@@ -1413,7 +1399,7 @@ diff --color -uNr a/src/http/ngx_http.c b/src/http/ngx_http.c
              && (addr[i].wc_head == NULL
 diff --color -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_module.c
 --- a/src/http/ngx_http_core_module.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http_core_module.c	2020-10-15 20:06:21.627026472 +0800
++++ b/src/http/ngx_http_core_module.c	2020-10-24 12:56:51.388270226 +0800
 @@ -4182,6 +4182,13 @@
              continue;
          }
@@ -1430,7 +1416,7 @@ diff --color -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_mod
          return NGX_CONF_ERROR;
 diff --color -uNr a/src/http/ngx_http_core_module.h b/src/http/ngx_http_core_module.h
 --- a/src/http/ngx_http_core_module.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http_core_module.h	2020-10-15 20:06:21.628026495 +0800
++++ b/src/http/ngx_http_core_module.h	2020-10-24 12:56:51.388270226 +0800
 @@ -82,6 +82,7 @@
      unsigned                   reuseport:1;
      unsigned                   so_keepalive:2;
@@ -1457,7 +1443,7 @@ diff --color -uNr a/src/http/ngx_http_core_module.h b/src/http/ngx_http_core_mod
  
 diff --color -uNr a/src/http/ngx_http.h b/src/http/ngx_http.h
 --- a/src/http/ngx_http.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http.h	2020-10-15 20:06:21.626026448 +0800
++++ b/src/http/ngx_http.h	2020-10-24 12:56:51.387270203 +0800
 @@ -20,6 +20,7 @@
  typedef struct ngx_http_log_ctx_s     ngx_http_log_ctx_t;
  typedef struct ngx_http_chunked_s     ngx_http_chunked_t;
@@ -1478,7 +1464,7 @@ diff --color -uNr a/src/http/ngx_http.h b/src/http/ngx_http.h
  #endif
 diff --color -uNr a/src/http/ngx_http_request_body.c b/src/http/ngx_http_request_body.c
 --- a/src/http/ngx_http_request_body.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http_request_body.c	2020-10-15 20:06:21.629026519 +0800
++++ b/src/http/ngx_http_request_body.c	2020-10-24 12:56:51.389270250 +0800
 @@ -87,6 +87,13 @@
      }
  #endif
@@ -1538,7 +1524,7 @@ diff --color -uNr a/src/http/ngx_http_request_body.c b/src/http/ngx_http_request
          return NGX_OK;
 diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
 --- a/src/http/ngx_http_request.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http_request.c	2020-10-15 20:06:21.629026519 +0800
++++ b/src/http/ngx_http_request.c	2020-10-24 12:56:51.389270250 +0800
 @@ -64,6 +64,10 @@
  static void ngx_http_ssl_handshake_handler(ngx_connection_t *c);
  #endif
@@ -1761,7 +1747,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
      if (c->ssl) {
 diff --color -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
 --- a/src/http/ngx_http_request.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http_request.h	2020-10-15 20:06:21.629026519 +0800
++++ b/src/http/ngx_http_request.h	2020-10-24 12:56:51.389270250 +0800
 @@ -24,6 +24,7 @@
  #define NGX_HTTP_VERSION_10                1000
  #define NGX_HTTP_VERSION_11                1001
@@ -1788,7 +1774,7 @@ diff --color -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
  
 diff --color -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
 --- a/src/http/ngx_http_upstream.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/ngx_http_upstream.c	2020-10-15 20:06:21.631026566 +0800
++++ b/src/http/ngx_http_upstream.c	2020-10-24 12:56:51.390270273 +0800
 @@ -523,6 +523,13 @@
      }
  #endif
@@ -1818,7 +1804,7 @@ diff --color -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
  
 diff --color -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
 --- a/src/http/v2/ngx_http_v2.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.c	2020-10-15 20:06:34.949342387 +0800
++++ b/src/http/v2/ngx_http_v2.c	2020-10-24 12:57:13.631795834 +0800
 @@ -273,6 +273,8 @@
  
      h2c->frame_size = NGX_HTTP_V2_DEFAULT_FRAME_SIZE;
@@ -1845,7 +1831,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
          default:
 diff --color -uNr a/src/http/v2/ngx_http_v2_encode.c b/src/http/v2/ngx_http_v2_encode.c
 --- a/src/http/v2/ngx_http_v2_encode.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_encode.c	2020-10-15 20:06:34.949342387 +0800
++++ b/src/http/v2/ngx_http_v2_encode.c	2020-10-24 12:57:13.632795858 +0800
 @@ -10,7 +10,7 @@
  #include <ngx_http.h>
  
@@ -1866,7 +1852,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_encode.c b/src/http/v2/ngx_http_v2_e
      if (value < prefix) {
 diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_filter_module.c
 --- a/src/http/v2/ngx_http_v2_filter_module.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_filter_module.c	2020-10-15 20:06:34.955342530 +0800
++++ b/src/http/v2/ngx_http_v2_filter_module.c	2020-10-24 12:57:13.633795881 +0800
 @@ -23,10 +23,53 @@
  #define ngx_http_v2_literal_size(h)                                           \
      (ngx_http_v2_integer_octets(sizeof(h) - 1) + sizeof(h) - 1)
@@ -2204,7 +2190,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_ht
      frame = ngx_http_v2_create_push_frame(r, start, pos);
 diff --color -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
 --- a/src/http/v2/ngx_http_v2.h	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.h	2020-10-15 20:06:34.955342530 +0800
++++ b/src/http/v2/ngx_http_v2.h	2020-10-24 12:57:13.634795905 +0800
 @@ -52,6 +52,14 @@
  #define NGX_HTTP_V2_MAX_WINDOW           ((1U << 31) - 1)
  #define NGX_HTTP_V2_DEFAULT_WINDOW       65535
@@ -2335,7 +2321,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
  #endif /* _NGX_HTTP_V2_H_INCLUDED_ */
 diff --color -uNr a/src/http/v2/ngx_http_v2_table.c b/src/http/v2/ngx_http_v2_table.c
 --- a/src/http/v2/ngx_http_v2_table.c	2020-09-29 22:32:10.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_table.c	2020-10-15 20:06:34.956342554 +0800
++++ b/src/http/v2/ngx_http_v2_table.c	2020-10-24 12:57:13.635795928 +0800
 @@ -361,3 +361,434 @@
  
      return NGX_OK;
@@ -2773,8 +2759,8 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_table.c b/src/http/v2/ngx_http_v2_ta
 +#endif
 diff --color -uNr a/src/http/v3/ngx_http_v3.c b/src/http/v3/ngx_http_v3.c
 --- a/src/http/v3/ngx_http_v3.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3.c	2020-10-15 20:06:21.632026590 +0800
-@@ -0,0 +1,2231 @@
++++ b/src/http/v3/ngx_http_v3.c	2020-10-24 12:56:51.391270297 +0800
+@@ -0,0 +1,2234 @@
 +
 +/*
 + * Copyright (C) Cloudflare, Inc.
@@ -3236,6 +3222,9 @@ diff --color -uNr a/src/http/v3/ngx_http_v3.c b/src/http/v3/ngx_http_v3.c
 +            }
 +
 +            case QUICHE_H3_EVENT_DATAGRAM:
++                break;
++
++            case QUICHE_H3_EVENT_GOAWAY:
 +                break;
 +        }
 +
@@ -5008,7 +4997,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3.c b/src/http/v3/ngx_http_v3.c
 +}
 diff --color -uNr a/src/http/v3/ngx_http_v3_filter_module.c b/src/http/v3/ngx_http_v3_filter_module.c
 --- a/src/http/v3/ngx_http_v3_filter_module.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3_filter_module.c	2020-10-15 20:06:21.632026590 +0800
++++ b/src/http/v3/ngx_http_v3_filter_module.c	2020-10-24 12:56:51.392270321 +0800
 @@ -0,0 +1,68 @@
 +
 +/*
@@ -5080,7 +5069,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3_filter_module.c b/src/http/v3/ngx_ht
 +}
 diff --color -uNr a/src/http/v3/ngx_http_v3.h b/src/http/v3/ngx_http_v3.h
 --- a/src/http/v3/ngx_http_v3.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3.h	2020-10-15 20:06:21.632026590 +0800
++++ b/src/http/v3/ngx_http_v3.h	2020-10-24 12:56:51.391270297 +0800
 @@ -0,0 +1,77 @@
 +
 +/*
@@ -5161,7 +5150,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3.h b/src/http/v3/ngx_http_v3.h
 +#endif /* _NGX_HTTP_V3_H_INCLUDED_ */
 diff --color -uNr a/src/http/v3/ngx_http_v3_module.c b/src/http/v3/ngx_http_v3_module.c
 --- a/src/http/v3/ngx_http_v3_module.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3_module.c	2020-10-15 20:06:21.632026590 +0800
++++ b/src/http/v3/ngx_http_v3_module.c	2020-10-24 12:56:51.392270321 +0800
 @@ -0,0 +1,286 @@
 +
 +/*
@@ -5451,7 +5440,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3_module.c b/src/http/v3/ngx_http_v3_m
 +}
 diff --color -uNr a/src/http/v3/ngx_http_v3_module.h b/src/http/v3/ngx_http_v3_module.h
 --- a/src/http/v3/ngx_http_v3_module.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3_module.h	2020-10-15 20:06:21.632026590 +0800
++++ b/src/http/v3/ngx_http_v3_module.h	2020-10-24 12:56:51.392270321 +0800
 @@ -0,0 +1,34 @@
 +
 +/*
