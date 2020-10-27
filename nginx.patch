@@ -4,8 +4,8 @@ Add Dynamic TLS Record support.
 Using: patch -p1 < nginx.patch
 
 diff -uNr a/auto/modules b/auto/modules
---- a/auto/modules	2020-03-03 23:04:21.000000000 +0800
-+++ b/auto/modules	2020-03-10 15:47:10.738727477 +0800
+--- a/auto/modules	2020-10-27 23:09:20.000000000 +0800
++++ b/auto/modules	2020-10-27 23:47:37.070714387 +0800
 @@ -423,6 +423,10 @@
          . auto/module
      fi
@@ -18,8 +18,8 @@ diff -uNr a/auto/modules b/auto/modules
          ngx_module_name=ngx_http_static_module
          ngx_module_incs=
 diff -uNr a/auto/options b/auto/options
---- a/auto/options	2020-03-03 23:04:21.000000000 +0800
-+++ b/auto/options	2020-03-10 15:47:10.739727485 +0800
+--- a/auto/options	2020-10-27 23:09:20.000000000 +0800
++++ b/auto/options	2020-10-27 23:47:37.071714411 +0800
 @@ -59,6 +59,7 @@
  HTTP_GZIP=YES
  HTTP_SSL=NO
@@ -28,7 +28,7 @@ diff -uNr a/auto/options b/auto/options
  HTTP_SSI=YES
  HTTP_REALIP=NO
  HTTP_XSLT=NO
-@@ -224,6 +225,7 @@
+@@ -225,6 +226,7 @@
  
          --with-http_ssl_module)          HTTP_SSL=YES               ;;
          --with-http_v2_module)           HTTP_V2=YES                ;;
@@ -36,7 +36,7 @@ diff -uNr a/auto/options b/auto/options
          --with-http_realip_module)       HTTP_REALIP=YES            ;;
          --with-http_addition_module)     HTTP_ADDITION=YES          ;;
          --with-http_xslt_module)         HTTP_XSLT=YES              ;;
-@@ -439,6 +441,7 @@
+@@ -441,6 +443,7 @@
  
    --with-http_ssl_module             enable ngx_http_ssl_module
    --with-http_v2_module              enable ngx_http_v2_module
@@ -45,8 +45,8 @@ diff -uNr a/auto/options b/auto/options
    --with-http_addition_module        enable ngx_http_addition_module
    --with-http_xslt_module            enable ngx_http_xslt_module
 diff -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
---- a/src/core/ngx_murmurhash.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/core/ngx_murmurhash.c	2020-03-10 15:47:10.739727485 +0800
+--- a/src/core/ngx_murmurhash.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/core/ngx_murmurhash.c	2020-10-27 23:47:37.072714434 +0800
 @@ -50,3 +50,63 @@
  
      return h;
@@ -112,8 +112,8 @@ diff -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
 +    return h;
 +}
 diff -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
---- a/src/core/ngx_murmurhash.h	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/core/ngx_murmurhash.h	2020-03-10 15:47:10.739727485 +0800
+--- a/src/core/ngx_murmurhash.h	2020-10-27 23:09:20.000000000 +0800
++++ b/src/core/ngx_murmurhash.h	2020-10-27 23:47:37.073714457 +0800
 @@ -15,5 +15,7 @@
  
  uint32_t ngx_murmur_hash2(u_char *data, size_t len);
@@ -123,9 +123,9 @@ diff -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
  
  #endif /* _NGX_MURMURHASH_H_INCLUDED_ */
 diff -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
---- a/src/event/ngx_event_openssl.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/event/ngx_event_openssl.c	2020-03-10 15:47:11.441732971 +0800
-@@ -1507,6 +1507,7 @@
+--- a/src/event/ngx_event_openssl.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/event/ngx_event_openssl.c	2020-10-27 23:47:37.076714527 +0800
+@@ -1590,6 +1590,7 @@
  
      sc->buffer = ((flags & NGX_SSL_BUFFER) != 0);
      sc->buffer_size = ssl->buffer_size;
@@ -133,7 +133,7 @@ diff -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
  
      sc->session_ctx = ssl->ctx;
  
-@@ -2404,6 +2405,41 @@
+@@ -2525,6 +2526,41 @@
  
      for ( ;; ) {
  
@@ -175,7 +175,7 @@ diff -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
          while (in && buf->last < buf->end && send < limit) {
              if (in->buf->last_buf || in->buf->flush) {
                  flush = 1;
-@@ -2511,6 +2547,9 @@
+@@ -2632,6 +2668,9 @@
  
      if (n > 0) {
  
@@ -186,10 +186,10 @@ diff -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
  
              c->read->handler = c->ssl->saved_read_handler;
 diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
---- a/src/event/ngx_event_openssl.h	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/event/ngx_event_openssl.h	2020-03-10 15:47:11.441732971 +0800
-@@ -64,10 +64,19 @@
- #endif
+--- a/src/event/ngx_event_openssl.h	2020-10-27 23:09:20.000000000 +0800
++++ b/src/event/ngx_event_openssl.h	2020-10-27 23:47:37.077714551 +0800
+@@ -67,10 +67,19 @@
+ typedef struct ngx_ssl_ocsp_s  ngx_ssl_ocsp_t;
  
  
 +typedef struct {
@@ -208,8 +208,8 @@ diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
  };
  
  
-@@ -99,6 +108,10 @@
-     unsigned                    in_early:1;
+@@ -106,6 +115,10 @@
+     unsigned                    in_ocsp:1;
      unsigned                    early_preread:1;
      unsigned                    write_blocked:1;
 +
@@ -219,7 +219,7 @@ diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
  };
  
  
-@@ -108,7 +121,7 @@
+@@ -115,7 +128,7 @@
  #define NGX_SSL_DFLT_BUILTIN_SCACHE  -5
  
  
@@ -229,10 +229,10 @@ diff -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
  typedef struct ngx_ssl_sess_id_s  ngx_ssl_sess_id_t;
  
 diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_ssl_module.c
---- a/src/http/modules/ngx_http_ssl_module.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.c	2020-03-10 15:47:11.442732979 +0800
-@@ -249,6 +249,41 @@
-       offsetof(ngx_http_ssl_srv_conf_t, early_data),
+--- a/src/http/modules/ngx_http_ssl_module.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/modules/ngx_http_ssl_module.c	2020-10-27 23:47:37.078714574 +0800
+@@ -301,6 +301,41 @@
+       offsetof(ngx_http_ssl_srv_conf_t, reject_handshake),
        NULL },
  
 +    { ngx_string("ssl_dyn_rec_enable"),
@@ -273,8 +273,8 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_s
        ngx_null_command
  };
  
-@@ -580,6 +615,11 @@
-     sscf->session_ticket_keys = NGX_CONF_UNSET_PTR;
+@@ -637,6 +672,11 @@
+     sscf->ocsp_cache_zone = NGX_CONF_UNSET_PTR;
      sscf->stapling = NGX_CONF_UNSET;
      sscf->stapling_verify = NGX_CONF_UNSET;
 +    sscf->dyn_rec_enable = NGX_CONF_UNSET;
@@ -285,7 +285,7 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_s
  
      return sscf;
  }
-@@ -647,6 +687,20 @@
+@@ -712,6 +752,20 @@
      ngx_conf_merge_str_value(conf->stapling_responder,
                           prev->stapling_responder, "");
  
@@ -306,7 +306,7 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_s
      conf->ssl.log = cf->log;
  
      if (conf->enable) {
-@@ -857,6 +911,28 @@
+@@ -943,6 +997,28 @@
          return NGX_CONF_ERROR;
      }
  
@@ -336,9 +336,9 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_s
  }
  
 diff -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ngx_http_ssl_module.h
---- a/src/http/modules/ngx_http_ssl_module.h	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.h	2020-03-10 15:47:11.442732979 +0800
-@@ -61,6 +61,12 @@
+--- a/src/http/modules/ngx_http_ssl_module.h	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/modules/ngx_http_ssl_module.h	2020-10-27 23:47:37.079714597 +0800
+@@ -67,6 +67,12 @@
  
      u_char                         *file;
      ngx_uint_t                      line;
@@ -352,9 +352,9 @@ diff -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ngx_http_s
  
  
 diff -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
---- a/src/http/v2/ngx_http_v2.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.c	2020-03-10 15:47:10.741727500 +0800
-@@ -271,6 +271,8 @@
+--- a/src/http/v2/ngx_http_v2.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/v2/ngx_http_v2.c	2020-10-27 23:47:37.082714667 +0800
+@@ -273,6 +273,8 @@
  
      h2c->frame_size = NGX_HTTP_V2_DEFAULT_FRAME_SIZE;
  
@@ -363,7 +363,7 @@ diff -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
      h2scf = ngx_http_get_module_srv_conf(hc->conf_ctx, ngx_http_v2_module);
  
      h2c->concurrent_pushes = h2scf->concurrent_pushes;
-@@ -2098,6 +2100,14 @@
+@@ -2231,6 +2233,14 @@
          case NGX_HTTP_V2_HEADER_TABLE_SIZE_SETTING:
  
              h2c->table_update = 1;
@@ -379,8 +379,8 @@ diff -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
  
          default:
 diff -uNr a/src/http/v2/ngx_http_v2_encode.c b/src/http/v2/ngx_http_v2_encode.c
---- a/src/http/v2/ngx_http_v2_encode.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_encode.c	2020-03-10 15:47:10.742727508 +0800
+--- a/src/http/v2/ngx_http_v2_encode.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_encode.c	2020-10-27 23:47:37.082714667 +0800
 @@ -10,7 +10,7 @@
  #include <ngx_http.h>
  
@@ -400,8 +400,8 @@ diff -uNr a/src/http/v2/ngx_http_v2_encode.c b/src/http/v2/ngx_http_v2_encode.c
  {
      if (value < prefix) {
 diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_filter_module.c
---- a/src/http/v2/ngx_http_v2_filter_module.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_filter_module.c	2020-03-10 15:47:10.743727516 +0800
+--- a/src/http/v2/ngx_http_v2_filter_module.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_filter_module.c	2020-10-27 23:47:37.084714714 +0800
 @@ -23,10 +23,53 @@
  #define ngx_http_v2_literal_size(h)                                           \
      (ngx_http_v2_integer_octets(sizeof(h) - 1) + sizeof(h) - 1)
@@ -738,8 +738,8 @@ diff -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_fi
  
      frame = ngx_http_v2_create_push_frame(r, start, pos);
 diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
---- a/src/http/v2/ngx_http_v2.h	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.h	2020-03-10 15:47:10.741727500 +0800
+--- a/src/http/v2/ngx_http_v2.h	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/v2/ngx_http_v2.h	2020-10-27 23:47:37.085714737 +0800
 @@ -52,6 +52,14 @@
  #define NGX_HTTP_V2_MAX_WINDOW           ((1U << 31) - 1)
  #define NGX_HTTP_V2_DEFAULT_WINDOW       65535
@@ -811,7 +811,7 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
      ngx_queue_t                      waiting;
  
      ngx_http_v2_state_t              state;
-@@ -163,6 +213,11 @@
+@@ -165,6 +215,11 @@
      unsigned                         blocked:1;
      unsigned                         goaway:1;
      unsigned                         push_disabled:1;
@@ -823,7 +823,7 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
  };
  
  
-@@ -206,6 +261,8 @@
+@@ -208,6 +263,8 @@
  
      ngx_array_t                     *cookies;
  
@@ -832,7 +832,7 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
      ngx_pool_t                      *pool;
  
      unsigned                         waiting:1;
-@@ -418,4 +475,35 @@
+@@ -420,4 +477,35 @@
      u_char *tmp, ngx_uint_t lower);
  
  
@@ -869,8 +869,8 @@ diff -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
 +
  #endif /* _NGX_HTTP_V2_H_INCLUDED_ */
 diff -uNr a/src/http/v2/ngx_http_v2_table.c b/src/http/v2/ngx_http_v2_table.c
---- a/src/http/v2/ngx_http_v2_table.c	2020-03-03 23:04:21.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_table.c	2020-03-10 15:47:10.743727516 +0800
+--- a/src/http/v2/ngx_http_v2_table.c	2020-10-27 23:09:20.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_table.c	2020-10-27 23:47:37.091714878 +0800
 @@ -361,3 +361,434 @@
  
      return NGX_OK;
