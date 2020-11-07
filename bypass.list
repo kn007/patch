@@ -160,6 +160,8 @@
 *.providerdienste.de
 *.virtualhosts.de
 *.he.net
+*.akamaized.net
+*.typekit.net
 
 
 ; ==============================================================================
