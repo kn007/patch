@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.4
+Test pass: 1.19.5
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -14,14 +14,14 @@ Test pass: 1.19.4
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.4 with [cloudflare/quiche 9d06b4c](https://github.com/cloudflare/quiche/tree/9d06b4c65c70fb515797c789d32b10e7deef295f)
+Test pass: 1.19.5 with [cloudflare/quiche c6fa418](https://github.com/cloudflare/quiche/tree/c6fa418da4f1343d3c02b51542715bd145e954ac)
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.19.4
+Test pass: 1.19.5
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -30,7 +30,7 @@ Test pass: 1.19.4
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.19.4
+Test pass: 1.19.5
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
@@ -59,6 +59,8 @@ Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/
 Test pass: 2019.02.14 version
 
 ## Links
+[Nginx 1.19.4新特性推荐](https://kn007.net/topics/nginx-1-19-4-new-feature-recommendation/)
+
 [让Nginx使用BoringSSL时支持OCSP Stapling](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)
 
 [博客终止使用TLS 1.0和TLS 1.1协议](https://kn007.net/topics/deprecating-tls-1-0-and-tls-1-1-protocols/)
