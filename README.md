@@ -49,6 +49,14 @@ Test pass: 1.17.9 with [cloudflare/quiche 9a8b3b](https://github.com/cloudflare/
 
 ## Other
 
+### ffmpeg-let-rtmp-flv-support-hevc-h265-opus.patch
+* FLV/RTMP Extensions For FFmpeg.
+    - Add FLV Encode/Decode with H.265/HEVC & OPUS Codec Support.
+    - Add RTMP Stream Push with H.265/HEVC & OPUS Codec Support.
+    - Thanks [@xia-chu](https://github.com/xia-chu/ZLMediaKit/wiki/RTMP%E5%AF%B9H265%E5%92%8COPUS%E7%9A%84%E6%94%AF%E6%8C%81).
+
+Test pass: 4.3.1
+
 ### dropbox_fs_fix.patch
 * For Dropbox Linux users. This patch could let official python script auto-load `libdropbox_fs_fix.so` library before start dropboxd.
     - Using [Dropbox filesystem fix for Linux Repo](https://github.com/dark/dropbox-filesystem-fix) and make `libdropbox_fs_fix.so`.
