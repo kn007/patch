@@ -9,6 +9,8 @@
 *.ietf.org
 *.schema.org
 *.youtu.be
+*.doubleclick.net
+*.googleadservices.com
 *.google.cn
 *.googleapps.com
 *.thinkwithgoogle.com
