@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.6
+Test pass: 1.19.7
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -14,14 +14,14 @@ Test pass: 1.19.6
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.6 with [cloudflare/quiche 5092e4d](https://github.com/cloudflare/quiche/tree/5092e4d1e8ae2773a56eddda6a8205f5e65b4b37)
+Test pass: 1.19.7 with [cloudflare/quiche 5b73762](https://github.com/cloudflare/quiche/tree/5b73762951ed2249db5f854240e6b6e68466484d)
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.19.6
+Test pass: 1.19.7
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -30,7 +30,7 @@ Test pass: 1.19.6
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.19.6
+Test pass: 1.19.7
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
