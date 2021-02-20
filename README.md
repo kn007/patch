@@ -14,7 +14,9 @@ Test pass: 1.19.7
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.7 with [cloudflare/quiche 5b73762](https://github.com/cloudflare/quiche/tree/5b73762951ed2249db5f854240e6b6e68466484d)
+Test pass: 1.19.6 with [cloudflare/quiche 5b73762](https://github.com/cloudflare/quiche/tree/5b73762951ed2249db5f854240e6b6e68466484d)
+
+Test failed on 1.19.7, cause `post_accept_timeout` had been removed by Nginx.
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
