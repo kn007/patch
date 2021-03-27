@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/3/19
+; Date: 2021/3/27
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -176,6 +176,7 @@
 *.pixfs.net
 *.sharemods.com
 *.notion.so
+*.imgbox.com
 
 ; ==============================================================================
 ; ==============================================================================
