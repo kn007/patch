@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/3/27
+; Date: 2021/4/9
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -206,15 +206,20 @@ www.r18.com
 *.64tianwang.com
 *.64wiki.com
 *.666kb.com
+*.6do.news
 *.6park.com
+*.a1080hd.com
 *.abc.xyz
 *.ablwang.com
 *.aboluowang.com
 *.actimes.com.au
+*.adsafeprotected.com
+*.adsrvr.org
 *.adultblogranking.com
 *.aforcemorepowerful.org
 *.ahd1080.com
 *.aisex.com
+*.aishangyou.tube
 *.ait.org.tw
 *.alabout.com
 *.alicejapan.co.jp
@@ -290,6 +295,7 @@ www.r18.com
 *.blogspot.kr
 *.bmvflorida.us
 *.bod.asia
+*.book.com.tw
 *.books.com.tw
 *.botanwang.com
 *.botanwang.org
@@ -308,6 +314,9 @@ www.r18.com
 *.businessweek.com
 *.bwp.im
 *.bx.tl
+*.c000.me
+*.c080.me
+*.c800.me
 *.c9x.info
 *.cahr.org.tw
 *.campaign.tw-npo.org
@@ -346,6 +355,7 @@ www.r18.com
 *.chinainperspective.com
 *.chinapress.com.my
 *.chinarightsia.org
+*.chinatcc.gov.cn
 *.china-week.com
 *.chinaworker.info
 *.chinesedaily.com
@@ -358,6 +368,7 @@ www.r18.com
 *.chrome.com
 *.chromium.org
 *.chubun.com
+*.cincainews.com
 *.citizenlab.org
 *.citizensradio.org
 *.city9x.com
@@ -414,6 +425,7 @@ www.r18.com
 *.dolf.org.hk
 *.dongtaiwang.com
 *.doub.io
+*.doubibackup.com
 *.download.aircrack-ng.org
 *.dphk.org
 *.dpp.org.tw
@@ -454,8 +466,10 @@ www.r18.com
 *.facebook.com
 *.facebook.net
 *.fangeming.com
+*.fanqiang.network
 *.fanqianghou.com
 *.farxian.com
+*.fastly.net
 *.faststone.org
 *.favstar.fm
 *.faydao.com
@@ -467,11 +481,13 @@ www.r18.com
 *.feedjit.com
 *.feedsportal.com
 *.felixcat.net
+*.ffx.io
 *.filecroco.com
 *.filesor.com
 *.filestube.com
 *.firebaseio.com
 *.firepic.org
+*.flyzy2005.com
 *.fmnnow.com
 *.foofind.is
 *.fooooo.com
@@ -507,6 +523,7 @@ www.r18.com
 *.getgom.com
 *.getsync.com
 *.ggpht.com
+*.ghd1080.com
 *.gigacircle.com
 *.github.com
 *.git-scm.com
@@ -515,6 +532,7 @@ www.r18.com
 *.globalvoicesonline.org
 *.glorystar.me
 *.gmail.com
+*.gnews.org
 *.goagent.biz
 *.goo.gl
 *.google
@@ -557,10 +575,13 @@ www.r18.com
 *.hkatvnews.com
 *.hkchurch.org
 *.hkci.org.hk
+*.hkcnews.com
 *.hkcrm.org.hk
 *.hkdailynews.com.hk
 *.hkdash.com
 *.hkej.com
+*.hket.com
+*.hketgroup.com
 *.hkgolden.com
 *.hkgoldenmobile.com
 *.hkhkhk.com
@@ -588,7 +609,9 @@ www.r18.com
 *.huping.net
 *.hutong9.net
 *.hwinfo.com
+*.hxmmdd.com
 *.hyperrate.com
+*.hzy.pw
 *.i1.hk
 *.i2ocr.com
 *.i2p2.de
@@ -630,6 +653,7 @@ www.r18.com
 *.inxian.com
 *.ipcf.org.tw
 *.ipicture.ru
+*.ipkmedia.com
 *.isohunt.com
 *.isunaffairs.com
 *.isuntv.com
@@ -676,7 +700,9 @@ www.r18.com
 *.lesoir.be
 *.letscorp.net
 *.libertytimes.com.tw
+*.limbopro.xyz
 *.lineageosrom.com
+*.line-scdn.net
 *.linkbucks.com
 *.listhub.net
 *.liuxiaobo.net
@@ -699,6 +725,7 @@ www.r18.com
 *.lvv2.com
 *.mail-archive.com
 *.maiplus.com
+*.malaymail.com
 *.malaysiakini.com
 *.matters.news
 *.mattwilcox.net
@@ -707,6 +734,7 @@ www.r18.com
 *.memehk.com
 *.merit-times.com
 *.merit-times.com.tw
+*.merlinblog.xyz
 *.metrolife.ca
 *.metroradio.com.hk
 *.minghui.org
@@ -727,11 +755,14 @@ www.r18.com
 *.mojim.com
 *.mokeedev.com
 *.molihua.org
+*.mono.ac
+*.mono.sh
 *.moonbbs.com
 *.mozilla.net
 *.mp3ye.eu
 *.mpfinance.com
 *.msguancha.com
+*.mtlmp4.com
 *.myca168.com
 *.mychinanews.com
 *.mycnnews.com
@@ -753,6 +784,7 @@ www.r18.com
 *.networkedblogs.com
 *.newcenturymc.com
 *.newcenturynews.com
+*.newhighlandvision.com
 *.news.hk.msn.com
 *.news.pts.org.tw
 *.newsancai.com
@@ -771,6 +803,8 @@ www.r18.com
 *.nps.gov
 *.nrk.no
 *.ntd.tv
+*.ntdtv.com
+*.ntdtv-dc.com
 *.nuzcom.com
 *.nvquan.org
 *.nyt.com
@@ -794,6 +828,7 @@ www.r18.com
 *.orzhd.com
 *.oursogo.com
 *.oursteps.com.au
+*.outbrain.com
 *.ow.ly
 *.oyax.com
 *.oyou.com.au
@@ -817,7 +852,9 @@ www.r18.com
 *.picrar.com
 *.piebridge.me
 *.pimgs.com
+*.pincong.rocks
 *.ping.fm
+*.pinimg.com
 *.pinterest.com
 *.piratescreen.com
 *.piring.com
@@ -842,6 +879,8 @@ www.r18.com
 *.qidian.ca
 *.qiwen.lu
 *.quickpornsearch.com
+*.quora.com
+*.quoracdn.net
 *.qxbbs.org
 *.radioaustralia.net.au
 *.ranyunfei.com
@@ -850,8 +889,10 @@ www.r18.com
 *.readingtimes.com.tw
 *.recovery.org.tw
 *.redchinacn.org
+*.reddit.com
 *.redsquirrel87.com
 *.redtube.com
+*.reduik.com
 *.referer.us
 *.relink.us
 *.rendsmap.com
@@ -859,6 +900,7 @@ www.r18.com
 *.resilio.com
 *.restorehk.com
 *.reuters.com
+*.reutersmedia.net
 *.rfa.org
 *.rferl.org
 *.rfi.fr
@@ -882,6 +924,7 @@ www.r18.com
 *.savetube.com
 *.savevid.com
 *.saveyoutube.com
+*.scdn.co
 *.scholarism.com
 *.s-dragon.org
 *.search.xxx
@@ -908,23 +951,29 @@ www.r18.com
 *.sinoquebec.com
 *.sis001.com
 *.sitebro.tw
+*.six-degrees.io
 *.slideshare.net
+*.smh.com.au
 *.smhric.org
 *.softether-download.com
 *.sohcradio.com
 *.sondelespoir.org
 *.sonidodelaesperanza.org
+*.sougouwiki.com
 *.soundofhope.co.kr
 *.soundofhope.kr
 *.soundofhope.org
 *.soup-dev.com
 *.southnews.com.tw
 *.spankwire.com
+*.spotify.com
 *.spring4u.info
+*.ssr.tools
 *.startpage.com
 *.steemit.com
 *.stgloballink.com
 *.stickeraction.com
+*.stimme-de.de
 *.stooorage.com
 *.storify.com
 *.storm.mg
@@ -939,16 +988,20 @@ www.r18.com
 *.swagbucks.com
 *.sydneytoday.com
 *.t.co
+*.t.me
 *.t66y.com
 *.taaze.tw
 *.tahr.org.tw
 *.taiwandaily.net
 *.taiwanus.net
 *.talkonly.net
+*.tantannews.com
 *.tavis.tw
 *.tca.org.tw
+*.tdesktop.com
 *.techinasia.com
 *.technorati.com
+*.telegra.ph
 *.telegram.me
 *.telegram.org
 *.telesco.pe
@@ -1005,6 +1058,7 @@ www.r18.com
 *.tweetdeck.com
 *.tweettunnel.com
 *.tweez.net
+*.twgreatdaily.com
 *.twicsy.com
 *.twilk.com
 *.twimg.com
@@ -1026,6 +1080,7 @@ www.r18.com
 *.ugo.com
 *.uhrp.org
 *.uighurbiz.net
+*.ulifestyle.com.hk
 *.ultrareach.com
 *.unblock.cn.com
 *.uncyclopedia.tw
@@ -1050,6 +1105,7 @@ www.r18.com
 *.vinmusic.com
 *.visiontimes.ca
 *.vjmedia.com.hk
+*.vocus.cc
 *.vot.org
 *.vox-cdn.com
 *.vpngate.jp
@@ -1131,6 +1187,7 @@ www.r18.com
 *.yzzk.com
 *.zhengjian.org
 *.zhenlibu1984.com
+*.zhongzilou.com
 *.zhoushuguang.com
 *.zinio.com
 *.zlvc.net
@@ -1168,6 +1225,7 @@ download-cdn.resilio.com
 forum.gamer.com.tw
 forum.games.hinet.net
 fpdownload.macromedia.com
+ftp.mozilla.org
 hcd-1.imgbox.com
 hk03dl.com
 HostRegex: ^((.+\.c\.doc-0-0-sj\.|)sj|ci\d{1,2}|oauth|webcache|\d-ps|uds|producer|lh\d|s\d|.+-opensocial|clients\d|translate|mail-attachment|.+-docs)\.googleusercontent\.com$
@@ -1212,6 +1270,7 @@ mirrorbits.lineageos.org
 pds.nasa.gov
 plaza.jp.rakuten-static.com
 s1.pir.fm
+sendtokindle.amazon.cn
 support.mozilla.org
 times.hinet.net
 torrent.ubuntu.com
@@ -1397,42 +1456,8 @@ UrlRegex: ^https://www\.wireshark\.org/
 vlog.xuite.net
 wenda.google.com.hk
 woeser.middle-way.net
+www.asus.com
 www.hbogo.com
 www.melauto.it
 www.resilio.com
 yuming.flnet.org
-*.stimme-de.de
-*.reutersmedia.net
-*.book.com.tw
-*.reddit.com
-*.line-scdn.net
-*.mtlmp4.com
-*.6do.news
-*.six-degrees.io
-*.hkcnews.com
-*.vocus.cc
-*.newhighlandvision.com
-*.chinatcc.gov.cn
-*.mono.sh
-*.mono.ac
-*.a1080hd.com
-*.discuss.com.hk
-*.zhongzilou.com
-*.limbopro.xyz
-*.doubibackup.com
-*.flyzy2005.com
-*.hzy.pw
-*.fastly.net
-*.pinimg.com
-*.scdn.co
-www.asus.com
-*.t.me
-*.quora.com
-*.quoracdn.net
-*.ghd1080.com
-*.c080.me
-*.tdesktop.com
-*.ulifestyle.com.hk
-*.hketgroup.com
-*.ntdtv.com
-*.ntdtv-dc.com
