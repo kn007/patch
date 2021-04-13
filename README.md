@@ -31,7 +31,7 @@ Test pass: 1.19.6 with [nginx_with_quic.patch@ec8cac4](https://github.com/kn007/
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.19.9
+Test pass: 1.19.10
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -40,7 +40,7 @@ Test pass: 1.19.9
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.19.9
+Test pass: 1.19.10
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
