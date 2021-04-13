@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.9
+Test pass: 1.19.10
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -16,7 +16,7 @@ Test pass: 1.19.9
 
 Require: Nginx 1.19.7 or later.
 
-Test pass: 1.19.9 with [cloudflare/quiche@fca5e9a](https://github.com/cloudflare/quiche/tree/fca5e9acdfdff9e80c7b9346214c64b393108328)
+Test pass: 1.19.10 with [cloudflare/quiche@d8bb8e3](https://github.com/cloudflare/quiche/tree/d8bb8e36d5c549c2bc8b87525737899abd061daf)
 
 `nginx_with_quic_for_1.19.6.patch` is required to support Nginx versions lower than 1.19.7, cause `post_accept_timeout` had been removed by Nginx since 1.19.7.
 
