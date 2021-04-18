@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/4/9
+; Date: 2021/4/18
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -42,6 +42,7 @@
 *.ytimg.com
 *.adzerk.net
 *.xmages.net
+*.fucklo.li
 *.freeproxylists.net
 *.archive.org
 *.shadowsocks.org
@@ -100,10 +101,12 @@
 *.google.co.*
 *.ggpht.com
 *.t.me
+*.telegram.me
 *.telegra.ph
-*.oneplus.net
 *.telegram.org
+*.tdesktop.com
 *.cisco.com
+*.oneplus.net
 *.g.co
 *.amazon.com
 *.amazon.co.*
@@ -113,10 +116,8 @@
 *.speedyrails.net
 *.androidfilehost.com
 *.pinimg.com
-*.telegram.me
-*.tdesktop.com
-*.dropboxusercontent.com
 *.flightradar24.com
+*.dropboxusercontent.com
 *.cloudconvert.com
 *.steamcardexchange.net
 *.steamcommunity.com
@@ -178,6 +179,7 @@
 *.notion.so
 *.imgbox.com
 *.geeks3d.com
+*.nvidia.com
 
 ; ==============================================================================
 ; ==============================================================================
