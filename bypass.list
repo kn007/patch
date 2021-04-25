@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/4/18
+; Date: 2021/4/25
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -184,6 +184,7 @@
 *.gamepadviewer.com
 *.humansofnewyork.com
 *.cloudflare.com
+*.wagnardsoft.com
 
 ; ==============================================================================
 ; ==============================================================================
