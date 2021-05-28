@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Test pass: 1.19.10
+Test pass: 1.21.0
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -16,7 +16,7 @@ Test pass: 1.19.10
 
 Require: Nginx 1.19.7 or later.
 
-Test pass: 1.19.10 with [cloudflare/quiche@63ef4f7](https://github.com/cloudflare/quiche/tree/63ef4f7fd11d039caa5aa29347e15b6754e9fd7b)
+Test pass: 1.21.0 with [cloudflare/quiche@cf2a087](https://github.com/cloudflare/quiche/tree/cf2a08757c942d13f15a5a22aa7ea9ef50309cbe)
 
 `nginx_with_quic_for_1.19.6.patch` is required to support Nginx versions lower than 1.19.7, cause `post_accept_timeout` had been removed by Nginx since 1.19.7.
 
@@ -31,7 +31,7 @@ Test pass: 1.19.6 with [nginx_with_quic.patch@ec8cac4](https://github.com/kn007/
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.19.10
+Test pass: 1.21.0
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -40,7 +40,7 @@ Test pass: 1.19.10
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.19.10
+Test pass: 1.21.0
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
