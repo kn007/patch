@@ -16,7 +16,7 @@ Test pass: 1.21.0
 
 Require: Nginx 1.19.7 or later.
 
-Test pass: 1.21.0 with [cloudflare/quiche@7eb57c4](https://github.com/cloudflare/quiche/tree/7eb57c4fc608932acc76c3ee2759c2e41e51d566)
+Test pass: 1.21.0 with [cloudflare/quiche@5afe288](https://github.com/cloudflare/quiche/tree/5afe28821fb91629ad0493348a399227d783148c)
 
 `nginx_with_quic_for_1.19.6.patch` is required to support Nginx versions lower than 1.19.7, cause `post_accept_timeout` had been removed by Nginx since 1.19.7.
 
