@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/5/4
+; Date: 2021/8/7
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -189,6 +189,7 @@
 *.gitlab-static.net
 *.soundcloud.com
 *.sndcdn.com
+*.dl.sourceforge.net
 
 ; ==============================================================================
 ; ==============================================================================
