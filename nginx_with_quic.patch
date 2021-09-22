@@ -3,7 +3,7 @@ Add HTTP2 HPACK Encoding Support.
 Add Dynamic TLS Record support.
 
 Using: patch -p1 < nginx.patch
-Based on cloudflare/quiche 1c88135.
+Based on cloudflare/quiche af1bbc0.
 Requires nginx 1.19.7 or later to patch.
 
 diff --color -uNr a/auto/lib/conf b/auto/lib/conf
@@ -76,7 +76,7 @@ diff --color -uNr a/auto/lib/quiche/conf b/auto/lib/quiche/conf
 +
 +    CORE_INCS="$CORE_INCS $QUICHE/include"
 +    CORE_DEPS="$CORE_DEPS $QUICHE/target/$QUICHE_BUILD_TARGET/libquiche.a"
-+    CORE_LIBS="$CORE_LIBS $QUICHE/target/$QUICHE_BUILD_TARGET/libquiche.a $NGX_LIBPTHREAD"
++    CORE_LIBS="$CORE_LIBS $QUICHE/target/$QUICHE_BUILD_TARGET/libquiche.a $NGX_LIBPTHREAD -lm"
 +
 +    if [ "$NGX_SYSTEM" = "Darwin" ]; then
 +        CORE_LIBS+=" -framework Security"
