@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/10/31
+; Date: 2021/11/03
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -197,6 +197,7 @@ u2.dmhy.org
 *.sndcdn.com
 *.dl.sourceforge.net
 *.dmm.co.jp
+*.javmost.com
 *.gifyu.com
 *.bitvise.com
 *.chucklefish.org
