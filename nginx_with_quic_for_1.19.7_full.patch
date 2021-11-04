@@ -2,9 +2,9 @@ Add HTTP3(QUIC) Support.
 Add HTTP2 HPACK Encoding Support.
 Add Dynamic TLS Record support.
 
-Using: patch -p1 < nginx.patch
+Using: patch -p1 < nginx_with_quic_for_1.19.7_full.patch
 Based on cloudflare/quiche af1bbc0.
-Requires nginx 1.19.7 or later to patch.
+Requires nginx 1.19.7 ~ 1.21.3 to patch.
 
 diff --color -uNr a/auto/lib/conf b/auto/lib/conf
 --- a/auto/lib/conf	2021-09-07 23:21:03.000000000 +0800
