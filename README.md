@@ -14,9 +14,19 @@ Test pass: 1.21.4
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Require: Nginx 1.19.7 or later.
+Require: Nginx 1.21.4 or later.
 
-Test pass: 1.21.4 with [cloudflare/quiche@af1bbc0](https://github.com/cloudflare/quiche/tree/af1bbc03e9992bae516d0b692a481de64bd4e8d9)
+Test pass: 1.21.4 with [cloudflare/quiche@fe56de9](https://github.com/cloudflare/quiche/tree/fe56de9c7a1117621ea01edc165bc5635f37fe27)
+
+### nginx_with_quic_for_1.19.7_full.patch (Discontinued)
+* Add HTTP3(QUIC) Support.
+    - For OCSP stapling, maybe you need [this](https://github.com/kn007/patch#enable_boringssl_ocsppatch).
+* Add HTTP2 HPACK Encoding Support.
+* Add Dynamic TLS Record support.
+
+Require: Nginx 1.19.7 or later(below then 1.21.4).
+
+Test pass: 1.21.3 with [cloudflare/quiche@af1bbc0](https://github.com/cloudflare/quiche/tree/af1bbc03e9992bae516d0b692a481de64bd4e8d9)
 
 `nginx_with_quic_for_1.19.6.patch` is required to support Nginx versions lower than 1.19.7, cause `post_accept_timeout` had been removed by Nginx since 1.19.7.
 
