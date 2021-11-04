@@ -24,7 +24,7 @@ Test pass: 1.21.4 with [cloudflare/quiche@fe56de9](https://github.com/cloudflare
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record support.
 
-Require: Nginx 1.19.7 or later(below then 1.21.4).
+Require: Nginx 1.19.7 or later(below 1.21.4).
 
 Test pass: 1.21.3 with [cloudflare/quiche@af1bbc0](https://github.com/cloudflare/quiche/tree/af1bbc03e9992bae516d0b692a481de64bd4e8d9)
 
