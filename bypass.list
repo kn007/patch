@@ -1,16 +1,11 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2021/11/12
+; Date: 2021/11/22
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
-u2.dmhy.org
-*.m-team.cc
-*.groueta.cc
-*.ccache.org
-*.open.cd
 
 *.ietf.org
 *.schema.org
@@ -196,8 +191,15 @@ u2.dmhy.org
 *.soundcloud.com
 *.sndcdn.com
 *.dl.sourceforge.net
-*.dmm.co.jp
 *.javmost.com
+*.javtrust.com
+*.dmm.co.jp
+*.m-team.cc
+*.groueta.cc
+*.ccache.org
+*.bmp.ovh
+*.open.cd
+u2.dmhy.org
 *.jdbimgs.com
 *.gifyu.com
 *.bitvise.com
