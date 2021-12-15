@@ -1,5 +1,5 @@
 Add HTTP2 HPACK Encoding Support.
-Add Dynamic TLS Record support.
+Add Dynamic TLS Record Support.
 
 Using: patch -p1 < nginx.patch
 
