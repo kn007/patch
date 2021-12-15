@@ -4,7 +4,7 @@
 
 ### nginx.patch
 * Add HTTP2 HPACK Encoding Support.
-* Add Dynamic TLS Record support.
+* Add Dynamic TLS Record Support.
 
 Test pass: 1.21.4
 
@@ -12,17 +12,17 @@ Test pass: 1.21.4
 * Add HTTP3(QUIC) Support.
     - For OCSP stapling, maybe you need [this](https://github.com/kn007/patch#enable_boringssl_ocsppatch).
 * Add HTTP2 HPACK Encoding Support.
-* Add Dynamic TLS Record support.
+* Add Dynamic TLS Record Support.
 
 Require: Nginx 1.21.4 or later.
 
-Test pass: 1.21.4 with [cloudflare/quiche@fe56de9](https://github.com/cloudflare/quiche/tree/fe56de9c7a1117621ea01edc165bc5635f37fe27)
+Test pass: 1.21.4 with [cloudflare/quiche@af67891](https://github.com/cloudflare/quiche/tree/af678919d35d7ea4068b4af5156128d6c88fed68)
 
 ### nginx_with_quic_for_1.19.7_full.patch (Discontinued)
 * Add HTTP3(QUIC) Support.
     - For OCSP stapling, maybe you need [this](https://github.com/kn007/patch#enable_boringssl_ocsppatch).
 * Add HTTP2 HPACK Encoding Support.
-* Add Dynamic TLS Record support.
+* Add Dynamic TLS Record Support.
 
 Require: Nginx 1.19.7 or later(below 1.21.4).
 
@@ -55,7 +55,7 @@ Test pass: 1.21.4
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
 * Add HTTP2 HPACK Encoding Support.
-* Add Dynamic TLS Record support.
+* Add Dynamic TLS Record Support.
 
 Test pass: 1.17.9
 
@@ -63,11 +63,18 @@ Test pass: 1.17.9
 * Add SPDY Support.
 * Add HTTP3(QUIC) Support.
 * Add HTTP2 HPACK Encoding Support.
-* Add Dynamic TLS Record support.
+* Add Dynamic TLS Record Support.
 
 Test pass: 1.17.9 with [cloudflare/quiche@9a8b3b](https://github.com/cloudflare/quiche/tree/9a8b3b12d007715cd4cc254362db51d5a01de9f2)
 
 ## Other
+
+### openssl-1.1.1.patch
+* Add TLS 1.3 Support.
+* Add BoringSSL's Equal Preference Support.
+* Add ChaCha20-Poly1305 Draft Version Support.
+
+Test pass: 1.1.1m
 
 ### ffmpeg-let-rtmp-flv-support-hevc-h265-opus.patch
 * FLV/RTMP Extensions For FFmpeg.
