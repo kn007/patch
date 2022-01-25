@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record Support.
 
-Test pass: 1.21.5
+Test pass: 1.21.6
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -41,7 +41,7 @@ Test pass: 1.19.6 with [nginx_with_quic.patch@ec8cac4](https://github.com/kn007/
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.21.5
+Test pass: 1.21.6
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
