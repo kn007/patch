@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/01/23
+; Date: 2022/01/28
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -222,6 +222,7 @@
 *.webflow.io
 *.webflow.com
 *.pstorage.space
+*.netcdn.space
 
 ; ==============================================================================
 ; ==============================================================================
