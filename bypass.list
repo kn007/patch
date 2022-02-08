@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/02/07
+; Date: 2022/02/08
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -232,6 +232,9 @@
 *.iili.io
 *.weserv.nl
 *.shoot.photo
+*.ccp.ovh
+*.imagebam.com
+*.truenas.com
 
 ; ==============================================================================
 ; ==============================================================================
