@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/02/18
+; Date: 2022/04/04
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -240,6 +240,7 @@
 *.skyvector.com
 *.postimgs.org
 *.postlmg.cc
+*.imagecurl.com
 
 ; ==============================================================================
 ; ==============================================================================
