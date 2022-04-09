@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/04/04
+; Date: 2022/04/09
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -241,6 +241,13 @@
 *.postimgs.org
 *.postlmg.cc
 *.imagecurl.com
+*.simbrief.com
+*.flightsim.to
+*.flybywiresim.com
+*.chartfox.org
+*.openstreetmap.org
+*.vatsim.net
+*.navigraph.com
 
 ; ==============================================================================
 ; ==============================================================================
