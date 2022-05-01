@@ -14,6 +14,8 @@ IP-CIDR6,fe80::/10,no-resolve
 IP-CIDR6,fd00::/8,no-resolve
 DOMAIN-SUFFIX,smtp
 DOMAIN-KEYWORD,aria2
+DOMAIN-KEYWORD,announce
+DOMAIN-KEYWORD,tracker
 PROCESS-NAME,aria2c.exe
 PROCESS-NAME,fdm.exe
 PROCESS-NAME,Folx.exe
