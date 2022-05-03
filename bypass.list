@@ -90,6 +90,8 @@
 *.bbc.co.uk
 *.travis-ci.org
 *.*.google
+*.goog
+*.pki.goog
 *.cdninstagram.com
 *.wordpress.org
 *.slideshare.net
