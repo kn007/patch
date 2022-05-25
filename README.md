@@ -18,7 +18,7 @@ Require: Nginx 1.21.4 or later.
 
 Test pass: 1.21.6 with [cloudflare/quiche@4bda091](https://github.com/cloudflare/quiche/tree/4bda0917dd5aa535f39214063ee85c2cad00ceb2)
 
-Check your modules when you build failed.
+<b>Check your modules when you build failed.</b>
 
 ### nginx_with_quic_for_1.19.7_full.patch (Discontinued)
 * Add HTTP3(QUIC) Support.
