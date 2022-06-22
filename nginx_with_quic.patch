@@ -3,12 +3,12 @@ Add HTTP2 HPACK Encoding Support.
 Add Dynamic TLS Record Support.
 
 Using: patch -p1 < nginx_with_quic.patch
-Based on cloudflare/quiche 4bda091.
+Based on cloudflare/quiche 5077595.
 Requires nginx 1.21.4 or later to patch.
 
 diff --color -uNr a/auto/lib/conf b/auto/lib/conf
---- a/auto/lib/conf	2022-01-25 23:03:52.000000000 +0800
-+++ b/auto/lib/conf	2022-05-26 02:57:58.724440149 +0800
+--- a/auto/lib/conf	2022-06-21 22:25:37.000000000 +0800
++++ b/auto/lib/conf	2022-06-22 16:58:06.662736948 +0800
 @@ -25,6 +25,10 @@
      . auto/lib/openssl/conf
  fi
@@ -21,8 +21,8 @@ diff --color -uNr a/auto/lib/conf b/auto/lib/conf
      . auto/lib/zlib/conf
  fi
 diff --color -uNr a/auto/lib/make b/auto/lib/make
---- a/auto/lib/make	2022-01-25 23:03:52.000000000 +0800
-+++ b/auto/lib/make	2022-05-26 02:57:58.724440149 +0800
+--- a/auto/lib/make	2022-06-21 22:25:37.000000000 +0800
++++ b/auto/lib/make	2022-06-22 16:58:06.662736948 +0800
 @@ -11,6 +11,10 @@
      . auto/lib/openssl/make
  fi
@@ -35,8 +35,8 @@ diff --color -uNr a/auto/lib/make b/auto/lib/make
      . auto/lib/zlib/make
  fi
 diff --color -uNr a/auto/lib/openssl/make b/auto/lib/openssl/make
---- a/auto/lib/openssl/make	2022-01-25 23:03:52.000000000 +0800
-+++ b/auto/lib/openssl/make	2022-05-26 02:57:58.725440175 +0800
+--- a/auto/lib/openssl/make	2022-06-21 22:25:37.000000000 +0800
++++ b/auto/lib/openssl/make	2022-06-22 16:58:06.662736948 +0800
 @@ -49,11 +49,13 @@
          cat << END                                            >> $NGX_MAKEFILE
  
@@ -58,7 +58,7 @@ diff --color -uNr a/auto/lib/openssl/make b/auto/lib/openssl/make
  
 diff --color -uNr a/auto/lib/quiche/conf b/auto/lib/quiche/conf
 --- a/auto/lib/quiche/conf	1970-01-01 08:00:00.000000000 +0800
-+++ b/auto/lib/quiche/conf	2022-05-26 02:57:58.725440175 +0800
++++ b/auto/lib/quiche/conf	2022-06-22 16:58:06.662736948 +0800
 @@ -0,0 +1,23 @@
 +
 +# Copyright (C) Cloudflare, Inc.
@@ -85,7 +85,7 @@ diff --color -uNr a/auto/lib/quiche/conf b/auto/lib/quiche/conf
 +fi
 diff --color -uNr a/auto/lib/quiche/make b/auto/lib/quiche/make
 --- a/auto/lib/quiche/make	1970-01-01 08:00:00.000000000 +0800
-+++ b/auto/lib/quiche/make	2022-05-26 02:57:58.725440175 +0800
++++ b/auto/lib/quiche/make	2022-06-22 16:58:06.662736948 +0800
 @@ -0,0 +1,23 @@
 +
 +# Copyright (C) Cloudflare, Inc.
@@ -111,8 +111,8 @@ diff --color -uNr a/auto/lib/quiche/make b/auto/lib/quiche/make
 +
 +END
 diff --color -uNr a/auto/make b/auto/make
---- a/auto/make	2022-01-25 23:03:52.000000000 +0800
-+++ b/auto/make	2022-05-26 02:57:58.725440175 +0800
+--- a/auto/make	2022-06-21 22:25:37.000000000 +0800
++++ b/auto/make	2022-06-22 16:58:06.662736948 +0800
 @@ -7,7 +7,8 @@
  
  mkdir -p $NGX_OBJS/src/core $NGX_OBJS/src/event $NGX_OBJS/src/event/modules \
@@ -124,8 +124,8 @@ diff --color -uNr a/auto/make b/auto/make
           $NGX_OBJS/src/mail \
           $NGX_OBJS/src/stream \
 diff --color -uNr a/auto/modules b/auto/modules
---- a/auto/modules	2022-01-25 23:03:52.000000000 +0800
-+++ b/auto/modules	2022-05-26 03:00:55.913987753 +0800
+--- a/auto/modules	2022-06-21 22:25:37.000000000 +0800
++++ b/auto/modules	2022-06-22 16:58:06.942744119 +0800
 @@ -124,6 +124,7 @@
      #     ngx_http_header_filter
      #     ngx_http_chunked_filter
@@ -210,8 +210,8 @@ diff --color -uNr a/auto/modules b/auto/modules
  
  if [ $USE_PCRE = YES ]; then
 diff --color -uNr a/auto/options b/auto/options
---- a/auto/options	2022-01-25 23:03:52.000000000 +0800
-+++ b/auto/options	2022-05-26 03:00:55.915987805 +0800
+--- a/auto/options	2022-06-21 22:25:37.000000000 +0800
++++ b/auto/options	2022-06-22 16:58:06.943744144 +0800
 @@ -59,6 +59,8 @@
  HTTP_GZIP=YES
  HTTP_SSL=NO
@@ -260,8 +260,8 @@ diff --color -uNr a/auto/options b/auto/options
    --with-http_addition_module        enable ngx_http_addition_module
    --with-http_xslt_module            enable ngx_http_xslt_module
 diff --color -uNr a/src/core/ngx_connection.h b/src/core/ngx_connection.h
---- a/src/core/ngx_connection.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/core/ngx_connection.h	2022-05-26 02:57:58.726440201 +0800
+--- a/src/core/ngx_connection.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/core/ngx_connection.h	2022-06-22 16:58:06.663736974 +0800
 @@ -77,6 +77,9 @@
      unsigned            deferred_accept:1;
      unsigned            delete_deferred:1;
@@ -284,8 +284,8 @@ diff --color -uNr a/src/core/ngx_connection.h b/src/core/ngx_connection.h
      socklen_t           local_socklen;
  
 diff --color -uNr a/src/core/ngx_core.h b/src/core/ngx_core.h
---- a/src/core/ngx_core.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/core/ngx_core.h	2022-05-26 02:57:58.726440201 +0800
+--- a/src/core/ngx_core.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/core/ngx_core.h	2022-06-22 16:58:06.664737000 +0800
 @@ -83,6 +83,9 @@
  #if (NGX_OPENSSL)
  #include <ngx_event_openssl.h>
@@ -297,8 +297,8 @@ diff --color -uNr a/src/core/ngx_core.h b/src/core/ngx_core.h
  #include <ngx_conf_file.h>
  #include <ngx_module.h>
 diff --color -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
---- a/src/core/ngx_murmurhash.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/core/ngx_murmurhash.c	2022-05-26 03:00:55.915987805 +0800
+--- a/src/core/ngx_murmurhash.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/core/ngx_murmurhash.c	2022-06-22 16:58:06.943744144 +0800
 @@ -50,3 +50,63 @@
  
      return h;
@@ -364,8 +364,8 @@ diff --color -uNr a/src/core/ngx_murmurhash.c b/src/core/ngx_murmurhash.c
 +    return h;
 +}
 diff --color -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
---- a/src/core/ngx_murmurhash.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/core/ngx_murmurhash.h	2022-05-26 03:00:55.915987805 +0800
+--- a/src/core/ngx_murmurhash.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/core/ngx_murmurhash.h	2022-06-22 16:58:06.943744144 +0800
 @@ -15,5 +15,7 @@
  
  uint32_t ngx_murmur_hash2(u_char *data, size_t len);
@@ -375,8 +375,8 @@ diff --color -uNr a/src/core/ngx_murmurhash.h b/src/core/ngx_murmurhash.h
  
  #endif /* _NGX_MURMURHASH_H_INCLUDED_ */
 diff --color -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.c
---- a/src/event/ngx_event_openssl.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/event/ngx_event_openssl.c	2022-05-26 03:00:55.917987856 +0800
+--- a/src/event/ngx_event_openssl.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/event/ngx_event_openssl.c	2022-06-22 16:58:06.945744195 +0800
 @@ -1629,6 +1629,7 @@
  
      sc->buffer = ((flags & NGX_SSL_BUFFER) != 0);
@@ -438,8 +438,8 @@ diff --color -uNr a/src/event/ngx_event_openssl.c b/src/event/ngx_event_openssl.
  
              c->read->handler = c->ssl->saved_read_handler;
 diff --color -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.h
---- a/src/event/ngx_event_openssl.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/event/ngx_event_openssl.h	2022-05-26 03:00:55.917987856 +0800
+--- a/src/event/ngx_event_openssl.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/event/ngx_event_openssl.h	2022-06-22 16:58:06.945744195 +0800
 @@ -78,10 +78,19 @@
  typedef struct ngx_ssl_ocsp_s  ngx_ssl_ocsp_t;
  
@@ -482,8 +482,8 @@ diff --color -uNr a/src/event/ngx_event_openssl.h b/src/event/ngx_event_openssl.
  
 diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 --- a/src/event/ngx_event_quic.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/event/ngx_event_quic.c	2022-05-26 02:57:58.726440201 +0800
-@@ -0,0 +1,620 @@
++++ b/src/event/ngx_event_quic.c	2022-06-22 16:58:06.664737000 +0800
+@@ -0,0 +1,625 @@
 +
 +/*
 + * Copyright (C) Cloudflare, Inc.
@@ -659,6 +659,7 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +#endif
 +
 +    conn = quiche_conn_new_with_tls(scid, sizeof(scid), NULL, 0,
++                                    c->local_sockaddr, c->local_socklen,
 +                                    c->sockaddr, c->socklen, quic->config,
 +                                    c->ssl->connection, true);
 +    if (conn == NULL) {
@@ -692,6 +693,8 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +    quiche_recv_info recv_info = {
 +        c->sockaddr,
 +        c->socklen,
++        c->local_sockaddr,
++        c->local_socklen,
 +    };
 +
 +    /* Process the client's Initial packet, which was saved into c->buffer by
@@ -754,6 +757,8 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +        quiche_recv_info recv_info = {
 +            c->sockaddr,
 +            c->socklen,
++            c->local_sockaddr,
++            c->local_socklen,
 +        };
 +
 +        ssize_t done = quiche_conn_recv(c->quic->conn, buf, n, &recv_info);
@@ -1106,7 +1111,7 @@ diff --color -uNr a/src/event/ngx_event_quic.c b/src/event/ngx_event_quic.c
 +}
 diff --color -uNr a/src/event/ngx_event_quic.h b/src/event/ngx_event_quic.h
 --- a/src/event/ngx_event_quic.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/event/ngx_event_quic.h	2022-05-26 02:57:58.726440201 +0800
++++ b/src/event/ngx_event_quic.h	2022-06-22 16:58:06.665737025 +0800
 @@ -0,0 +1,49 @@
 +
 +/*
@@ -1158,9 +1163,9 @@ diff --color -uNr a/src/event/ngx_event_quic.h b/src/event/ngx_event_quic.h
 +
 +#endif /* _NGX_EVENT_QUIC_H_INCLUDED_ */
 diff --color -uNr a/src/event/ngx_event_udp.c b/src/event/ngx_event_udp.c
---- a/src/event/ngx_event_udp.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/event/ngx_event_udp.c	2022-05-26 02:57:58.727440226 +0800
-@@ -276,6 +276,14 @@
+--- a/src/event/ngx_event_udp.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/event/ngx_event_udp.c	2022-06-22 16:58:06.666737051 +0800
+@@ -204,6 +204,14 @@
          (void) ngx_atomic_fetch_add(ngx_stat_accepted, 1);
  #endif
  
@@ -1176,8 +1181,8 @@ diff --color -uNr a/src/event/ngx_event_udp.c b/src/event/ngx_event_udp.c
                                - ngx_cycle->free_connection_n;
  
 diff --color -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ngx_http_ssl_module.c
---- a/src/http/modules/ngx_http_ssl_module.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.c	2022-05-26 03:00:55.918987882 +0800
+--- a/src/http/modules/ngx_http_ssl_module.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/modules/ngx_http_ssl_module.c	2022-06-22 16:58:06.946744221 +0800
 @@ -296,6 +296,41 @@
        offsetof(ngx_http_ssl_srv_conf_t, reject_handshake),
        NULL },
@@ -1317,8 +1322,8 @@ diff --color -uNr a/src/http/modules/ngx_http_ssl_module.c b/src/http/modules/ng
  }
  
 diff --color -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ngx_http_ssl_module.h
---- a/src/http/modules/ngx_http_ssl_module.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/modules/ngx_http_ssl_module.h	2022-05-26 03:00:55.918987882 +0800
+--- a/src/http/modules/ngx_http_ssl_module.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/modules/ngx_http_ssl_module.h	2022-06-22 16:58:06.946744221 +0800
 @@ -67,6 +67,12 @@
  
      u_char                         *file;
@@ -1333,8 +1338,8 @@ diff --color -uNr a/src/http/modules/ngx_http_ssl_module.h b/src/http/modules/ng
  
  
 diff --color -uNr a/src/http/ngx_http.c b/src/http/ngx_http.c
---- a/src/http/ngx_http.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http.c	2022-05-26 02:57:58.727440226 +0800
+--- a/src/http/ngx_http.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http.c	2022-06-22 16:58:06.667737076 +0800
 @@ -1178,6 +1178,7 @@
  ngx_http_add_listen(ngx_conf_t *cf, ngx_http_core_srv_conf_t *cscf,
      ngx_http_listen_opt_t *lsopt)
@@ -1443,9 +1448,9 @@ diff --color -uNr a/src/http/ngx_http.c b/src/http/ngx_http.c
          if (addr[i].hash.buckets == NULL
              && (addr[i].wc_head == NULL
 diff --color -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_module.c
---- a/src/http/ngx_http_core_module.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http_core_module.c	2022-05-26 02:57:58.728440252 +0800
-@@ -4191,6 +4191,13 @@
+--- a/src/http/ngx_http_core_module.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http_core_module.c	2022-06-22 16:58:06.668737102 +0800
+@@ -4283,6 +4283,13 @@
              continue;
          }
  
@@ -1460,8 +1465,8 @@ diff --color -uNr a/src/http/ngx_http_core_module.c b/src/http/ngx_http_core_mod
                             "invalid parameter \"%V\"", &value[n]);
          return NGX_CONF_ERROR;
 diff --color -uNr a/src/http/ngx_http_core_module.h b/src/http/ngx_http_core_module.h
---- a/src/http/ngx_http_core_module.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http_core_module.h	2022-05-26 02:57:58.729440278 +0800
+--- a/src/http/ngx_http_core_module.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http_core_module.h	2022-06-22 16:58:06.668737102 +0800
 @@ -82,6 +82,7 @@
      unsigned                   reuseport:1;
      unsigned                   so_keepalive:2;
@@ -1487,8 +1492,8 @@ diff --color -uNr a/src/http/ngx_http_core_module.h b/src/http/ngx_http_core_mod
  
  
 diff --color -uNr a/src/http/ngx_http.h b/src/http/ngx_http.h
---- a/src/http/ngx_http.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http.h	2022-05-26 02:57:58.728440252 +0800
+--- a/src/http/ngx_http.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http.h	2022-06-22 16:58:06.667737076 +0800
 @@ -20,6 +20,7 @@
  typedef struct ngx_http_log_ctx_s     ngx_http_log_ctx_t;
  typedef struct ngx_http_chunked_s     ngx_http_chunked_t;
@@ -1508,8 +1513,8 @@ diff --color -uNr a/src/http/ngx_http.h b/src/http/ngx_http.h
  #include <ngx_http_cache.h>
  #endif
 diff --color -uNr a/src/http/ngx_http_request_body.c b/src/http/ngx_http_request_body.c
---- a/src/http/ngx_http_request_body.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http_request_body.c	2022-05-26 02:57:58.731440329 +0800
+--- a/src/http/ngx_http_request_body.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http_request_body.c	2022-06-22 16:58:06.670737153 +0800
 @@ -314,6 +314,12 @@
                              ngx_del_timer(c->read);
                          }
@@ -1579,9 +1584,9 @@ diff --color -uNr a/src/http/ngx_http_request_body.c b/src/http/ngx_http_request
          return ngx_http_request_body_chunked_filter(r, in);
  
 diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
---- a/src/http/ngx_http_request.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http_request.c	2022-05-26 03:00:57.531029254 +0800
-@@ -64,6 +64,10 @@
+--- a/src/http/ngx_http_request.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http_request.c	2022-06-22 16:58:07.037746552 +0800
+@@ -62,6 +62,10 @@
  static void ngx_http_ssl_handshake_handler(ngx_connection_t *c);
  #endif
  
@@ -1592,7 +1597,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
  
  static char *ngx_http_client_errors[] = {
  
-@@ -350,6 +354,20 @@
+@@ -348,6 +352,20 @@
          c->log->action = "reading PROXY protocol";
      }
  
@@ -1613,7 +1618,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
      if (rev->ready) {
          /* the deferred accept(), iocp */
  
-@@ -805,8 +823,9 @@
+@@ -803,8 +821,9 @@
  
          c->ssl->no_wait_shutdown = 1;
  
@@ -1625,7 +1630,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
          {
          unsigned int            len;
          const unsigned char    *data;
-@@ -814,15 +833,33 @@
+@@ -812,15 +831,33 @@
  
          hc = c->data;
  
@@ -1660,7 +1665,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
          }
  #endif
  
-@@ -1047,6 +1084,70 @@
+@@ -1045,6 +1082,70 @@
  
  #endif
  
@@ -1731,7 +1736,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
  
  static void
  ngx_http_process_request_line(ngx_event_t *rev)
-@@ -2736,6 +2837,13 @@
+@@ -2710,6 +2811,13 @@
      }
  #endif
  
@@ -1745,7 +1750,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
      clcf = ngx_http_get_module_loc_conf(r, ngx_http_core_module);
  
      if (r->main->count != 1) {
-@@ -2950,6 +3058,19 @@
+@@ -2924,6 +3032,19 @@
  
  #endif
  
@@ -1765,7 +1770,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
  #if (NGX_HAVE_KQUEUE)
  
      if (ngx_event_flags & NGX_USE_KQUEUE_EVENT) {
-@@ -3642,7 +3763,15 @@
+@@ -3616,7 +3737,15 @@
      }
  #endif
  
@@ -1781,7 +1786,7 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
      ngx_http_close_connection(c);
  }
  
-@@ -3763,6 +3892,17 @@
+@@ -3737,6 +3866,17 @@
      ngx_log_debug1(NGX_LOG_DEBUG_HTTP, c->log, 0,
                     "close http connection: %d", c->fd);
  
@@ -1800,8 +1805,8 @@ diff --color -uNr a/src/http/ngx_http_request.c b/src/http/ngx_http_request.c
  
      if (c->ssl) {
 diff --color -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
---- a/src/http/ngx_http_request.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http_request.h	2022-05-26 02:57:58.730440303 +0800
+--- a/src/http/ngx_http_request.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http_request.h	2022-06-22 16:58:06.670737153 +0800
 @@ -24,6 +24,7 @@
  #define NGX_HTTP_VERSION_10                1000
  #define NGX_HTTP_VERSION_11                1001
@@ -1810,7 +1815,7 @@ diff --color -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
  
  #define NGX_HTTP_UNKNOWN                   0x00000001
  #define NGX_HTTP_GET                       0x00000002
-@@ -327,6 +328,7 @@
+@@ -329,6 +330,7 @@
      ngx_chain_t                      *free;
  
      unsigned                          ssl:1;
@@ -1818,7 +1823,7 @@ diff --color -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
      unsigned                          proxy_protocol:1;
  } ngx_http_connection_t;
  
-@@ -449,6 +451,7 @@
+@@ -451,6 +453,7 @@
  
      ngx_http_connection_t            *http_connection;
      ngx_http_v2_stream_t             *stream;
@@ -1827,9 +1832,9 @@ diff --color -uNr a/src/http/ngx_http_request.h b/src/http/ngx_http_request.h
      ngx_http_log_handler_pt           log_handler;
  
 diff --color -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
---- a/src/http/ngx_http_upstream.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/ngx_http_upstream.c	2022-05-26 02:57:58.732440355 +0800
-@@ -525,6 +525,13 @@
+--- a/src/http/ngx_http_upstream.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/ngx_http_upstream.c	2022-06-22 16:58:06.672737204 +0800
+@@ -521,6 +521,13 @@
      }
  #endif
  
@@ -1843,7 +1848,7 @@ diff --color -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
      if (c->read->timer_set) {
          ngx_del_timer(c->read);
      }
-@@ -1357,6 +1364,12 @@
+@@ -1353,6 +1360,12 @@
          return;
      }
  #endif
@@ -1857,8 +1862,8 @@ diff --color -uNr a/src/http/ngx_http_upstream.c b/src/http/ngx_http_upstream.c
  #if (NGX_HAVE_KQUEUE)
  
 diff --color -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
---- a/src/http/v2/ngx_http_v2.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.c	2022-05-26 03:00:55.920987933 +0800
+--- a/src/http/v2/ngx_http_v2.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/v2/ngx_http_v2.c	2022-06-22 16:58:06.947744247 +0800
 @@ -274,6 +274,8 @@
  
      h2c->frame_size = NGX_HTTP_V2_DEFAULT_FRAME_SIZE;
@@ -1884,8 +1889,8 @@ diff --color -uNr a/src/http/v2/ngx_http_v2.c b/src/http/v2/ngx_http_v2.c
  
          default:
 diff --color -uNr a/src/http/v2/ngx_http_v2_encode.c b/src/http/v2/ngx_http_v2_encode.c
---- a/src/http/v2/ngx_http_v2_encode.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_encode.c	2022-05-26 03:00:55.920987933 +0800
+--- a/src/http/v2/ngx_http_v2_encode.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_encode.c	2022-06-22 16:58:06.947744247 +0800
 @@ -10,7 +10,7 @@
  #include <ngx_http.h>
  
@@ -1905,8 +1910,8 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_encode.c b/src/http/v2/ngx_http_v2_e
  {
      if (value < prefix) {
 diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_http_v2_filter_module.c
---- a/src/http/v2/ngx_http_v2_filter_module.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_filter_module.c	2022-05-26 03:00:55.920987933 +0800
+--- a/src/http/v2/ngx_http_v2_filter_module.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_filter_module.c	2022-06-22 16:58:06.948744272 +0800
 @@ -23,10 +23,53 @@
  #define ngx_http_v2_literal_size(h)                                           \
      (ngx_http_v2_integer_octets(sizeof(h) - 1) + sizeof(h) - 1)
@@ -2183,7 +2188,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_ht
      }
  
      fin = r->header_only
-@@ -998,6 +964,7 @@
+@@ -997,6 +963,7 @@
  
      for (i = 0; i < NGX_HTTP_V2_PUSH_HEADERS; i++) {
          len += binary[i].len;
@@ -2191,7 +2196,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_ht
      }
  
      pos = ngx_pnalloc(r->pool, len);
-@@ -1007,12 +974,17 @@
+@@ -1006,12 +973,17 @@
  
      start = pos;
  
@@ -2215,7 +2220,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_ht
  
      ngx_log_debug0(NGX_LOG_DEBUG_HTTP, fc->log, 0,
                     "http2 push header: \":method: GET\"");
-@@ -1022,8 +994,7 @@
+@@ -1021,8 +993,7 @@
      ngx_log_debug1(NGX_LOG_DEBUG_HTTP, fc->log, 0,
                     "http2 push header: \":path: %V\"", path);
  
@@ -2225,7 +2230,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_ht
  
      ngx_log_debug1(NGX_LOG_DEBUG_HTTP, fc->log, 0,
                     "http2 push header: \":scheme: %V\"", &r->schema);
-@@ -1048,11 +1019,15 @@
+@@ -1047,11 +1018,15 @@
              continue;
          }
  
@@ -2243,8 +2248,8 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_filter_module.c b/src/http/v2/ngx_ht
  
      frame = ngx_http_v2_create_push_frame(r, start, pos);
 diff --color -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
---- a/src/http/v2/ngx_http_v2.h	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2.h	2022-05-26 03:00:55.921987959 +0800
+--- a/src/http/v2/ngx_http_v2.h	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/v2/ngx_http_v2.h	2022-06-22 16:58:06.948744272 +0800
 @@ -51,6 +51,14 @@
  #define NGX_HTTP_V2_MAX_WINDOW           ((1U << 31) - 1)
  #define NGX_HTTP_V2_DEFAULT_WINDOW       65535
@@ -2374,8 +2379,8 @@ diff --color -uNr a/src/http/v2/ngx_http_v2.h b/src/http/v2/ngx_http_v2.h
 +
  #endif /* _NGX_HTTP_V2_H_INCLUDED_ */
 diff --color -uNr a/src/http/v2/ngx_http_v2_table.c b/src/http/v2/ngx_http_v2_table.c
---- a/src/http/v2/ngx_http_v2_table.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/http/v2/ngx_http_v2_table.c	2022-05-26 03:00:55.922987984 +0800
+--- a/src/http/v2/ngx_http_v2_table.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/http/v2/ngx_http_v2_table.c	2022-06-22 16:58:06.949744298 +0800
 @@ -361,3 +361,434 @@
  
      return NGX_OK;
@@ -2813,7 +2818,7 @@ diff --color -uNr a/src/http/v2/ngx_http_v2_table.c b/src/http/v2/ngx_http_v2_ta
 +#endif
 diff --color -uNr a/src/http/v3/ngx_http_v3.c b/src/http/v3/ngx_http_v3.c
 --- a/src/http/v3/ngx_http_v3.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3.c	2022-05-26 02:57:58.733440380 +0800
++++ b/src/http/v3/ngx_http_v3.c	2022-06-22 16:58:06.673737230 +0800
 @@ -0,0 +1,2234 @@
 +
 +/*
@@ -5051,7 +5056,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3.c b/src/http/v3/ngx_http_v3.c
 +}
 diff --color -uNr a/src/http/v3/ngx_http_v3_filter_module.c b/src/http/v3/ngx_http_v3_filter_module.c
 --- a/src/http/v3/ngx_http_v3_filter_module.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3_filter_module.c	2022-05-26 02:57:58.733440380 +0800
++++ b/src/http/v3/ngx_http_v3_filter_module.c	2022-06-22 16:58:06.673737230 +0800
 @@ -0,0 +1,68 @@
 +
 +/*
@@ -5123,7 +5128,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3_filter_module.c b/src/http/v3/ngx_ht
 +}
 diff --color -uNr a/src/http/v3/ngx_http_v3.h b/src/http/v3/ngx_http_v3.h
 --- a/src/http/v3/ngx_http_v3.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3.h	2022-05-26 02:57:58.733440380 +0800
++++ b/src/http/v3/ngx_http_v3.h	2022-06-22 16:58:06.673737230 +0800
 @@ -0,0 +1,79 @@
 +
 +/*
@@ -5206,7 +5211,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3.h b/src/http/v3/ngx_http_v3.h
 +#endif /* _NGX_HTTP_V3_H_INCLUDED_ */
 diff --color -uNr a/src/http/v3/ngx_http_v3_module.c b/src/http/v3/ngx_http_v3_module.c
 --- a/src/http/v3/ngx_http_v3_module.c	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3_module.c	2022-05-26 02:57:58.733440380 +0800
++++ b/src/http/v3/ngx_http_v3_module.c	2022-06-22 16:58:06.673737230 +0800
 @@ -0,0 +1,286 @@
 +
 +/*
@@ -5496,7 +5501,7 @@ diff --color -uNr a/src/http/v3/ngx_http_v3_module.c b/src/http/v3/ngx_http_v3_m
 +}
 diff --color -uNr a/src/http/v3/ngx_http_v3_module.h b/src/http/v3/ngx_http_v3_module.h
 --- a/src/http/v3/ngx_http_v3_module.h	1970-01-01 08:00:00.000000000 +0800
-+++ b/src/http/v3/ngx_http_v3_module.h	2022-05-26 02:57:58.733440380 +0800
++++ b/src/http/v3/ngx_http_v3_module.h	2022-06-22 16:58:06.674737256 +0800
 @@ -0,0 +1,34 @@
 +
 +/*
@@ -5533,9 +5538,9 @@ diff --color -uNr a/src/http/v3/ngx_http_v3_module.h b/src/http/v3/ngx_http_v3_m
 +
 +#endif /* _NGX_HTTP_V3_MODULE_H_INCLUDED_ */
 diff --color -uNr a/src/os/unix/ngx_udp_sendmsg_chain.c b/src/os/unix/ngx_udp_sendmsg_chain.c
---- a/src/os/unix/ngx_udp_sendmsg_chain.c	2022-01-25 23:03:52.000000000 +0800
-+++ b/src/os/unix/ngx_udp_sendmsg_chain.c	2022-05-26 02:57:58.734440406 +0800
-@@ -322,6 +322,7 @@
+--- a/src/os/unix/ngx_udp_sendmsg_chain.c	2022-06-21 22:25:37.000000000 +0800
++++ b/src/os/unix/ngx_udp_sendmsg_chain.c	2022-06-22 16:58:06.674737256 +0800
+@@ -403,6 +403,7 @@
  
          switch (err) {
          case NGX_EAGAIN:
