@@ -16,7 +16,7 @@ Test pass: 1.23.0
 
 Require: Nginx 1.21.4 or later.
 
-Test pass: 1.21.6 with [cloudflare/quiche@4bda091](https://github.com/cloudflare/quiche/tree/4bda0917dd5aa535f39214063ee85c2cad00ceb2)
+Test pass: 1.23.0 with [cloudflare/quiche@5077595](https://github.com/cloudflare/quiche/tree/5077595573b092b1fd8fb5b0cd277806f5c1f8f2)
 
 <b>Check your modules when build failed.</b>
 
@@ -52,7 +52,7 @@ Test pass: 1.23.0
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.21.6
+Test pass: 1.23.0
 
 ### nginx_with_spdy.patch (Deprecated)
 * Add SPDY Support.
