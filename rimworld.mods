@@ -1,0 +1,375 @@
+Version: 1
+Name: 1.3n
+Mods:
+- Id: brrainz.harmony
+  Name: Harmony
+- Id: ludeon.rimworld
+  Name: 核心
+- Id: automatic.startupimpact
+  Name: Startup impact
+- Id: fluffy.modmanager
+  Name: Mod Manager
+- Id: imranfish.xmlextensions
+  Name: XML Extensions
+- Id: ludeon.rimworld.royalty
+  Name: 皇权
+- Id: ludeon.rimworld.ideology
+  Name: 文化
+- Id: unlimitedhugs.hugslib
+  Name: HugsLib
+- Id: rwzh.chinesepack.hugslib
+  Name: HugsLib_zh
+- Id: trinity.runtimegcupdated
+  Name: RuntimeGC [1.3]
+- Id: lazycat.nopseudotranslate
+  Name: No Pseudo Translate无开发者乱码
+- Id: madeline.modmismatchformatter
+  Name: Better ModMismatch Window
+- Id: peppsen.pmusic
+  Name: P-Music
+- Id: fluffy.musicmanager
+  Name: Music Manager
+- Id: oskarpotocki.vanillafactionsexpanded.core
+  Name: Vanilla Expanded Framework
+- Id: rwzh.chinesepack.vanillafactionsexpandedcore
+  Name: Vanilla_Expanded_Framework_zh
+- Id: vanillaexpanded.vanillatraitsexpanded
+  Name: Vanilla Traits Expanded
+- Id: rwzh.chinesepack.vanillatraitsexpanded
+  Name: Vanilla_Traits_Expanded_zh
+- Id: vanillaexpanded.vtexe
+  Name: Vanilla Textures Expanded
+- Id: rwzh.chinesepack.vtexe
+  Name: Vanilla_Textures_Expanded_zh
+- Id: vanillaexpanded.vfepower
+  Name: Vanilla Furniture Expanded - Power
+- Id: rwzh.chinesepack.vfepower
+  Name: Vanilla_Furniture_Expanded_Power_zh
+- Id: vanillaexpanded.vcef
+  Name: Vanilla Fishing Expanded
+- Id: rwzh.chinesepack.vcef
+  Name: Vanilla_Fishing_Expanded_zh
+- Id: moretraitslots.kv.rw
+  Name: '[KV] More Trait Slots'
+- Id: moretraitslots.kv.rw.zh
+  Name: '[KV] More Trait Slots 简繁中文汉化 更多特性槽'
+- Id: vanillaexpanded.vhe
+  Name: Vanilla Hair Expanded
+- Id: rwzh.chinesepack.vhe
+  Name: Vanilla_Hair_Expanded_zh
+- Id: rimsenal.hair
+  Name: Rimsenal - Hair pack
+- Id: won.hair
+  Name: Won hair_men
+- Id: won2.hair
+  Name: 'Won hair_women '
+- Id: mlie.morepracticaltraits
+  Name: More Practical Traits (Continued)
+- Id: void.charactereditor
+  Name: Character Editor
+- Id: edb.preparecarefully
+  Name: EdB Prepare Carefully
+- Id: sarg.smartspeed
+  Name: Smart Speed
+- Id: configurablemaps.kv.rw
+  Name: '[KV] Configurable Maps'
+- Id: chinesepackage.configurablemaps
+  Name: ConfigurableMaps-可编辑地图繁简中文补丁
+- Id: unlimitedhugs.mapreroll
+  Name: Map Reroll
+- Id: m00nl1ght.mappreview
+  Name: Map Preview
+- Id: zh.m00nl1ght.mappreview
+  Name: Map Preview_zh
+- Id: sdknm2.pawnrenderpatchforhd
+  Name: Pawn Render Patch for HD
+- Id: derekbickley.ltocolonygroupsfinal
+  Name: '[LTO] Colony Groups'
+- Id: zh.ltocolonygroupsfinal
+  Name: '[LTO] Colony Groups简繁中文汉化包'
+- Id: dark.jobinbar
+  Name: Job In Bar
+- Id: chinesetranslation.whw.jobinbar
+  Name: Job In Bar 个人简中汉化
+- Id: nals.facialanimation
+  Name: '[NL] Facial Animation - WIP'
+- Id: jaxe.bubbles
+  Name: Interaction Bubbles
+- Id: jaxe.bubbles.zh.hc
+  Name: Interaction Bubbles_zh
+- Id: jpt.speakup
+  Name: SpeakUp
+- Id: zh.speakup
+  Name: SpeakUp简体中文汉化包
+- Id: jaxe.rimhud
+  Name: RimHUD
+- Id: shouer.chinesepack.rimhud
+  Name: RimHUD_zh
+- Id: kahdeg.killfeed
+  Name: Killfeed
+- Id: automatic.recipeicons
+  Name: Recipe icons
+- Id: dubwise.dubsappareltweaks
+  Name: Dubs Apparel Tweaks
+- Id: rwzh.chinesepack.dubsappareltweaks
+  Name: Dubs_Apparel_Tweaks_zh
+- Id: owlchemist.toggleableoverlays
+  Name: Toggleable Overlays
+- Id: zh.owlchemist.toggleableoverlays
+  Name: Toggleable Overlays_zh
+- Id: owlchemist.toggleablereadouts
+  Name: Toggleable Readouts
+- Id: pzqaks.toggleablereadouts.zh
+  Name: Toggleable Readouts简体中文汉化
+- Id: legodude17.qualcolor
+  Name: Quality Colors
+- Id: falconne.heatmap
+  Name: Heat Map
+- Id: smashphil.loadinginprogress
+  Name: Loading In Progress
+- Id: wiseclock.ac.daysmatter
+  Name: Days Matter (fork)
+- Id: vanya.tools.blightedalert
+  Name: Blighted Alert
+- Id: fyarn.fixablemooddebuffsalert
+  Name: Fixable Mood Debuffs Alert
+- Id: tammybee.predatorhuntalert
+  Name: Predator Hunt Alert
+- Id: tammybee.restocknotification
+  Name: Restock Notification
+- Id: jp.adjacentlight
+  Name: Adjacent Light
+- Id: insertkey.itemlistselector
+  Name: ItemListSelector
+- Id: tradingspot.kv.rw
+  Name: '[KV] Trading Spot'
+- Id: timmyliang.tradehelper
+  Name: TradeHelper
+- Id: smashphil.dropspot
+  Name: Trade Ships Drop Spot
+- Id: hatena.animaldiscovery
+  Name: Animal Discovery
+- Id: merthsoft.designatorshapes
+  Name: Designator Shapes
+- Id: beibei.translationpack.designatorshapes
+  Name: Designator Shapes add Translation
+- Id: ogliss.wanderjoinsplus
+  Name: WanderJoinsPlus
+- Id: ogliss.rescueejoinsplus
+  Name: RescueeJoinsPlus
+- Id: vanya.tools.incidentpersonstat
+  Name: Incident Person Stat
+- Id: brrainz.cameraplus
+  Name: Camera+
+- Id: rwzh.chinesepack.cameraplus
+  Name: Camera+_zh
+- Id: indeed.stackxxl
+  Name: Stack XXL
+- Id: fluffy.followme
+  Name: Follow Me
+- Id: unlimitedhugs.allowtool
+  Name: Allow Tool
+- Id: unlimitedhugs.defensivepositions
+  Name: Defensive Positions
+- Id: rwzh.chinesepack.unlimitedhugs
+  Name: UnlimitedHugs_zh_pack
+- Id: navyseal5.moreharvestdesignators
+  Name: More Harvest Designators!
+- Id: thewirelord354.conduitdeconstruct
+  Name: Conduit Deconstruct
+- Id: bob.draggablecornerss
+  Name: Draggable Corners
+- Id: leafzxg.masterofcooking
+  Name: Master of Cooking
+- Id: leafzxg.masterofcrafting
+  Name: Master of Crafting
+- Id: squirtingelephant.cofigurableroomstats
+  Name: Configurable Room Stats
+- Id: frozensnowfox.filthvanisheswithrainandtime
+  Name: '[FSF] Filth Vanishes With Rain And Time'
+- Id: mario1.3patch.metaldontburn
+  Name: Metal Don't Burn (UNOFFICIAL 1.3 PATCH)
+- Id: chicken305.efficienlight
+  Name: Chickens Efficient Light
+- Id: telardo.dragselect
+  Name: DragSelect
+- Id: alien.milkablemuffalo
+  Name: Milkable Muffalo [1.3]
+- Id: scherub.stonecuttingextended
+  Name: Stonecutting Extended
+- Id: automatic.prisonerbedsetowner
+  Name: Set Owner for Prisoner Beds
+- Id: showhair.kv.rw
+  Name: '[KV] Show Hair With Hats or Hide All Hats'
+- Id: captainmuscles.dropinventory
+  Name: Drop All Inventory
+- Id: tikubonn.dontblockdoor
+  Name: DontBlockDoor
+- Id: legodude17.smartdecon
+  Name: Smarter Deconstruction and Mining
+- Id: oninotamasi.legodude17.smartdecon.zh
+  Name: Smarter Deconstruction and Mining繁簡漢化
+- Id: dhultgren.smarterconstruction
+  Name: Smarter Construction
+- Id: tammybee.cutplantsbeforebuilding
+  Name: Cut plants before building
+- Id: mlie.lessstupidromanceattempt
+  Name: Less Stupid Romance Attempt (Continued)
+- Id: vanya.tools.bulkcarrier
+  Name: Bulk Carrier
+- Id: mlie.10xcarryingcapacity
+  Name: 10x Carrying Capacity (Continued)
+- Id: fluffy.medicaltab
+  Name: Medical Tab
+- Id: fluffy.pharmacist
+  Name: Pharmacist
+- Id: antaioz.modmedicinepatch
+  Name: Mod Medicine Patch
+- Id: voult.betterpawncontrol
+  Name: Better Pawn Control
+- Id: jp.perfectpathing
+  Name: Perfect Pathfinding
+- Id: jbloodthorn.nolazydoctors
+  Name: No Lazy Doctors
+- Id: telardo.nolaggybed
+  Name: No Laggy Bed
+- Id: uuugggg.sharetheload
+  Name: Share The Load
+- Id: seekiworksmod.no11
+  Name: Chop Wood with Other Skills
+- Id: puremj.mjrimmods.vanillafix_mortarshellloading
+  Name: 'Vanilla Fix: Mortar Shell Loading'
+- Id: puremj.mjrimmods.vanillafixhaulafterslaughter
+  Name: 'Vanilla Fix: Haul After Slaughter'
+- Id: improvedloadtransportpods.rw
+  Name: Improved Load Transport Pods
+- Id: puremj.mjrimmods.whileyouarenearby
+  Name: While You Are Nearby
+- Id: codeoptimist.jobsofopportunity
+  Name: While You're Up / PUAH+
+- Id: rwzh.chinesepack.jobsofopportunity
+  Name: While_You're_U_PUAH+_zh
+- Id: mehni.pickupandhaul
+  Name: Pick Up And Haul
+- Id: fed1splay.pawntargetfix
+  Name: PawnTargetFix
+- Id: brrainz.achtung
+  Name: Achtung!
+- Id: rwzh.chinesepack.achtung
+  Name: Achtung!_zh
+- Id: rh2.bcd.first.aid
+  Name: '[RH2] BCD: First Aid'
+- Id: zh.rh2bcdfirstaid
+  Name: '[RH2]BCD:First Aid 简繁汉化'
+- Id: rh2.cpers.arrest.here
+  Name: '[RH2] CPERS: Arrest Here!'
+- Id: zh.rh2cpersarresthere
+  Name: '[RH2]CPERS: Arrest Here! 简繁汉化'
+- Id: avilmask.commonsense
+  Name: Common Sense
+- Id: roolo.searchanddestroy
+  Name: Search and Destroy
+- Id: murmur.isid
+  Name: Infestations Spawn in Darkness
+- Id: mlie.dismisstrader
+  Name: Dismiss Trader (Continued)
+- Id: zephyr.dismisstraderzh
+  Name: Dismiss Trader (Continued)简繁汉化
+- Id: sgc.quests
+  Name: Quest Reward Rebalance
+- Id: sandy.rpgstyleinventory.avilmask.revamped
+  Name: RPG Style Inventory Revamped
+- Id: lbmaian.begonemessage
+  Name: Begone, Message!
+- Id: caravansrestbeforearrival.1trickponyta
+  Name: Caravans Rest Before Arrival
+- Id: dakkpasserida.animareplant
+  Name: Replantable Anima Trees
+- Id: vanya.agent.housemaidnukos
+  Name: '[L] House Maid Nukos'
+- Id: com.github.alandariva.moreplanning
+  Name: More Planning 1.3
+- Id: ben.automaticnightowl
+  Name: Automatic Night Owl
+- Id: xelnigma.psyeltex
+  Name: Psy-Eltex
+- Id: xrushha.craftablebroadshieldcore
+  Name: 'Craftable uncraftables: Shield Core'
+- Id: coldzero.craftableroyaltyweapons
+  Name: Craftable Royalty Weapons (Continued)
+- Id: zephyr.craftableroyaltyweaponszh
+  Name: Craftable Royalty Weapons 皇权武器制造简繁汉化
+- Id: cuddle.donottakemyguns
+  Name: Don't take my guns
+- Id: owlchemist.undergroundpowerconduits
+  Name: Underground Power Conduits
+- Id: red.owlchemist.undergroundpowerconduits.zh
+  Name: Underground Power Conduits 简繁汉化包
+- Id: leafzxg.deerextension
+  Name: Deer Extension
+- Id: wemd.fastmoisturepumps
+  Name: '[WD] Fast Moisture Pumps'
+- Id: murmur.walllight
+  Name: Wall Light
+- Id: czk.walllight.patch
+  Name: '[CZK] Wall Light - Vanilla Colours Patch'
+- Id: gt.sam.tilledsoil
+  Name: Tilled Soil
+- Id: rimfridge.kv.rw
+  Name: '[KV] RimFridge'
+- Id: haplo.miscellaneous.training
+  Name: Misc. Training
+- Id: fluffy.backuppower
+  Name: Backup Power
+- Id: dracoix.doormat.r12a
+  Name: Door Mat
+- Id: owlchemist.modulartablesandchairs
+  Name: Modular Tables and Chairs
+- Id: balistafreak.standalonehotspring
+  Name: Standalone Hot Spring
+- Id: rwzh.chinesepack.standalonehotspring
+  Name: Standalone_Hot_Spring_zh
+- Id: notfood.mendandrecycle
+  Name: MendAndRecycle
+- Id: bbbbilly.makereinforcedbarrel
+  Name: Make Reinforced Barrel
+- Id: zlj.staticqualityplus
+  Name: Static Quality Plus
+- Id: hatti.qualitybuilder
+  Name: QualityBuilder
+- Id: rwzh.chinesepack.qualitybuilder
+  Name: QualityBuilder_zh
+- Id: vat.epoeforked
+  Name: Expanded Prosthetics and Organ Engineering - Forked
+- Id: vat.epoeforkedroyalty
+  Name: 'EPOE-Forked: Royalty DLC expansion'
+- Id: rwzh.chinesepack.epoeforkedroyalty
+  Name: EPOE-Forked_Royalty_DLC_expansion_zh
+- Id: rwzh.chinesepack.epoeforked
+  Name: Expanded_Prosthetics_and_Organ_Engineering_Forked_zh
+- Id: neronix17.embrasures
+  Name: '[O21] Seamless Embrasures'
+- Id: neceros.dws.simpleturrets
+  Name: Simple Turrets
+- Id: mlie.prisonersshouldfearturrets
+  Name: Prisoners Should Fear Turrets
+- Id: bustedbunny.prisonersarenotswines
+  Name: Prisoners Are Not Swines
+- Id: ratys.rtfuse
+  Name: RT Fuse
+- Id: ratys.rtsolarflareshield
+  Name: RT Solar Flare Shield
+- Id: rwzh.chinesepack.ratys
+  Name: RT_zh_pack
+- Id: ghostrolly.rim73
+  Name: Rim73 - Performance and Optimisations
+- Id: taranchuk.performanceoptimizer
+  Name: Performance Optimizer
+- Id: pzqaks.performanceoptimize.zh
+  Name: Performance Optimizer简体中文汉化
+- Id: krkr.rocketman
+  Name: RocketMan - Performance Mod
+- Id: dubwise.dubsperformanceanalyzer
+  Name: Dubs Performance Analyzer
+- Id: dubwise.dubsperformanceanalyzer.cntrans
+  Name: Dubs Performance Analyzer性能分析汉化
