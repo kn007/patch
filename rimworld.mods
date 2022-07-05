@@ -71,10 +71,10 @@ Mods:
   Name: EdB Prepare Carefully
 - Id: sarg.smartspeed
   Name: Smart Speed
-- Id: configurablemaps.kv.rw
-  Name: '[KV] Configurable Maps'
-- Id: chinesepackage.configurablemaps
-  Name: ConfigurableMaps-可编辑地图繁简中文补丁
+- Id: zylle.mapdesigner
+  Name: Map Designer
+- Id: rwzh.chinesepack.mapdesigner
+  Name: Map_Designer_zh
 - Id: unlimitedhugs.mapreroll
   Name: Map Reroll
 - Id: m00nl1ght.mappreview
