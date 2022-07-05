@@ -129,6 +129,8 @@ Mods:
   Name: Loading In Progress
 - Id: wiseclock.ac.daysmatter
   Name: Days Matter (fork)
+- Id: telardo.romanceontherim
+  Name: Romance On The Rim
 - Id: vanya.tools.blightedalert
   Name: Blighted Alert
 - Id: fyarn.fixablemooddebuffsalert
