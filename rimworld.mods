@@ -201,8 +201,6 @@ Mods:
   Name: Stonecutting Extended
 - Id: automatic.prisonerbedsetowner
   Name: Set Owner for Prisoner Beds
-- Id: showhair.kv.rw
-  Name: '[KV] Show Hair With Hats or Hide All Hats'
 - Id: captainmuscles.dropinventory
   Name: Drop All Inventory
 - Id: tikubonn.dontblockdoor
