@@ -347,6 +347,14 @@ Mods:
   Name: EPOE-Forked_Royalty_DLC_expansion_zh
 - Id: rwzh.chinesepack.epoeforked
   Name: Expanded_Prosthetics_and_Organ_Engineering_Forked_zh
+- Id: inglix.fasterbiosculptingpod
+  Name: Faster Biosculpter Pod
+- Id: inglix.fasterbiosculptingpod.zh
+  Name: Faster Biosculpter Pod 简繁中文汉化 更快的塑型仓
+- Id: waether.biosculptingplus
+  Name: BioSculptingPlus
+- Id: pzqaks.biosculptingplus.zh
+  Name: BioSculptingPlus 简繁汉化包
 - Id: neronix17.embrasures
   Name: '[O21] Seamless Embrasures'
 - Id: neceros.dws.simpleturrets
