@@ -271,6 +271,8 @@ Mods:
   Name: Search and Destroy
 - Id: murmur.isid
   Name: Infestations Spawn in Darkness
+- Id: gorymoon.closeall
+  Name: CloseAll
 - Id: mlie.dismisstrader
   Name: Dismiss Trader (Continued)
 - Id: zephyr.dismisstraderzh
