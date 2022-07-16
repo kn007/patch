@@ -209,6 +209,8 @@ Mods:
   Name: DontBlockDoor
 - Id: mlie.nomoreautoroof
   Name: NoMoreAutoroof (Continued)
+- Id: andery233xj.mod.removehealthdraw
+  Name: Remove Health Draw
 - Id: legodude17.smartdecon
   Name: Smarter Deconstruction and Mining
 - Id: oninotamasi.legodude17.smartdecon.zh
