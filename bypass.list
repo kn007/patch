@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/06/30
+; Date: 2022/07/24
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -265,6 +265,7 @@
 *.jsdelivr.net
 *.jsdelivr.com
 *.evga.com
+*.imageshack.com
 
 ; ==============================================================================
 ; ==============================================================================
