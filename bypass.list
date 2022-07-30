@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/07/24
+; Date: 2022/07/30
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -269,6 +269,9 @@
 *.adultempire.com
 *.exoticaz.to
 *.storages.cc
+*.rockstargames.com
+*.arkoselabs.com
+*.arkoselabs.cn
 
 ; ==============================================================================
 ; ==============================================================================
