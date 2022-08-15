@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/07/30
+; Date: 2022/08/16
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -272,6 +272,9 @@
 *.rockstargames.com
 *.arkoselabs.com
 *.arkoselabs.cn
+*.javhdporn.net
+*.i18n.pw
+*.qbittorrent.org
 
 ; ==============================================================================
 ; ==============================================================================
