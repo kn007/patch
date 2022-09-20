@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/08/24
+; Date: 2022/09/20
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -281,6 +281,7 @@
 *.pic599.net
 *.98tuch.net
 *.postto.me
+*.microsoft.com
 
 ; ==============================================================================
 ; ==============================================================================
