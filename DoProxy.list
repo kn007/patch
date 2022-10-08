@@ -70,6 +70,7 @@ DOMAIN-SUFFIX,googlecode.com
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,onedriver.com
 DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,*.wikimedia.org
 DOMAIN-SUFFIX,nodequery.com
 DOMAIN-SUFFIX,androidfilehost.com
 DOMAIN-SUFFIX,appspot.com
