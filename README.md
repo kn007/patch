@@ -6,7 +6,7 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record Support.
 
-Test pass: 1.23.0
+Test pass: 1.23.2
 
 ### nginx_with_quic.patch
 * Add HTTP3(QUIC) Support.
@@ -43,7 +43,7 @@ Test pass: 1.19.6 with [nginx_with_quic.patch@ec8cac4](https://github.com/kn007/
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.23.0
+Test pass: 1.23.2
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -76,7 +76,7 @@ Test pass: 1.17.9 with [cloudflare/quiche@9a8b3b](https://github.com/cloudflare/
 * Add BoringSSL's Equal Preference Support.
 * Add ChaCha20-Poly1305 Draft Version Support.
 
-Test pass: 1.1.1p
+Test pass: 1.1.1r
 
 ### ffmpeg-let-rtmp-flv-support-hevc-h265-opus.patch
 * FLV/RTMP Extensions For FFmpeg.
