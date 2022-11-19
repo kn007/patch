@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/10/25
+; Date: 2022/11/19
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -200,8 +200,12 @@
 *.jable.tv
 *.dmm.co.jp
 *.m-team.cc
+*.pterclub.com
 *.groueta.cc
 *.ccache.org
+*.seejav.bid
+*.picturedata.org
+*.javbee.net
 *.bmp.ovh
 *.open.cd
 *.dmhy.org
