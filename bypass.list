@@ -1,11 +1,12 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/11/19
+; Date: 2022/11/29
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+*.hikarifield.co.jp
 *.postfix.org
 *.ietf.org
 *.schema.org
