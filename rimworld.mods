@@ -6,15 +6,15 @@ Mods:
 - Id: ludeon.rimworld
   Name: 核心
   SteamWorkshopId: 0
-- Id: automatic.startupimpact
-  Name: Startup impact
-  SteamWorkshopId: 1684944322
 - Id: fluffy.modmanager
   Name: Mod Manager
   SteamWorkshopId: 1507748539
 - Id: imranfish.xmlextensions
   Name: XML Extensions
   SteamWorkshopId: 2574315206
+- Id: bs.betterlog
+  Name: Better Log - Fix your errors with style
+  SteamWorkshopId: 2772559481
 - Id: ludeon.rimworld.royalty
   Name: 皇权
   SteamWorkshopId: 0
@@ -28,11 +28,8 @@ Mods:
   Name: HugsLib_zh
   SteamWorkshopId: 1798770746
 - Id: trinity.runtimegcupdated
-  Name: RuntimeGC [1.3]
+  Name: RuntimeGC [1.4]
   SteamWorkshopId: 2559582557
-- Id: lazycat.nopseudotranslate
-  Name: No Pseudo Translate无开发者乱码
-  SteamWorkshopId: 2808842065
 - Id: madeline.modmismatchformatter
   Name: Better ModMismatch Window
   SteamWorkshopId: 1872244972
@@ -73,8 +70,8 @@ Mods:
   Name: Vanilla_Fishing_Expanded_zh
   SteamWorkshopId: 2035866747
 - Id: moretraitslots.kv.rw
-  Name: '[KV] More Trait Slots'
-  SteamWorkshopId: 1508292711
+  Name: '[KV] More Trait Slots [1.4]'
+  SteamWorkshopId: 2878346573
 - Id: moretraitslots.kv.rw.zh
   Name: '[KV] More Trait Slots 简繁中文汉化 更多特性槽'
   SteamWorkshopId: 2746343336
@@ -120,9 +117,6 @@ Mods:
 - Id: zh.m00nl1ght.mappreview
   Name: Map Preview_zh
   SteamWorkshopId: 2804421885
-- Id: sdknm2.pawnrenderpatchforhd
-  Name: Pawn Render Patch for HD
-  SteamWorkshopId: 2539273760
 - Id: murmur.threatpointcap
   Name: Threat Point Cap
   SteamWorkshopId: 2380491067
@@ -286,7 +280,7 @@ Mods:
   Name: '[FSF] Filth Vanishes With Rain And Time'
   SteamWorkshopId: 1508341791
 - Id: mario1.3patch.metaldontburn
-  Name: Metal Don't Burn (UNOFFICIAL 1.3 PATCH)
+  Name: Metal Don't Burn (UNOFFICIAL 1.4 PATCH)
   SteamWorkshopId: 2557145474
 - Id: chicken305.efficienlight
   Name: Chickens Efficient Light
@@ -295,7 +289,7 @@ Mods:
   Name: DragSelect
   SteamWorkshopId: 2599942235
 - Id: alien.milkablemuffalo
-  Name: Milkable Muffalo [1.3]
+  Name: Milkable Muffalo
   SteamWorkshopId: 2019852283
 - Id: scherub.stonecuttingextended
   Name: Stonecutting Extended
@@ -363,7 +357,7 @@ Mods:
 - Id: seekiworksmod.no11
   Name: Chop Wood with Other Skills
   SteamWorkshopId: 2811154414
-- Id: puremj.mjrimmods.vanillafix_mortarshellloading
+- Id: puremj.mjrimmods.vanillafixmortarshellloading
   Name: 'Vanilla Fix: Mortar Shell Loading'
   SteamWorkshopId: 2799902757
 - Id: puremj.mjrimmods.vanillafixhaulafterslaughter
@@ -393,7 +387,7 @@ Mods:
 - Id: rwzh.chinesepack.achtung
   Name: Achtung!_zh
   SteamWorkshopId: 1782765741
-- Id: rh2.bcd.first.aid
+- Id: rh2.bcds.first.aid
   Name: '[RH2] BCD: First Aid'
   SteamWorkshopId: 2563152474
 - Id: zh.rh2bcdfirstaid
@@ -442,14 +436,14 @@ Mods:
   Name: '[L] House Maid Nukos'
   SteamWorkshopId: 1418683071
 - Id: com.github.alandariva.moreplanning
-  Name: More Planning 1.3
+  Name: More Planning [1.4]
   SteamWorkshopId: 2551225702
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
-- Id: xelnigma.psyeltex
-  Name: Psy-Eltex
-  SteamWorkshopId: 2366166093
+- Id: victor.psyultra
+  Name: Psy Ultra
+  SteamWorkshopId: 2879578025
 - Id: xrushha.craftablebroadshieldcore
   Name: 'Craftable uncraftables: Shield Core'
   SteamWorkshopId: 2198480490
@@ -484,8 +478,8 @@ Mods:
   Name: Tilled Soil
   SteamWorkshopId: 725747149
 - Id: rimfridge.kv.rw
-  Name: '[KV] RimFridge'
-  SteamWorkshopId: 1180721235
+  Name: RimFridge Updated
+  SteamWorkshopId: 2878183338
 - Id: haplo.miscellaneous.training
   Name: Misc. Training
   SteamWorkshopId: 717575199
@@ -510,9 +504,12 @@ Mods:
 - Id: bbbbilly.makereinforcedbarrel
   Name: Make Reinforced Barrel
   SteamWorkshopId: 2538773133
-- Id: zlj.staticqualityplus
-  Name: Static Quality Plus
-  SteamWorkshopId: 737358776
+- Id: vis.staticquality
+  Name: Static Quality Stripped
+  SteamWorkshopId: 2801204005
+- Id: ratys.madskills
+  Name: Mad Skills
+  SteamWorkshopId: 731111514
 - Id: hatti.qualitybuilder
   Name: QualityBuilder
   SteamWorkshopId: 754637870
@@ -522,15 +519,15 @@ Mods:
 - Id: vat.epoeforked
   Name: Expanded Prosthetics and Organ Engineering - Forked
   SteamWorkshopId: 1949064302
+- Id: rwzh.chinesepack.epoeforked
+  Name: Expanded_Prosthetics_and_Organ_Engineering_Forked_zh
+  SteamWorkshopId: 2021158028
 - Id: vat.epoeforkedroyalty
   Name: 'EPOE-Forked: Royalty DLC expansion'
   SteamWorkshopId: 2008970276
 - Id: rwzh.chinesepack.epoeforkedroyalty
   Name: EPOE-Forked_Royalty_DLC_expansion_zh
   SteamWorkshopId: 2026231230
-- Id: rwzh.chinesepack.epoeforked
-  Name: Expanded_Prosthetics_and_Organ_Engineering_Forked_zh
-  SteamWorkshopId: 2021158028
 - Id: inglix.fasterbiosculptingpod
   Name: Faster Biosculpter Pod
   SteamWorkshopId: 2576257954
@@ -544,7 +541,7 @@ Mods:
   Name: BioSculptingPlus 简繁汉化包
   SteamWorkshopId: 2619378452
 - Id: neronix17.embrasures
-  Name: '[O21] Seamless Embrasures'
+  Name: Seamless Embrasures
   SteamWorkshopId: 2290689449
 - Id: neceros.dws.simpleturrets
   Name: Simple Turrets
@@ -558,27 +555,21 @@ Mods:
 - Id: ratys.rtfuse
   Name: RT Fuse
   SteamWorkshopId: 728314182
+- Id: oninotamasi.ratys.rtfuse.zh
+  Name: RT Fuse繁簡漢化
+  SteamWorkshopId: 2812831085
 - Id: ratys.rtsolarflareshield
   Name: RT Solar Flare Shield
   SteamWorkshopId: 728315620
-- Id: rwzh.chinesepack.ratys
-  Name: RT_zh_pack
-  SteamWorkshopId: 2015185500
-- Id: ghostrolly.rim73
-  Name: Rim73 - Performance and Optimisations
-  SteamWorkshopId: 2573814850
+- Id: zh.rtsolarflareshield.only
+  Name: RT Solar Flare Shield -- RT太阳耀斑屏蔽装置 简繁汉化包
+  SteamWorkshopId: 2828115388
 - Id: taranchuk.performanceoptimizer
   Name: Performance Optimizer
   SteamWorkshopId: 2664723367
-- Id: pzqaks.performanceoptimize.zh
-  Name: Performance Optimizer简体中文汉化
-  SteamWorkshopId: 2668142391
 - Id: krkr.rocketman
   Name: RocketMan - Performance Mod
   SteamWorkshopId: 2479389928
-- Id: dubwise.dubsperformanceanalyzer
+- Id: dubwise.dubsperformanceanalyzer.steam
   Name: Dubs Performance Analyzer
   SteamWorkshopId: 2038874626
-- Id: dubwise.dubsperformanceanalyzer.cntrans
-  Name: Dubs Performance Analyzer性能分析汉化
-  SteamWorkshopId: 2579782618
