@@ -144,6 +144,9 @@ Mods:
 - Id: dubwise.dubsappareltweaks
   Name: Dubs Apparel Tweaks
   SteamWorkshopId: 2296697286
+- Id: rwzh.chinesepack.dubsappareltweaks
+  Name: Dubs_Apparel_Tweaks_zh
+  SteamWorkshopId: 2327363931
 - Id: bustedbunny.chooseyourrecipe
   Name: Choose Your Recipe
   SteamWorkshopId: 2613112847
@@ -156,6 +159,9 @@ Mods:
 - Id: zh.owlchemist.toggleableseries
   Name: Owlchemist - Toggleable Series_zh
   SteamWorkshopId: 2768513554
+- Id: syrus.heatmap
+  Name: Heat Map (Continued)
+  SteamWorkshopId: 2552838384
 - Id: legodude17.qualcolor
   Name: Quality Colors
   SteamWorkshopId: 2420141361
@@ -342,9 +348,15 @@ Mods:
 - Id: rh2.bcds.first.aid
   Name: '[RH2] BCD: First Aid'
   SteamWorkshopId: 2563152474
+- Id: zh.rh2bcdfirstaid
+  Name: '[RH2]BCD:First Aid 简繁汉化'
+  SteamWorkshopId: 2566595634
 - Id: rh2.cpers.arrest.here
   Name: '[RH2] CPERS: Arrest Here!'
   SteamWorkshopId: 2563157350
+- Id: zh.rh2cpersarresthere
+  Name: '[RH2]CPERS: Arrest Here! 简繁汉化'
+  SteamWorkshopId: 2566596115
 - Id: avilmask.commonsense
   Name: Common Sense
   SteamWorkshopId: 1561769193
@@ -393,12 +405,18 @@ Mods:
 - Id: coldzero.craftableroyaltyweapons
   Name: Craftable Royalty Weapons (Continued)
   SteamWorkshopId: 2559489638
+- Id: zephyr.craftableroyaltyweaponszh
+  Name: Craftable Royalty Weapons 皇权武器制造简繁汉化
+  SteamWorkshopId: 2063798513
 - Id: cuddle.donottakemyguns
   Name: Don't take my guns
   SteamWorkshopId: 1869879952
 - Id: owlchemist.undergroundpowerconduits
   Name: Underground Power Conduits
   SteamWorkshopId: 1735421319
+- Id: red.owlchemist.undergroundpowerconduits.zh
+  Name: Underground Power Conduits 简繁汉化包
+  SteamWorkshopId: 2744717109
 - Id: leafzxg.deerextension
   Name: Deer Extension
   SteamWorkshopId: 1336473924
@@ -450,12 +468,21 @@ Mods:
 - Id: vat.epoeforked
   Name: Expanded Prosthetics and Organ Engineering - Forked
   SteamWorkshopId: 1949064302
+- Id: rwzh.chinesepack.epoeforked
+  Name: Expanded_Prosthetics_and_Organ_Engineering_Forked_zh
+  SteamWorkshopId: 2021158028
 - Id: vat.epoeforkedroyalty
   Name: 'EPOE-Forked: Royalty DLC expansion'
   SteamWorkshopId: 2008970276
+- Id: rwzh.chinesepack.epoeforkedroyalty
+  Name: EPOE-Forked_Royalty_DLC_expansion_zh
+  SteamWorkshopId: 2026231230
 - Id: inglix.fasterbiosculptingpod
   Name: Faster Biosculpter Pod
   SteamWorkshopId: 2576257954
+- Id: inglix.fasterbiosculptingpod.zh
+  Name: Faster Biosculpter Pod 简繁中文汉化 更快的塑型仓
+  SteamWorkshopId: 2745481476
 - Id: waether.biosculptingplus
   Name: BioSculptingPlus
   SteamWorkshopId: 2577455618
