@@ -252,9 +252,6 @@ Mods:
 - Id: rwzh.chinesepack.cameraplus
   Name: Camera+_zh
   SteamWorkshopId: 1783453942
-- Id: indeed.stackxxl
-  Name: Stack XXL
-  SteamWorkshopId: 826366050
 - Id: fluffy.followme
   Name: Follow Me
   SteamWorkshopId: 715759739
@@ -411,6 +408,9 @@ Mods:
 - Id: avilmask.commonsense
   Name: Common Sense
   SteamWorkshopId: 1561769193
+- Id: dingo.lessrebuff
+  Name: Less Rebuff
+  SteamWorkshopId: 774543761
 - Id: roolo.searchanddestroy
   Name: Search and Destroy
   SteamWorkshopId: 1467764609
