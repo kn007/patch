@@ -6,6 +6,12 @@ Mods:
 - Id: ludeon.rimworld
   Name: 核心
   SteamWorkshopId: 0
+- Id: arandomkiwi.rimsaves
+  Name: RimSaves
+  SteamWorkshopId: 1713367505
+- Id: rwzh.chinesepack.rimsaves
+  Name: RimSaves_zh
+  SteamWorkshopId: 2199383843
 - Id: fluffy.modmanager
   Name: Mod Manager
   SteamWorkshopId: 1507748539
@@ -20,6 +26,9 @@ Mods:
   SteamWorkshopId: 0
 - Id: ludeon.rimworld.ideology
   Name: 文化
+  SteamWorkshopId: 0
+- Id: ludeon.rimworld.biotech
+  Name: 生物技术
   SteamWorkshopId: 0
 - Id: unlimitedhugs.hugslib
   Name: HugsLib
@@ -108,6 +117,15 @@ Mods:
 - Id: zh.m00nl1ght.mappreview
   Name: Map Preview_zh
   SteamWorkshopId: 2804421885
+- Id: m00nl1ght.geologicallandforms
+  Name: Geological Landforms
+  SteamWorkshopId: 2773943594
+- Id: zh.m00nl1ght.geologicallandforms
+  Name: Geological Landforms_zh
+  SteamWorkshopId: 2774968010
+- Id: ih.clean.textures
+  Name: Clean Textures
+  SteamWorkshopId: 2865361569
 - Id: murmur.threatpointcap
   Name: Threat Point Cap
   SteamWorkshopId: 2380491067
@@ -123,6 +141,9 @@ Mods:
 - Id: chinesetranslation.whw.jobinbar
   Name: Job In Bar 个人简中汉化
   SteamWorkshopId: 2625438810
+- Id: dubwise.dubsmintminimap
+  Name: Dubs Mint Minimap
+  SteamWorkshopId: 1662119905
 - Id: nals.facialanimation
   Name: '[NL] Facial Animation - WIP'
   SteamWorkshopId: 1635901197
@@ -183,6 +204,9 @@ Mods:
 - Id: tammybee.predatorhuntalert
   Name: Predator Hunt Alert
   SteamWorkshopId: 1537786185
+- Id: zilla.fertilityinfo
+  Name: Show Fertility on Health Tab
+  SteamWorkshopId: 2879306896
 - Id: tammybee.restocknotification
   Name: Restock Notification
   SteamWorkshopId: 2079149222
@@ -201,6 +225,12 @@ Mods:
 - Id: smashphil.dropspot
   Name: Trade Ships Drop Spot
   SteamWorkshopId: 1969732297
+- Id: joseasoler.tradingoptions
+  Name: Trading Options
+  SteamWorkshopId: 2876541977
+- Id: zh.joseasoler.tradingoptions
+  Name: Trading Options-汉化
+  SteamWorkshopId: 2876724391
 - Id: hatena.animaldiscovery
   Name: Animal Discovery
   SteamWorkshopId: 2172166576
@@ -249,6 +279,9 @@ Mods:
 - Id: leafzxg.masterofcrafting
   Name: Master of Crafting
   SteamWorkshopId: 848513545
+- Id: mlie.foodpoisoningstackfix
+  Name: Food Poisoning Stack Fix (Continued)
+  SteamWorkshopId: 2843483188
 - Id: frozensnowfox.filthvanisheswithrainandtime
   Name: '[FSF] Filth Vanishes With Rain And Time'
   SteamWorkshopId: 1508341791
@@ -261,6 +294,12 @@ Mods:
 - Id: telardo.dragselect
   Name: DragSelect
   SteamWorkshopId: 2599942235
+- Id: haecriver.injuredcarry
+  Name: Injured Carry
+  SteamWorkshopId: 2413690575
+- Id: dvs.norandomrelations
+  Name: No Random Relations
+  SteamWorkshopId: 2583377522
 - Id: alien.milkablemuffalo
   Name: Milkable Muffalo
   SteamWorkshopId: 2019852283
@@ -315,6 +354,12 @@ Mods:
 - Id: uuugggg.sharetheload
   Name: Share The Load
   SteamWorkshopId: 1356838246
+- Id: owlchemist.cleanpathfinding
+  Name: Clean Pathfinding
+  SteamWorkshopId: 2603765747
+- Id: owlchemist.cleanpathfinding.zh.hc
+  Name: Clean Pathfinding + Doorpathing_zh
+  SteamWorkshopId: 2711236834
 - Id: seekiworksmod.no11
   Name: Chop Wood with Other Skills
   SteamWorkshopId: 2811154414
@@ -336,6 +381,12 @@ Mods:
 - Id: mehni.pickupandhaul
   Name: Pick Up And Haul
   SteamWorkshopId: 1279012058
+- Id: mlie.pawneducation
+  Name: Pawn Education (Continued)
+  SteamWorkshopId: 2296533470
+- Id: rwzh.chinesepack.pawneducation
+  Name: Pawn_Education_zh
+  SteamWorkshopId: 2380908925
 - Id: fed1splay.pawntargetfix
   Name: PawnTargetFix
   SteamWorkshopId: 2014789938
@@ -366,6 +417,12 @@ Mods:
 - Id: murmur.isid
   Name: Infestations Spawn in Darkness
   SteamWorkshopId: 2017514331
+- Id: crocodil.foodpoisoningcures
+  Name: Food Poisoning Cures
+  SteamWorkshopId: 2856335335
+- Id: zh.crocodil.foodpoisoningcures
+  Name: Food Poisoning Cures_zh
+  SteamWorkshopId: 2857544882
 - Id: gorymoon.closeall
   Name: CloseAll
   SteamWorkshopId: 2018479759
@@ -396,6 +453,9 @@ Mods:
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
+- Id: relaxedotter.bettermechanoidloot
+  Name: Better Mechanoid Loot (continued)
+  SteamWorkshopId: 2886997332
 - Id: victor.psyultra
   Name: Psy Ultra
   SteamWorkshopId: 2879578025
@@ -489,6 +549,12 @@ Mods:
 - Id: pzqaks.biosculptingplus.zh
   Name: BioSculptingPlus 简繁汉化包
   SteamWorkshopId: 2619378452
+- Id: eagle0600.dresspatients.1.4
+  Name: Dress Patients (1.4)
+  SteamWorkshopId: 2877763074
+- Id: rwzh.chinesepack.dresspatients
+  Name: Dress_Patients_zh
+  SteamWorkshopId: 2063186733
 - Id: neronix17.embrasures
   Name: Seamless Embrasures
   SteamWorkshopId: 2290689449
@@ -501,6 +567,18 @@ Mods:
 - Id: bustedbunny.prisonersarenotswines
   Name: Prisoners Are Not Swines
   SteamWorkshopId: 2613966365
+- Id: tac.genetrader
+  Name: Gene Trader
+  SteamWorkshopId: 2886375137
+- Id: witek.mechscanhaultocharger
+  Name: Mechs can haul to charger
+  SteamWorkshopId: 2883113037
+- Id: porio.tunnulerfix
+  Name: Allow Tunnelers To Drill
+  SteamWorkshopId: 2882915775
+- Id: witek.fabricorscanrepairmechs
+  Name: Fabricors can repair mechs
+  SteamWorkshopId: 2886185474
 - Id: ratys.rtfuse
   Name: RT Fuse
   SteamWorkshopId: 728314182
