@@ -75,12 +75,24 @@ Mods:
 - Id: rwzh.chinesepack.vcef
   Name: Vanilla_Fishing_Expanded_zh
   SteamWorkshopId: 2035866747
+- Id: unofficial.morepracticaltraits
+  Name: More Practical Traits - unofficial update
+  SteamWorkshopId: 2893524668
 - Id: moretraitslots.kv.rw
   Name: '[KV] More Trait Slots [1.4]'
   SteamWorkshopId: 2878346573
 - Id: zh.moretraitslotstaranchuk.only
   Name: '[KV] More Trait Slots [1.4] -- 更多特性槽1.4 简体汉化包'
   SteamWorkshopId: 2878778439
+- Id: darkborderman.moretraitgenes
+  Name: More Genes
+  SteamWorkshopId: 2878539467
+- Id: gloomy.gloomyfacemk2.1.4
+  Name: Gloomy Face mk2
+  SteamWorkshopId: 2890566247
+- Id: nals.chibifacefemale
+  Name: '[NL] Chibi Face Female only'
+  SteamWorkshopId: 1540475285
 - Id: vanillaexpanded.vhe
   Name: Vanilla Hair Expanded
   SteamWorkshopId: 1888705256
@@ -90,15 +102,18 @@ Mods:
 - Id: rimsenal.hair
   Name: Rimsenal - Hair pack
   SteamWorkshopId: 725949967
-- Id: won.hair
-  Name: Won hair_men
-  SteamWorkshopId: 1879950403
-- Id: won2.hair
-  Name: 'Won hair_women '
-  SteamWorkshopId: 1886150617
+- Id: jintuzilamian.hairstyle.afumenshairstyles
+  Name: AFU男士发型_Men's hairstyles
+  SteamWorkshopId: 2072106893
+- Id: jintuzilamian.hairstyle.afuwomenshairstyles
+  Name: AFU女士发型_Women's hairstyles
+  SteamWorkshopId: 2020779666
 - Id: agentblac.makepawnsprisoners
   Name: 1.4 - Imprisonment On The Go! (Make Pawns Prisoners Without Beds)
   SteamWorkshopId: 1203903378
+- Id: wrk.woundremover
+  Name: 1.3/Ideology Wound Remover
+  SteamWorkshopId: 2839444849
 - Id: void.charactereditor
   Name: Character Editor
   SteamWorkshopId: 1874644848
@@ -159,6 +174,9 @@ Mods:
 - Id: shouer.chinesepack.rimhud
   Name: RimHUD_zh
   SteamWorkshopId: 1928161832
+- Id: creeper.betterinfocard
+  Name: BetterInfoCard
+  SteamWorkshopId: 2890920739
 - Id: kahdeg.killfeed
   Name: Killfeed
   SteamWorkshopId: 1362098265
@@ -168,6 +186,15 @@ Mods:
 - Id: rwzh.chinesepack.dubsappareltweaks
   Name: Dubs_Apparel_Tweaks_zh
   SteamWorkshopId: 2327363931
+- Id: avilmask.commonsense
+  Name: Common Sense
+  SteamWorkshopId: 1561769193
+- Id: dingo.lessrebuff
+  Name: Less Rebuff
+  SteamWorkshopId: 774543761
+- Id: neronix17.tweaksgalore
+  Name: Tweaks Galore
+  SteamWorkshopId: 2695164414
 - Id: bustedbunny.chooseyourrecipe
   Name: Choose Your Recipe
   SteamWorkshopId: 2613112847
@@ -210,12 +237,18 @@ Mods:
 - Id: tammybee.restocknotification
   Name: Restock Notification
   SteamWorkshopId: 2079149222
+- Id: kathanon.repairinthezone
+  Name: Repair in the Zone
+  SteamWorkshopId: 2798537004
 - Id: jp.adjacentlight
   Name: Adjacent Light
   SteamWorkshopId: 2517853803
 - Id: insertkey.itemlistselector
   Name: ItemListSelector
   SteamWorkshopId: 1522414793
+- Id: zal.moretradeships
+  Name: More Trade Ships (Continued)
+  SteamWorkshopId: 2892108461
 - Id: timmyliang.tradehelper
   Name: TradeHelper
   SteamWorkshopId: 2113372560
@@ -231,6 +264,15 @@ Mods:
 - Id: zh.joseasoler.tradingoptions
   Name: Trading Options-汉化
   SteamWorkshopId: 2876724391
+- Id: tac.genetrader
+  Name: Gene Trader
+  SteamWorkshopId: 2886375137
+- Id: mlie.dismisstrader
+  Name: Dismiss Trader (Continued)
+  SteamWorkshopId: 2078518511
+- Id: zephyr.dismisstraderzh
+  Name: Dismiss Trader (Continued)简繁汉化
+  SteamWorkshopId: 2081531370
 - Id: hatena.animaldiscovery
   Name: Animal Discovery
   SteamWorkshopId: 2172166576
@@ -276,6 +318,9 @@ Mods:
 - Id: leafzxg.masterofcrafting
   Name: Master of Crafting
   SteamWorkshopId: 848513545
+- Id: savestoragesettings.kv.rw
+  Name: '[KV] Save Storage, Outfit, Crafting, Drug, & Operation Settings [1.4]'
+  SteamWorkshopId: 0
 - Id: mlie.foodpoisoningstackfix
   Name: Food Poisoning Stack Fix (Continued)
   SteamWorkshopId: 2843483188
@@ -327,6 +372,9 @@ Mods:
 - Id: mlie.lessstupidromanceattempt
   Name: Less Stupid Romance Attempt (Continued)
   SteamWorkshopId: 2014603702
+- Id: mlie.billysimprovedcaravanformation
+  Name: Billy's Improved Caravan Formation (Continued)
+  SteamWorkshopId: 2068456092
 - Id: vanya.tools.bulkcarrier
   Name: Bulk Carrier
   SteamWorkshopId: 1428989232
@@ -405,12 +453,6 @@ Mods:
 - Id: zh.rh2cpersarresthere
   Name: '[RH2]CPERS: Arrest Here! 简繁汉化'
   SteamWorkshopId: 2566596115
-- Id: avilmask.commonsense
-  Name: Common Sense
-  SteamWorkshopId: 1561769193
-- Id: dingo.lessrebuff
-  Name: Less Rebuff
-  SteamWorkshopId: 774543761
 - Id: roolo.searchanddestroy
   Name: Search and Destroy
   SteamWorkshopId: 1467764609
@@ -426,12 +468,6 @@ Mods:
 - Id: gorymoon.closeall
   Name: CloseAll
   SteamWorkshopId: 2018479759
-- Id: mlie.dismisstrader
-  Name: Dismiss Trader (Continued)
-  SteamWorkshopId: 2078518511
-- Id: zephyr.dismisstraderzh
-  Name: Dismiss Trader (Continued)简繁汉化
-  SteamWorkshopId: 2081531370
 - Id: sgc.quests
   Name: Quest Reward Rebalance
   SteamWorkshopId: 2312419897
@@ -456,6 +492,12 @@ Mods:
 - Id: relaxedotter.bettermechanoidloot
   Name: Better Mechanoid Loot (continued)
   SteamWorkshopId: 2886997332
+- Id: kikohi.bettergroundpenetratingscanner
+  Name: Better ground-penetrating scanner
+  SteamWorkshopId: 2809972387
+- Id: zh.kikohi.bettergroundpenetratingscanner
+  Name: Better ground-penetrating scanner_zh
+  SteamWorkshopId: 2810420557
 - Id: victor.psyultra
   Name: Psy Ultra
   SteamWorkshopId: 2879578025
@@ -486,6 +528,9 @@ Mods:
 - Id: murmur.walllight
   Name: Wall Light
   SteamWorkshopId: 1423699208
+- Id: zh.walllight.only
+  Name: Wall Light -- 壁灯 简体汉化包
+  SteamWorkshopId: 2826726307
 - Id: gt.sam.tilledsoil
   Name: Tilled Soil
   SteamWorkshopId: 725747149
@@ -567,9 +612,6 @@ Mods:
 - Id: bustedbunny.prisonersarenotswines
   Name: Prisoners Are Not Swines
   SteamWorkshopId: 2613966365
-- Id: tac.genetrader
-  Name: Gene Trader
-  SteamWorkshopId: 2886375137
 - Id: witek.mechscanhaultocharger
   Name: Mechs can haul to charger
   SteamWorkshopId: 2883113037
@@ -588,6 +630,15 @@ Mods:
 - Id: zh.rtsolarflareshield.only
   Name: RT Solar Flare Shield -- RT太阳耀斑屏蔽装置 简繁汉化包
   SteamWorkshopId: 2828115388
+- Id: mlie.enterhere
+  Name: Enter Here
+  SteamWorkshopId: 2824117092
+- Id: zh.enterhere.only
+  Name: Enter Here -- 客从此进 简繁汉化包
+  SteamWorkshopId: 2826779697
+- Id: velcroboy333.outdoorlighting
+  Name: Outdoor Lighting (continued)
+  SteamWorkshopId: 2888755935
 - Id: taranchuk.performanceoptimizer
   Name: Performance Optimizer
   SteamWorkshopId: 2664723367
