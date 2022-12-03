@@ -246,9 +246,6 @@ Mods:
 - Id: insertkey.itemlistselector
   Name: ItemListSelector
   SteamWorkshopId: 1522414793
-- Id: zal.moretradeships
-  Name: More Trade Ships (Continued)
-  SteamWorkshopId: 2892108461
 - Id: timmyliang.tradehelper
   Name: TradeHelper
   SteamWorkshopId: 2113372560
