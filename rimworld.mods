@@ -198,6 +198,9 @@ Mods:
 - Id: bustedbunny.chooseyourrecipe
   Name: Choose Your Recipe
   SteamWorkshopId: 2613112847
+- Id: mlie.configurableroomstats
+  Name: Configurable Room Stats (Continued)
+  SteamWorkshopId: 2896467431
 - Id: owlchemist.toggleableoverlays
   Name: Toggleable Overlays
   SteamWorkshopId: 2608654598
@@ -234,9 +237,6 @@ Mods:
 - Id: zilla.fertilityinfo
   Name: Show Fertility on Health Tab
   SteamWorkshopId: 2879306896
-- Id: tammybee.restocknotification
-  Name: Restock Notification
-  SteamWorkshopId: 2079149222
 - Id: kathanon.repairinthezone
   Name: Repair in the Zone
   SteamWorkshopId: 2798537004
