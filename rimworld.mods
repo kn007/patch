@@ -612,6 +612,12 @@ Mods:
 - Id: rwzh.chinesepack.dresspatients
   Name: Dress_Patients_zh
   SteamWorkshopId: 2063186733
+- Id: fluffy.fluffybreakdowns
+  Name: Fluffy Breakdowns
+  SteamWorkshopId: 726244033
+- Id: doctorstupid.sofa
+  Name: Literally just a sofa
+  SteamWorkshopId: 2894560149
 - Id: neronix17.embrasures
   Name: Seamless Embrasures
   SteamWorkshopId: 2290689449
