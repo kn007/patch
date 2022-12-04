@@ -231,6 +231,9 @@ Mods:
 - Id: legodude17.qualcolor
   Name: Quality Colors
   SteamWorkshopId: 2420141361
+- Id: qualcolor.zh
+  Name: Quality Colors zh 简体中文汉化
+  SteamWorkshopId: 2891521968
 - Id: owlchemist.simplefx.vapor
   Name: 'Simple FX: Vapor'
   SteamWorkshopId: 2886571275
@@ -390,6 +393,9 @@ Mods:
 - Id: legodude17.smartdecon
   Name: Smarter Deconstruction and Mining
   SteamWorkshopId: 2398365712
+- Id: legodude17.smartdecon.zh
+  Name: Smarter Deconstruction and Mining zh 简体中文
+  SteamWorkshopId: 2891998257
 - Id: dhultgren.smarterconstruction
   Name: Smarter Construction
   SteamWorkshopId: 2202185773
@@ -426,6 +432,9 @@ Mods:
 - Id: uuugggg.sharetheload
   Name: Share The Load
   SteamWorkshopId: 1356838246
+- Id: uuugggg.sharetheload.zh
+  Name: Share The Load zh 简体中文补丁
+  SteamWorkshopId: 2892578913
 - Id: owlchemist.cleanpathfinding
   Name: Clean Pathfinding
   SteamWorkshopId: 2603765747
@@ -453,6 +462,9 @@ Mods:
 - Id: mehni.pickupandhaul
   Name: Pick Up And Haul
   SteamWorkshopId: 1279012058
+- Id: pickupandhaul.zh
+  Name: pick up and haul zh 中文补丁
+  SteamWorkshopId: 2891446654
 - Id: mlie.pawneducation
   Name: Pawn Education (Continued)
   SteamWorkshopId: 2296533470
@@ -472,7 +484,7 @@ Mods:
   Name: '[RH2] BCD: First Aid'
   SteamWorkshopId: 2563152474
 - Id: zh.rh2bcdfirstaid
-  Name: '[RH2]BCD:First Aid 简繁汉化'
+  Name: '[RH2]BCD:First Aid_zh'
   SteamWorkshopId: 2566595634
 - Id: rh2.cpers.arrest.here
   Name: '[RH2] CPERS: Arrest Here!'
