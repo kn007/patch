@@ -69,6 +69,9 @@ Mods:
 - Id: vanillaexpanded.vfepower
   Name: Vanilla Furniture Expanded - Power
   SteamWorkshopId: 2062943477
+- Id: rwzh.chinesepack.vfe
+  Name: Vanilla_Furniture_Expanded_zh_pack
+  SteamWorkshopId: 2033672219
 - Id: vanillaexpanded.vcef
   Name: Vanilla Fishing Expanded
   SteamWorkshopId: 1914064942
@@ -87,6 +90,9 @@ Mods:
 - Id: darkborderman.moretraitgenes
   Name: More Genes
   SteamWorkshopId: 2878539467
+- Id: zh.moretraitgenes
+  Name: More Genes简体中文汉化包
+  SteamWorkshopId: 2884401339
 - Id: gloomy.gloomyfacemk2.1.4
   Name: Gloomy Face mk2
   SteamWorkshopId: 2890566247
@@ -108,6 +114,18 @@ Mods:
 - Id: jintuzilamian.hairstyle.afuwomenshairstyles
   Name: AFU女士发型_Women's hairstyles
   SteamWorkshopId: 2020779666
+- Id: nals.facialanimation
+  Name: '[NL] Facial Animation - WIP'
+  SteamWorkshopId: 1635901197
+- Id: oppey.eyegenecolors
+  Name: '[BIOTECH] Facial Animation - EyeGenes '
+  SteamWorkshopId: 2893193835
+- Id: pzqaks.eyegenecolors.zh
+  Name: '[BIOTECH] Facial Animation - EyeGenes——动态表情用的眼睛颜色简体汉化'
+  SteamWorkshopId: 2895979302
+- Id: oppey.goawayeyestrain
+  Name: Go Away Eye Strain!
+  SteamWorkshopId: 2895295315
 - Id: agentblac.makepawnsprisoners
   Name: 1.4 - Imprisonment On The Go! (Make Pawns Prisoners Without Beds)
   SteamWorkshopId: 1203903378
@@ -159,9 +177,6 @@ Mods:
 - Id: dubwise.dubsmintminimap
   Name: Dubs Mint Minimap
   SteamWorkshopId: 1662119905
-- Id: nals.facialanimation
-  Name: '[NL] Facial Animation - WIP'
-  SteamWorkshopId: 1635901197
 - Id: jaxe.bubbles
   Name: Interaction Bubbles
   SteamWorkshopId: 1516158345
@@ -624,9 +639,9 @@ Mods:
 - Id: ratys.rtsolarflareshield
   Name: RT Solar Flare Shield
   SteamWorkshopId: 728315620
-- Id: zh.rtsolarflareshield.only
-  Name: RT Solar Flare Shield -- RT太阳耀斑屏蔽装置 简繁汉化包
-  SteamWorkshopId: 2828115388
+- Id: rwzh.chinesepack.ratys
+  Name: RT_zh_pack
+  SteamWorkshopId: 2015185500
 - Id: mlie.enterhere
   Name: Enter Here
   SteamWorkshopId: 2824117092
