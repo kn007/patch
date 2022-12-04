@@ -231,6 +231,21 @@ Mods:
 - Id: legodude17.qualcolor
   Name: Quality Colors
   SteamWorkshopId: 2420141361
+- Id: owlchemist.simplefx.vapor
+  Name: 'Simple FX: Vapor'
+  SteamWorkshopId: 2886571275
+- Id: owlchemist.simplefx.splashes
+  Name: 'Simple FX: Splashes'
+  SteamWorkshopId: 2889330414
+- Id: owlchemist.simplefx.smoke2
+  Name: 'Simple FX: Smoke'
+  SteamWorkshopId: 2574489704
+- Id: owlchemist.scatteredflames
+  Name: Scattered Flames
+  SteamWorkshopId: 2652749788
+- Id: owlchemist.scatteredflames.zh.hc
+  Name: Scattered Flames_zh
+  SteamWorkshopId: 2711236044
 - Id: smashphil.loadinginprogress
   Name: Loading In Progress
   SteamWorkshopId: 1975622772
