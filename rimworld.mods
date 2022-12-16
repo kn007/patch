@@ -118,7 +118,7 @@ Mods:
   Name: '[NL] Facial Animation - WIP'
   SteamWorkshopId: 1635901197
 - Id: oppey.eyegenecolors
-  Name: '[BIOTECH] Facial Animation - EyeGenes '
+  Name: '[BIOTECH] EyeGenes '
   SteamWorkshopId: 2893193835
 - Id: pzqaks.eyegenecolors.zh
   Name: '[BIOTECH] Facial Animation - EyeGenes——动态表情用的眼睛颜色简体汉化'
@@ -156,9 +156,6 @@ Mods:
 - Id: zh.m00nl1ght.geologicallandforms
   Name: Geological Landforms_zh
   SteamWorkshopId: 2774968010
-- Id: ih.clean.textures
-  Name: Clean Textures
-  SteamWorkshopId: 2865361569
 - Id: murmur.threatpointcap
   Name: Threat Point Cap
   SteamWorkshopId: 2380491067
@@ -441,6 +438,12 @@ Mods:
 - Id: owlchemist.cleanpathfinding.zh.hc
   Name: Clean Pathfinding + Doorpathing_zh
   SteamWorkshopId: 2711236834
+- Id: victor.wallsaresolid
+  Name: Walls are solid
+  SteamWorkshopId: 2896548513
+- Id: aelanna.cleaningspeed
+  Name: Cleaning Speed
+  SteamWorkshopId: 2748222814
 - Id: seekiworksmod.no11
   Name: Chop Wood with Other Skills
   SteamWorkshopId: 2811154414
@@ -490,7 +493,7 @@ Mods:
   Name: '[RH2] CPERS: Arrest Here!'
   SteamWorkshopId: 2563157350
 - Id: zh.rh2cpersarresthere
-  Name: '[RH2]CPERS: Arrest Here! 简繁汉化'
+  Name: '[RH2]CPERS: Arrest Here!_zh'
   SteamWorkshopId: 2566596115
 - Id: roolo.searchanddestroy
   Name: Search and Destroy
