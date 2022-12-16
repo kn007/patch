@@ -114,15 +114,15 @@ Mods:
 - Id: jintuzilamian.hairstyle.afuwomenshairstyles
   Name: AFU女士发型_Women's hairstyles
   SteamWorkshopId: 2020779666
+- Id: nera.spawnthosegenes
+  Name: '[BT] SpawnThoseGenes!'
+  SteamWorkshopId: 2898044088
 - Id: nals.facialanimation
   Name: '[NL] Facial Animation - WIP'
   SteamWorkshopId: 1635901197
-- Id: oppey.eyegenecolors
-  Name: '[BIOTECH] EyeGenes '
-  SteamWorkshopId: 2893193835
-- Id: pzqaks.eyegenecolors.zh
-  Name: '[BIOTECH] Facial Animation - EyeGenes——动态表情用的眼睛颜色简体汉化'
-  SteamWorkshopId: 2895979302
+- Id: oppey.eyegenes2
+  Name: '[BT] EyeGenes2 | Base - [NL] Facial Animation |'
+  SteamWorkshopId: 2898151329
 - Id: oppey.goawayeyestrain
   Name: Go Away Eye Strain!
   SteamWorkshopId: 2895295315
