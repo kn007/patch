@@ -207,6 +207,12 @@ Mods:
 - Id: neronix17.tweaksgalore
   Name: Tweaks Galore
   SteamWorkshopId: 2695164414
+- Id: vesper.notmyfault
+  Name: Not My Fault
+  SteamWorkshopId: 2870045856
+- Id: amch.needbaroverflow
+  Name: Need Bar Overflow
+  SteamWorkshopId: 2566316158
 - Id: bustedbunny.chooseyourrecipe
   Name: Choose Your Recipe
   SteamWorkshopId: 2613112847
@@ -246,6 +252,9 @@ Mods:
 - Id: owlchemist.scatteredflames.zh.hc
   Name: Scattered Flames_zh
   SteamWorkshopId: 2711236044
+- Id: fishbones.daylilyretexture
+  Name: I Hate Daylilies
+  SteamWorkshopId: 2878142283
 - Id: smashphil.loadinginprogress
   Name: Loading In Progress
   SteamWorkshopId: 1975622772
@@ -347,7 +356,7 @@ Mods:
   SteamWorkshopId: 848513545
 - Id: savestoragesettings.kv.rw
   Name: '[KV] Save Storage, Outfit, Crafting, Drug, & Operation Settings [1.4]'
-  SteamWorkshopId: 0
+  SteamWorkshopId: 2878346181
 - Id: mlie.foodpoisoningstackfix
   Name: Food Poisoning Stack Fix (Continued)
   SteamWorkshopId: 2843483188
