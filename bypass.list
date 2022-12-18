@@ -6,6 +6,9 @@
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+*.worldofwarships.asia
+*.worldofwarships.jp
+*.wargaming.net
 *.hikarifield.co.jp
 *.postfix.org
 *.ietf.org
