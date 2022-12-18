@@ -1,5 +1,8 @@
 # Basic on https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+DOMAIN-SUFFIX,worldofwarships.asia
+DOMAIN-SUFFIX,worldofwarships.jp
+DOMAIN-SUFFIX,wargaming.net
 DOMAIN-SUFFIX,hikarifield.co.jp
 DOMAIN-SUFFIX,postfix.org
 DOMAIN-SUFFIX,ietf.org
