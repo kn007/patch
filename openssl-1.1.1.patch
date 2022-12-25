@@ -5,8 +5,8 @@ Add ChaCha20-Poly1305 Draft Version Support.
 Using: patch -p1 < openssl-1.1.1.patch
 
 diff --color -uNr a/crypto/evp/c_allc.c b/crypto/evp/c_allc.c
---- a/crypto/evp/c_allc.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/crypto/evp/c_allc.c	2021-12-15 19:12:11.257085063 +0800
+--- a/crypto/evp/c_allc.c	2022-11-01 20:36:10.000000000 +0800
++++ b/crypto/evp/c_allc.c	2022-12-25 15:28:59.857389551 +0800
 @@ -261,6 +261,7 @@
      EVP_add_cipher(EVP_chacha20());
  # ifndef OPENSSL_NO_POLY1305
@@ -16,8 +16,8 @@ diff --color -uNr a/crypto/evp/c_allc.c b/crypto/evp/c_allc.c
  #endif
  }
 diff --color -uNr a/crypto/evp/e_chacha20_poly1305.c b/crypto/evp/e_chacha20_poly1305.c
---- a/crypto/evp/e_chacha20_poly1305.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/crypto/evp/e_chacha20_poly1305.c	2021-12-15 19:12:11.257085063 +0800
+--- a/crypto/evp/e_chacha20_poly1305.c	2022-11-01 20:36:10.000000000 +0800
++++ b/crypto/evp/e_chacha20_poly1305.c	2022-12-25 15:28:59.857389551 +0800
 @@ -156,6 +156,7 @@
      struct { uint64_t aad, text; } len;
      int aad, mac_inited, tag_len, nonce_len;
@@ -223,8 +223,8 @@ diff --color -uNr a/crypto/evp/e_chacha20_poly1305.c b/crypto/evp/e_chacha20_pol
  # endif
  #endif
 diff --color -uNr a/crypto/objects/obj_dat.h b/crypto/objects/obj_dat.h
---- a/crypto/objects/obj_dat.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/crypto/objects/obj_dat.h	2021-12-15 19:12:11.260085139 +0800
+--- a/crypto/objects/obj_dat.h	2022-11-01 20:36:10.000000000 +0800
++++ b/crypto/objects/obj_dat.h	2022-12-25 15:28:59.861389655 +0800
 @@ -1078,7 +1078,7 @@
      0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x0D,       /* [ 7753] OBJ_hmacWithSHA512_256 */
  };
@@ -272,8 +272,8 @@ diff --color -uNr a/crypto/objects/obj_dat.h b/crypto/objects/obj_dat.h
       407,    /* "characteristic-two-field" */
       395,    /* "clearance" */
 diff --color -uNr a/crypto/objects/objects.txt b/crypto/objects/objects.txt
---- a/crypto/objects/objects.txt	2021-12-14 23:45:01.000000000 +0800
-+++ b/crypto/objects/objects.txt	2021-12-15 19:12:11.262085190 +0800
+--- a/crypto/objects/objects.txt	2022-11-01 20:36:10.000000000 +0800
++++ b/crypto/objects/objects.txt	2022-12-25 15:28:59.862389681 +0800
 @@ -1534,6 +1534,7 @@
  			: AES-192-CBC-HMAC-SHA256	: aes-192-cbc-hmac-sha256
  			: AES-256-CBC-HMAC-SHA256	: aes-256-cbc-hmac-sha256
@@ -283,16 +283,16 @@ diff --color -uNr a/crypto/objects/objects.txt b/crypto/objects/objects.txt
  
  ISO-US 10046 2 1	: dhpublicnumber		: X9.42 DH
 diff --color -uNr a/crypto/objects/obj_mac.num b/crypto/objects/obj_mac.num
---- a/crypto/objects/obj_mac.num	2021-12-14 23:45:01.000000000 +0800
-+++ b/crypto/objects/obj_mac.num	2021-12-15 19:12:11.261085165 +0800
+--- a/crypto/objects/obj_mac.num	2022-11-01 20:36:10.000000000 +0800
++++ b/crypto/objects/obj_mac.num	2022-12-25 15:28:59.862389681 +0800
 @@ -1192,3 +1192,4 @@
  magma_mac		1192
  hmacWithSHA512_224		1193
  hmacWithSHA512_256		1194
 +chacha20_poly1305_draft		1195
 diff --color -uNr a/doc/man1/ciphers.pod b/doc/man1/ciphers.pod
---- a/doc/man1/ciphers.pod	2021-12-14 23:45:01.000000000 +0800
-+++ b/doc/man1/ciphers.pod	2021-12-15 19:11:53.411629704 +0800
+--- a/doc/man1/ciphers.pod	2022-11-01 20:36:10.000000000 +0800
++++ b/doc/man1/ciphers.pod	2022-12-25 15:28:59.863389707 +0800
 @@ -400,6 +400,21 @@
  
  =back
@@ -316,8 +316,8 @@ diff --color -uNr a/doc/man1/ciphers.pod b/doc/man1/ciphers.pod
  
  The following lists give the SSL or TLS cipher suites names from the
 diff --color -uNr a/include/openssl/evp.h b/include/openssl/evp.h
---- a/include/openssl/evp.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/include/openssl/evp.h	2021-12-15 19:12:11.262085190 +0800
+--- a/include/openssl/evp.h	2022-11-01 20:36:10.000000000 +0800
++++ b/include/openssl/evp.h	2022-12-25 15:28:59.864389733 +0800
 @@ -919,6 +919,7 @@
  const EVP_CIPHER *EVP_chacha20(void);
  #  ifndef OPENSSL_NO_POLY1305
@@ -327,8 +327,8 @@ diff --color -uNr a/include/openssl/evp.h b/include/openssl/evp.h
  # endif
  
 diff --color -uNr a/include/openssl/obj_mac.h b/include/openssl/obj_mac.h
---- a/include/openssl/obj_mac.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/include/openssl/obj_mac.h	2021-12-15 19:12:11.264085241 +0800
+--- a/include/openssl/obj_mac.h	2022-11-01 20:36:10.000000000 +0800
++++ b/include/openssl/obj_mac.h	2022-12-25 15:28:59.866389785 +0800
 @@ -4807,6 +4807,10 @@
  #define LN_chacha20_poly1305            "chacha20-poly1305"
  #define NID_chacha20_poly1305           1018
@@ -341,8 +341,8 @@ diff --color -uNr a/include/openssl/obj_mac.h b/include/openssl/obj_mac.h
  #define LN_chacha20             "chacha20"
  #define NID_chacha20            1019
 diff --color -uNr a/include/openssl/sslerr.h b/include/openssl/sslerr.h
---- a/include/openssl/sslerr.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/include/openssl/sslerr.h	2021-12-15 19:11:53.411629704 +0800
+--- a/include/openssl/sslerr.h	2022-11-01 20:36:10.000000000 +0800
++++ b/include/openssl/sslerr.h	2022-12-25 15:28:59.867389811 +0800
 @@ -603,6 +603,8 @@
  # define SSL_R_MISSING_SUPPORTED_GROUPS_EXTENSION         209
  # define SSL_R_MISSING_TMP_DH_KEY                         171
@@ -365,8 +365,8 @@ diff --color -uNr a/include/openssl/sslerr.h b/include/openssl/sslerr.h
  # define SSL_R_UNINITIALIZED                              276
  # define SSL_R_UNKNOWN_ALERT_TYPE                         246
 diff --color -uNr a/include/openssl/ssl.h b/include/openssl/ssl.h
---- a/include/openssl/ssl.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/include/openssl/ssl.h	2021-12-15 19:12:11.265085267 +0800
+--- a/include/openssl/ssl.h	2022-11-01 20:36:10.000000000 +0800
++++ b/include/openssl/ssl.h	2022-12-25 15:28:59.868389837 +0800
 @@ -125,6 +125,7 @@
  # define SSL_TXT_CAMELLIA256     "CAMELLIA256"
  # define SSL_TXT_CAMELLIA        "CAMELLIA"
@@ -376,8 +376,8 @@ diff --color -uNr a/include/openssl/ssl.h b/include/openssl/ssl.h
  # define SSL_TXT_ARIA            "ARIA"
  # define SSL_TXT_ARIA_GCM        "ARIAGCM"
 diff --color -uNr a/include/openssl/tls1.h b/include/openssl/tls1.h
---- a/include/openssl/tls1.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/include/openssl/tls1.h	2021-12-15 19:12:11.266085292 +0800
+--- a/include/openssl/tls1.h	2022-11-01 20:36:10.000000000 +0800
++++ b/include/openssl/tls1.h	2022-12-25 15:28:59.869389863 +0800
 @@ -597,7 +597,12 @@
  # define TLS1_CK_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256   0x0300C09A
  # define TLS1_CK_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384   0x0300C09B
@@ -417,8 +417,8 @@ diff --color -uNr a/include/openssl/tls1.h b/include/openssl/tls1.h
  # define TLS1_TXT_ECDHE_ECDSA_WITH_CHACHA20_POLY1305       "ECDHE-ECDSA-CHACHA20-POLY1305"
  # define TLS1_TXT_DHE_RSA_WITH_CHACHA20_POLY1305           "DHE-RSA-CHACHA20-POLY1305"
 diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
---- a/ssl/s3_lib.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/ssl/s3_lib.c	2021-12-15 19:12:11.268085344 +0800
+--- a/ssl/s3_lib.c	2022-11-01 20:36:10.000000000 +0800
++++ b/ssl/s3_lib.c	2022-12-25 15:28:59.870389889 +0800
 @@ -31,8 +31,26 @@
  };
  
@@ -551,7 +551,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
       1,
       TLS1_TXT_PSK_WITH_CHACHA20_POLY1305,
       TLS1_RFC_PSK_WITH_CHACHA20_POLY1305,
-@@ -4115,6 +4169,17 @@
+@@ -4127,6 +4181,17 @@
      return 1;
  }
  
@@ -569,7 +569,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
  /*
   * ssl3_choose_cipher - choose a cipher from those offered by the client
   * @s: SSL connection
-@@ -4124,16 +4189,24 @@
+@@ -4136,16 +4201,24 @@
   * Returns the selected cipher or NULL when no common ciphers.
   */
  const SSL_CIPHER *ssl3_choose_cipher(SSL *s, STACK_OF(SSL_CIPHER) *clnt,
@@ -600,7 +600,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
  
      /* Let's see which ciphers we can support */
  
-@@ -4160,54 +4233,13 @@
+@@ -4172,54 +4245,13 @@
  #endif
  
      /* SUITE-B takes precedence over server preference and ChaCha priortiy */
@@ -658,7 +658,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
          allow = srvr;
      }
  
-@@ -4238,14 +4270,16 @@
+@@ -4250,14 +4282,16 @@
      for (i = 0; i < sk_SSL_CIPHER_num(prio); i++) {
          c = sk_SSL_CIPHER_value(prio, i);
  
@@ -677,7 +677,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
  
          /*
           * Since TLS 1.3 ciphersuites can be used with any auth or
-@@ -4267,10 +4301,10 @@
+@@ -4279,10 +4313,10 @@
  #ifndef OPENSSL_NO_PSK
              /* with PSK there must be server callback set */
              if ((alg_k & SSL_PSK) && s->psk_server_callback == NULL)
@@ -690,7 +690,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
  #ifdef CIPHER_DEBUG
              fprintf(stderr, "%d:[%08lX:%08lX:%08lX:%08lX]%p:%s\n", ok, alg_k,
                      alg_a, mask_k, mask_a, (void *)c, c->name);
-@@ -4287,6 +4321,14 @@
+@@ -4299,6 +4333,14 @@
  
              if (!ok)
                  continue;
@@ -705,7 +705,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
          }
          ii = sk_SSL_CIPHER_find(allow, c);
          if (ii >= 0) {
-@@ -4294,14 +4336,7 @@
+@@ -4306,14 +4348,7 @@
              if (!ssl_security(s, SSL_SECOP_CIPHER_SHARED,
                                c->strength_bits, 0, (void *)c))
                  continue;
@@ -721,7 +721,7 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
              if (prefer_sha256) {
                  const SSL_CIPHER *tmp = sk_SSL_CIPHER_value(allow, ii);
  
-@@ -4313,13 +4348,38 @@
+@@ -4325,13 +4360,38 @@
                      ret = tmp;
                  continue;
              }
@@ -765,8 +765,8 @@ diff --color -uNr a/ssl/s3_lib.c b/ssl/s3_lib.c
  }
  
 diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
---- a/ssl/ssl_ciph.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/ssl/ssl_ciph.c	2021-12-15 19:12:11.269085369 +0800
+--- a/ssl/ssl_ciph.c	2022-11-01 20:36:10.000000000 +0800
++++ b/ssl/ssl_ciph.c	2022-12-25 15:35:32.000000000 +0800
 @@ -43,7 +43,8 @@
  #define SSL_ENC_CHACHA_IDX      19
  #define SSL_ENC_ARIA128GCM_IDX  20
@@ -961,16 +961,18 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
  #else
              while (isalnum((unsigned char)ch) || (ch == '-') || (ch == '.')
                     || (ch == '='))
-@@ -1026,7 +1083,7 @@
+@@ -1026,7 +1083,9 @@
                   * alphanumeric, so we call this an error.
                   */
                  SSLerr(SSL_F_SSL_CIPHER_PROCESS_RULESTR, SSL_R_INVALID_COMMAND);
--                retval = found = 0;
+-                return 0;
 +                retval = found = in_group = 0;
-                 l++;
-                 break;
++                l++;
++                break;
              }
-@@ -1205,8 +1262,8 @@
+ 
+             if (rule == CIPHER_SPECIAL) {
+@@ -1203,8 +1262,8 @@
          } else if (found) {
              ssl_cipher_apply_rule(cipher_id,
                                    alg_mkey, alg_auth, alg_enc, alg_mac,
@@ -981,7 +983,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
          } else {
              while ((*l != '\0') && !ITEM_SEP(*l))
                  l++;
-@@ -1215,6 +1272,11 @@
+@@ -1213,6 +1272,11 @@
              break;              /* done */
      }
  
@@ -993,7 +995,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
      return retval;
  }
  
-@@ -1378,7 +1440,7 @@
+@@ -1376,7 +1440,7 @@
      int ret = set_ciphersuites(&(ctx->tls13_ciphersuites), str);
  
      if (ret && ctx->cipher_list != NULL)
@@ -1002,7 +1004,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
                                    ctx->tls13_ciphersuites);
  
      return ret;
-@@ -1391,10 +1453,10 @@
+@@ -1389,10 +1453,10 @@
  
      if (s->cipher_list == NULL) {
          if ((cipher_list = SSL_get_ciphers(s)) != NULL)
@@ -1015,7 +1017,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
                                    s->tls13_ciphersuites);
  
      return ret;
-@@ -1402,17 +1464,20 @@
+@@ -1400,17 +1464,20 @@
  
  STACK_OF(SSL_CIPHER) *ssl_create_cipher_list(const SSL_METHOD *ssl_method,
                                               STACK_OF(SSL_CIPHER) *tls13_ciphersuites,
@@ -1039,7 +1041,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
  
      /*
       * Return with error if nothing to do.
-@@ -1461,16 +1526,16 @@
+@@ -1459,16 +1526,16 @@
       * preference).
       */
      ssl_cipher_apply_rule(0, SSL_kECDHE, SSL_aECDSA, 0, 0, 0, 0, CIPHER_ADD,
@@ -1063,7 +1065,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
                            &head, &tail);
  
      /*
-@@ -1479,13 +1544,13 @@
+@@ -1477,13 +1544,13 @@
       * strength.
       */
      ssl_cipher_apply_rule(0, 0, 0, SSL_AES ^ SSL_AESGCM, 0, 0, 0, CIPHER_ADD,
@@ -1080,7 +1082,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
                            &tail);
  
      /*
-@@ -1493,16 +1558,16 @@
+@@ -1491,16 +1558,16 @@
       * disabled. (For applications that allow them, they aren't too bad, but
       * we prefer authenticated ciphers.)
       */
@@ -1101,7 +1103,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
                            &tail);
  
      /*
-@@ -1518,7 +1583,7 @@
+@@ -1516,7 +1583,7 @@
       * Partially overrule strength sort to prefer TLS 1.2 ciphers/PRFs.
       * TODO(openssl-team): is there an easier way to accomplish all this?
       */
@@ -1110,7 +1112,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
                            &head, &tail);
  
      /*
-@@ -1534,15 +1599,18 @@
+@@ -1532,15 +1599,18 @@
       * Because we now bump ciphers to the top of the list, we proceed in
       * reverse order of preference.
       */
@@ -1133,7 +1135,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
  
      /*
       * We also need cipher aliases for selecting based on the rule_str.
-@@ -1556,9 +1624,8 @@
+@@ -1554,9 +1624,8 @@
      num_of_alias_max = num_of_ciphers + num_of_group_aliases + 1;
      ca_list = OPENSSL_malloc(sizeof(*ca_list) * num_of_alias_max);
      if (ca_list == NULL) {
@@ -1144,7 +1146,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
      }
      ssl_cipher_collect_aliases(ca_list, num_of_group_aliases,
                                 disabled_mkey, disabled_auth, disabled_enc,
-@@ -1583,29 +1650,19 @@
+@@ -1581,29 +1650,19 @@
  
      OPENSSL_free(ca_list);      /* Not needed anymore */
  
@@ -1181,7 +1183,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
  
      /*
       * The cipher selection for the list is done. The ciphers are added
-@@ -1613,26 +1670,50 @@
+@@ -1611,26 +1670,50 @@
       */
      for (curr = head; curr != NULL; curr = curr->next) {
          if (curr->active) {
@@ -1243,7 +1245,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
  }
  
  char *SSL_CIPHER_description(const SSL_CIPHER *cipher, char *buf, int len)
-@@ -1793,6 +1874,9 @@
+@@ -1791,6 +1874,9 @@
      case SSL_CHACHA20POLY1305:
          enc = "CHACHA20/POLY1305(256)";
          break;
@@ -1253,7 +1255,7 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
      default:
          enc = "unknown";
          break;
-@@ -2117,7 +2201,7 @@
+@@ -2115,7 +2201,7 @@
          out = EVP_CCM_TLS_EXPLICIT_IV_LEN + 16;
      } else if (c->algorithm_enc & (SSL_AES128CCM8 | SSL_AES256CCM8)) {
          out = EVP_CCM_TLS_EXPLICIT_IV_LEN + 8;
@@ -1263,8 +1265,8 @@ diff --color -uNr a/ssl/ssl_ciph.c b/ssl/ssl_ciph.c
      } else if (c->algorithm_mac & SSL_AEAD) {
          /* We're supposed to have handled all the AEAD modes above */
 diff --color -uNr a/ssl/ssl_err.c b/ssl/ssl_err.c
---- a/ssl/ssl_err.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/ssl/ssl_err.c	2021-12-15 19:11:53.415629806 +0800
+--- a/ssl/ssl_err.c	2022-11-01 20:36:10.000000000 +0800
++++ b/ssl/ssl_err.c	2022-12-25 15:28:59.873389966 +0800
 @@ -968,6 +968,9 @@
      {ERR_PACK(ERR_LIB_SSL, 0, SSL_R_MISSING_TMP_DH_KEY), "missing tmp dh key"},
      {ERR_PACK(ERR_LIB_SSL, 0, SSL_R_MISSING_TMP_ECDH_KEY),
@@ -1291,8 +1293,8 @@ diff --color -uNr a/ssl/ssl_err.c b/ssl/ssl_err.c
      {ERR_PACK(ERR_LIB_SSL, 0, SSL_R_UNINITIALIZED), "uninitialized"},
      {ERR_PACK(ERR_LIB_SSL, 0, SSL_R_UNKNOWN_ALERT_TYPE), "unknown alert type"},
 diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
---- a/ssl/ssl_lib.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/ssl/ssl_lib.c	2021-12-15 19:11:53.417629857 +0800
+--- a/ssl/ssl_lib.c	2022-11-01 20:36:10.000000000 +0800
++++ b/ssl/ssl_lib.c	2022-12-25 15:28:59.875390018 +0800
 @@ -1128,6 +1128,71 @@
      return X509_VERIFY_PARAM_set1(ssl->param, vpm);
  }
@@ -1375,7 +1377,7 @@ diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
      sk_SSL_CIPHER_free(s->cipher_list_by_id);
      sk_SSL_CIPHER_free(s->tls13_ciphersuites);
      sk_SSL_CIPHER_free(s->peer_ciphers);
-@@ -2451,9 +2517,9 @@
+@@ -2466,9 +2532,9 @@
  {
      if (s != NULL) {
          if (s->cipher_list != NULL) {
@@ -1387,7 +1389,7 @@ diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
          }
      }
      return NULL;
-@@ -2527,8 +2593,8 @@
+@@ -2542,8 +2608,8 @@
   * preference */
  STACK_OF(SSL_CIPHER) *SSL_CTX_get_ciphers(const SSL_CTX *ctx)
  {
@@ -1398,7 +1400,7 @@ diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
      return NULL;
  }
  
-@@ -3072,7 +3138,7 @@
+@@ -3087,7 +3153,7 @@
                                  ret->tls13_ciphersuites,
                                  &ret->cipher_list, &ret->cipher_list_by_id,
                                  SSL_DEFAULT_CIPHER_LIST, ret->cert)
@@ -1407,7 +1409,7 @@ diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
          SSLerr(SSL_F_SSL_CTX_NEW, SSL_R_LIBRARY_HAS_NO_CIPHERS);
          goto err2;
      }
-@@ -3248,7 +3314,7 @@
+@@ -3263,7 +3329,7 @@
  #ifndef OPENSSL_NO_CT
      CTLOG_STORE_free(a->ctlog_store);
  #endif
@@ -1416,7 +1418,7 @@ diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
      sk_SSL_CIPHER_free(a->cipher_list_by_id);
      sk_SSL_CIPHER_free(a->tls13_ciphersuites);
      ssl_cert_free(a->cert);
-@@ -3913,13 +3979,15 @@
+@@ -3929,13 +3995,15 @@
  
      /* dup the cipher_list and cipher_list_by_id stacks */
      if (s->cipher_list != NULL) {
@@ -1437,8 +1439,8 @@ diff --color -uNr a/ssl/ssl_lib.c b/ssl/ssl_lib.c
      /* Dup the client_CA list */
      if (!dup_ca_names(&ret->ca_names, s->ca_names)
 diff --color -uNr a/ssl/ssl_local.h b/ssl/ssl_local.h
---- a/ssl/ssl_local.h	2021-12-14 23:45:01.000000000 +0800
-+++ b/ssl/ssl_local.h	2021-12-15 19:12:11.270085395 +0800
+--- a/ssl/ssl_local.h	2022-11-01 20:36:10.000000000 +0800
++++ b/ssl/ssl_local.h	2022-12-25 15:28:59.876390044 +0800
 @@ -230,12 +230,13 @@
  # define SSL_CHACHA20POLY1305    0x00080000U
  # define SSL_ARIA128GCM          0x00100000U
@@ -1534,7 +1536,7 @@ diff --color -uNr a/ssl/ssl_local.h b/ssl/ssl_local.h
  __owur int ssl_cipher_get_evp(const SSL_SESSION *s, const EVP_CIPHER **enc,
                                const EVP_MD **md, int *mac_pkey_type,
                                size_t *mac_secret_size, SSL_COMP **comp,
-@@ -2362,7 +2407,7 @@
+@@ -2363,7 +2408,7 @@
                                              CERT_PKEY *cpk);
  __owur const SSL_CIPHER *ssl3_choose_cipher(SSL *ssl,
                                              STACK_OF(SSL_CIPHER) *clnt,
@@ -1544,8 +1546,8 @@ diff --color -uNr a/ssl/ssl_local.h b/ssl/ssl_local.h
  __owur int ssl3_new(SSL *s);
  void ssl3_free(SSL *s);
 diff --color -uNr a/ssl/statem/statem_srvr.c b/ssl/statem/statem_srvr.c
---- a/ssl/statem/statem_srvr.c	2021-12-14 23:45:01.000000000 +0800
-+++ b/ssl/statem/statem_srvr.c	2021-12-15 19:11:53.420629934 +0800
+--- a/ssl/statem/statem_srvr.c	2022-11-01 20:36:10.000000000 +0800
++++ b/ssl/statem/statem_srvr.c	2022-12-25 15:28:59.877390070 +0800
 @@ -1773,7 +1773,7 @@
      /* For TLSv1.3 we must select the ciphersuite *before* session resumption */
      if (SSL_IS_TLS13(s)) {
@@ -1586,8 +1588,8 @@ diff --color -uNr a/ssl/statem/statem_srvr.c b/ssl/statem/statem_srvr.c
                  if (cipher == NULL) {
                      SSLfatal(s, SSL_AD_HANDSHAKE_FAILURE,
 diff --color -uNr a/util/libcrypto.num b/util/libcrypto.num
---- a/util/libcrypto.num	2021-12-14 23:45:01.000000000 +0800
-+++ b/util/libcrypto.num	2021-12-15 19:12:11.272085446 +0800
+--- a/util/libcrypto.num	2022-11-01 20:36:10.000000000 +0800
++++ b/util/libcrypto.num	2022-12-25 15:28:59.879390122 +0800
 @@ -4591,3 +4591,4 @@
  X509_REQ_set0_signature                 4545	1_1_1h	EXIST::FUNCTION:
  X509_REQ_set1_signature_algo            4546	1_1_1h	EXIST::FUNCTION:
