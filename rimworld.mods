@@ -78,6 +78,9 @@ Mods:
 - Id: rwzh.chinesepack.vcef
   Name: Vanilla_Fishing_Expanded_zh
   SteamWorkshopId: 2035866747
+- Id: owlchemist.bettervanillamasking
+  Name: Better Vanilla Masking
+  SteamWorkshopId: 1736114368
 - Id: unofficial.morepracticaltraits
   Name: More Practical Traits - unofficial update
   SteamWorkshopId: 2893524668
@@ -195,7 +198,7 @@ Mods:
 - Id: dubwise.dubsappareltweaks
   Name: Dubs Apparel Tweaks
   SteamWorkshopId: 2296697286
-- Id: rwzh.chinesepack.dubsappareltweaks
+- Id: rwzh.leafzxg.dubsappareltweaks
   Name: Dubs_Apparel_Tweaks_zh
   SteamWorkshopId: 2327363931
 - Id: avilmask.commonsense
@@ -330,6 +333,12 @@ Mods:
 - Id: rwzh.chinesepack.cameraplus
   Name: Camera+_zh
   SteamWorkshopId: 1783453942
+- Id: nomaxbills.kv.rw
+  Name: '[KV] No Max Bills'
+  SteamWorkshopId: 1588831229
+- Id: falconne.bwm
+  Name: Better Workbench Management
+  SteamWorkshopId: 935982361
 - Id: fluffy.followme
   Name: Follow Me
   SteamWorkshopId: 715759739
@@ -354,9 +363,6 @@ Mods:
 - Id: leafzxg.masterofcrafting
   Name: Master of Crafting
   SteamWorkshopId: 848513545
-- Id: savestoragesettings.kv.rw
-  Name: '[KV] Save Storage, Outfit, Crafting, Drug, & Operation Settings [1.4]'
-  SteamWorkshopId: 2878346181
 - Id: mlie.foodpoisoningstackfix
   Name: Food Poisoning Stack Fix (Continued)
   SteamWorkshopId: 2843483188
@@ -610,7 +616,7 @@ Mods:
   Name: MendAndRecycle
   SteamWorkshopId: 735241897
 - Id: vis.staticquality
-  Name: Static Quality Stripped
+  Name: Static Quality
   SteamWorkshopId: 2801204005
 - Id: ratys.madskills
   Name: Mad Skills
@@ -624,13 +630,13 @@ Mods:
 - Id: vat.epoeforked
   Name: Expanded Prosthetics and Organ Engineering - Forked
   SteamWorkshopId: 1949064302
-- Id: rwzh.chinesepack.epoeforked
+- Id: rwzh.leafzxg.epoeforked
   Name: Expanded_Prosthetics_and_Organ_Engineering_Forked_zh
   SteamWorkshopId: 2021158028
 - Id: vat.epoeforkedroyalty
   Name: 'EPOE-Forked: Royalty DLC expansion'
   SteamWorkshopId: 2008970276
-- Id: rwzh.chinesepack.epoeforkedroyalty
+- Id: rwzh.leafzxg.epoeforkedroyalty
   Name: EPOE-Forked_Royalty_DLC_expansion_zh
   SteamWorkshopId: 2026231230
 - Id: inglix.fasterbiosculptingpod
