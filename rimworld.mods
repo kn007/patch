@@ -285,6 +285,9 @@ Mods:
 - Id: insertkey.itemlistselector
   Name: ItemListSelector
   SteamWorkshopId: 1522414793
+- Id: leoltron.maxbuymaxsell
+  Name: Max Buy, Max Sell
+  SteamWorkshopId: 2889812094
 - Id: timmyliang.tradehelper
   Name: TradeHelper
   SteamWorkshopId: 2113372560
