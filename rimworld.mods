@@ -276,9 +276,6 @@ Mods:
 - Id: tammybee.predatorhuntalert
   Name: Predator Hunt Alert
   SteamWorkshopId: 1537786185
-- Id: zilla.fertilityinfo
-  Name: Show Fertility on Health Tab
-  SteamWorkshopId: 2879306896
 - Id: kathanon.repairinthezone
   Name: Repair in the Zone
   SteamWorkshopId: 2798537004
@@ -546,6 +543,12 @@ Mods:
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
+- Id: gm.headsetwhelmet
+  Name: Mechanitor Headset with Helmet
+  SteamWorkshopId: 2881642669
+- Id: wvc.sergkart.biotech.mechanoididleoptimization
+  Name: Mechanoid Idle Optimization
+  SteamWorkshopId: 2885792215
 - Id: relaxedotter.bettermechanoidloot
   Name: Better Mechanoid Loot (continued)
   SteamWorkshopId: 2886997332
