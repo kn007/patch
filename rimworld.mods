@@ -210,6 +210,9 @@ Mods:
 - Id: neronix17.tweaksgalore
   Name: Tweaks Galore
   SteamWorkshopId: 2695164414
+- Id: mobius.royaltytweaks
+  Name: Royalty Tweaks
+  SteamWorkshopId: 2018384424
 - Id: vesper.notmyfault
   Name: Not My Fault
   SteamWorkshopId: 2870045856
@@ -429,6 +432,15 @@ Mods:
 - Id: fluffy.medicaltab
   Name: Medical Tab
   SteamWorkshopId: 715565817
+- Id: rwzh.leafzxg.medicaltab
+  Name: Medical_Tab_zh
+  SteamWorkshopId: 2905108685
+- Id: fluffy.worktab
+  Name: Work Tab
+  SteamWorkshopId: 725219116
+- Id: rwzh.leafzxg.worktab
+  Name: Work_Tab_zh
+  SteamWorkshopId: 2905108789
 - Id: antaioz.modmedicinepatch
   Name: Mod Medicine Patch
   SteamWorkshopId: 1430084631
