@@ -1,5 +1,8 @@
 Version: 0
 Mods:
+- Id: rupal.rimpymodmanagerdatabase
+  Name: RimPy Mod Manager Database
+  SteamWorkshopId: 1847679158
 - Id: brrainz.harmony
   Name: Harmony
   SteamWorkshopId: 2009463077
@@ -48,6 +51,12 @@ Mods:
 - Id: fluffy.musicmanager
   Name: Music Manager
   SteamWorkshopId: 2229205672
+- Id: telefonmast.graphicssettings
+  Name: Graphics Settings+
+  SteamWorkshopId: 1678847247
+- Id: tinygrox.chs.graphicssettings
+  Name: Graphics Settings CHS
+  SteamWorkshopId: 2888729664
 - Id: oskarpotocki.vanillafactionsexpanded.core
   Name: Vanilla Expanded Framework
   SteamWorkshopId: 2023507013
@@ -96,9 +105,9 @@ Mods:
 - Id: zh.moretraitgenes
   Name: More Genes简体中文汉化包
   SteamWorkshopId: 2884401339
-- Id: gloomy.gloomyfacemk2.1.4
-  Name: Gloomy Face mk2
-  SteamWorkshopId: 2890566247
+- Id: gloomyfacemk2.1.4.unofficial
+  Name: Gloomy Face mk2 Unofficial
+  SteamWorkshopId: 2910048077
 - Id: nals.chibifacefemale
   Name: '[NL] Chibi Face Female only'
   SteamWorkshopId: 1540475285
@@ -216,6 +225,9 @@ Mods:
 - Id: mobius.royaltytweaks
   Name: Royalty Tweaks
   SteamWorkshopId: 2018384424
+- Id: wemd.handsarenotoutside
+  Name: '[WD] Hands Are Not Outside'
+  SteamWorkshopId: 1985331019
 - Id: vesper.notmyfault
   Name: Not My Fault
   SteamWorkshopId: 2870045856
@@ -432,6 +444,9 @@ Mods:
 - Id: mlie.lessstupidromanceattempt
   Name: Less Stupid Romance Attempt (Continued)
   SteamWorkshopId: 2014603702
+- Id: wemd.whitepowerarmor
+  Name: '[WD] White Power Armor'
+  SteamWorkshopId: 1122453564
 - Id: mlie.billysimprovedcaravanformation
   Name: Billy's Improved Caravan Formation (Continued)
   SteamWorkshopId: 2068456092
