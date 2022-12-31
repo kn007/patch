@@ -6,12 +6,6 @@ Mods:
 - Id: ludeon.rimworld
   Name: 核心
   SteamWorkshopId: 0
-- Id: arandomkiwi.rimsaves
-  Name: RimSaves
-  SteamWorkshopId: 1713367505
-- Id: rwzh.chinesepack.rimsaves
-  Name: RimSaves_zh
-  SteamWorkshopId: 2199383843
 - Id: fluffy.modmanager
   Name: Mod Manager
   SteamWorkshopId: 1507748539
@@ -36,6 +30,12 @@ Mods:
 - Id: rwzh.chinesepack.hugslib
   Name: HugsLib_zh
   SteamWorkshopId: 1798770746
+- Id: arandomkiwi.rimsaves
+  Name: RimSaves
+  SteamWorkshopId: 1713367505
+- Id: rwzh.chinesepack.rimsaves
+  Name: RimSaves_zh
+  SteamWorkshopId: 2199383843
 - Id: trinity.runtimegcupdated
   Name: RuntimeGC [1.4]
   SteamWorkshopId: 2559582557
@@ -165,18 +165,18 @@ Mods:
 - Id: murmur.threatpointcap
   Name: Threat Point Cap
   SteamWorkshopId: 2380491067
-- Id: derekbickley.ltocolonygroupsfinal
-  Name: '[LTO] Colony Groups'
-  SteamWorkshopId: 2345493945
-- Id: zh.ltocolonygroupsfinal
-  Name: '[LTO] Colony Groups简繁中文汉化包'
-  SteamWorkshopId: 2364514563
 - Id: dark.jobinbar
   Name: Job In Bar
   SteamWorkshopId: 2086300611
 - Id: chinesetranslation.whw.jobinbar
   Name: Job In Bar 个人简中汉化
   SteamWorkshopId: 2625438810
+- Id: derekbickley.ltocolonygroupsfinal
+  Name: '[LTO] Colony Groups'
+  SteamWorkshopId: 2345493945
+- Id: zh.ltocolonygroupsfinal
+  Name: '[LTO] Colony Groups简繁中文汉化包'
+  SteamWorkshopId: 2364514563
 - Id: dubwise.dubsmintminimap
   Name: Dubs Mint Minimap
   SteamWorkshopId: 1662119905
@@ -354,6 +354,9 @@ Mods:
 - Id: fluffy.followme
   Name: Follow Me
   SteamWorkshopId: 715759739
+- Id: com.github.alandariva.moreplanning
+  Name: More Planning [1.4]
+  SteamWorkshopId: 2551225702
 - Id: unlimitedhugs.allowtool
   Name: Allow Tool
   SteamWorkshopId: 761421485
@@ -492,18 +495,18 @@ Mods:
 - Id: puremj.mjrimmods.whileyouarenearby
   Name: While You Are Nearby
   SteamWorkshopId: 2784585275
-- Id: codeoptimist.jobsofopportunity
-  Name: While You're Up / PUAH+
-  SteamWorkshopId: 2034960453
-- Id: rwzh.chinesepack.jobsofopportunity
-  Name: While_You're_U_PUAH+_zh
-  SteamWorkshopId: 2039718734
 - Id: mehni.pickupandhaul
   Name: Pick Up And Haul
   SteamWorkshopId: 1279012058
 - Id: pickupandhaul.zh
   Name: pick up and haul zh 中文补丁
   SteamWorkshopId: 2891446654
+- Id: codeoptimist.jobsofopportunity
+  Name: While You're Up / PUAH+
+  SteamWorkshopId: 2034960453
+- Id: rwzh.chinesepack.jobsofopportunity
+  Name: While_You're_U_PUAH+_zh
+  SteamWorkshopId: 2039718734
 - Id: mlie.pawneducation
   Name: Pawn Education (Continued)
   SteamWorkshopId: 2296533470
@@ -561,9 +564,6 @@ Mods:
 - Id: vanya.agent.housemaidnukos
   Name: '[L] House Maid Nukos'
   SteamWorkshopId: 1418683071
-- Id: com.github.alandariva.moreplanning
-  Name: More Planning [1.4]
-  SteamWorkshopId: 2551225702
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
