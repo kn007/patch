@@ -135,6 +135,9 @@ Mods:
 - Id: wrk.woundremover
   Name: 1.3/Ideology Wound Remover
   SteamWorkshopId: 2839444849
+- Id: edb.preparecarefully
+  Name: EdB Prepare Carefully
+  SteamWorkshopId: 735106432
 - Id: void.charactereditor
   Name: Character Editor
   SteamWorkshopId: 1874644848
@@ -222,6 +225,12 @@ Mods:
 - Id: bustedbunny.chooseyourrecipe
   Name: Choose Your Recipe
   SteamWorkshopId: 2613112847
+- Id: dubwise.dubsmintmenus
+  Name: Dubs Mint Menus
+  SteamWorkshopId: 1446523594
+- Id: rwzh.chinesepack.dubsmintmenus
+  Name: Dubs_Mint_Menus_zh
+  SteamWorkshopId: 2327364313
 - Id: mlie.configurableroomstats
   Name: Configurable Room Stats (Continued)
   SteamWorkshopId: 2896467431
