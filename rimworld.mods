@@ -225,6 +225,9 @@ Mods:
 - Id: mobius.royaltytweaks
   Name: Royalty Tweaks
   SteamWorkshopId: 2018384424
+- Id: mlie.allmemoriesfade
+  Name: All Memories Fade
+  SteamWorkshopId: 2800155563
 - Id: wemd.handsarenotoutside
   Name: '[WD] Hands Are Not Outside'
   SteamWorkshopId: 1985331019
@@ -609,6 +612,9 @@ Mods:
 - Id: zephyr.craftableroyaltyweaponszh
   Name: Craftable Royalty Weapons 皇权武器制造简繁汉化
   SteamWorkshopId: 2063798513
+- Id: hrg164hjo.steriletilepatch
+  Name: Make sterile tile beautiful again
+  SteamWorkshopId: 2895016825
 - Id: cuddle.donottakemyguns
   Name: Don't take my guns
   SteamWorkshopId: 1869879952
