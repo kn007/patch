@@ -585,6 +585,9 @@ Mods:
 - Id: dakkpasserida.animareplant
   Name: Replantable Anima Trees
   SteamWorkshopId: 2586765823
+- Id: atom.tree
+  Name: Anima and Gauranlen Tree Retexture
+  SteamWorkshopId: 2662326639
 - Id: vanya.agent.housemaidnukos
   Name: '[L] House Maid Nukos'
   SteamWorkshopId: 1418683071
@@ -720,6 +723,9 @@ Mods:
 - Id: neronix17.embrasures
   Name: Seamless Embrasures
   SteamWorkshopId: 2290689449
+- Id: darthsergeant.10turrets
+  Name: 1.0 Turrets
+  SteamWorkshopId: 2028662113
 - Id: neceros.dws.simpleturrets
   Name: Simple Turrets
   SteamWorkshopId: 2559263455
