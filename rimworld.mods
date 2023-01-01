@@ -477,9 +477,6 @@ Mods:
 - Id: rwzh.leafzxg.worktab
   Name: Work_Tab_zh
   SteamWorkshopId: 2905108789
-- Id: antaioz.modmedicinepatch
-  Name: Mod Medicine Patch
-  SteamWorkshopId: 1430084631
 - Id: voult.betterpawncontrol
   Name: Better Pawn Control
   SteamWorkshopId: 1541460369
@@ -675,6 +672,9 @@ Mods:
 - Id: vis.staticquality
   Name: Static Quality
   SteamWorkshopId: 2801204005
+- Id: zh.vis.staticquality
+  Name: Static Quality_zh
+  SteamWorkshopId: 2907151281
 - Id: ratys.madskills
   Name: Mad Skills
   SteamWorkshopId: 731111514
