@@ -87,6 +87,12 @@ Mods:
 - Id: rwzh.chinesepack.vcef
   Name: Vanilla_Fishing_Expanded_zh
   SteamWorkshopId: 2035866747
+- Id: tenthwit.apparel
+  Name: Retextured Apparel
+  SteamWorkshopId: 2042613316
+- Id: tenthwit.sculptures
+  Name: Retextured Sculptures
+  SteamWorkshopId: 2045252395
 - Id: owlchemist.bettervanillamasking
   Name: Better Vanilla Masking
   SteamWorkshopId: 1736114368
@@ -111,15 +117,12 @@ Mods:
 - Id: nals.chibifacefemale
   Name: '[NL] Chibi Face Female only'
   SteamWorkshopId: 1540475285
-- Id: vanillaexpanded.vhe
-  Name: Vanilla Hair Expanded
-  SteamWorkshopId: 1888705256
-- Id: rwzh.chinesepack.vhe
-  Name: Vanilla_Hair_Expanded_zh
-  SteamWorkshopId: 2189272277
-- Id: rimsenal.hair
-  Name: Rimsenal - Hair pack
-  SteamWorkshopId: 725949967
+- Id: hourai.vanillahairsretex
+  Name: Vanilla Hairs Retextured
+  SteamWorkshopId: 2893572291
+- Id: klr.gloomyhairmk2forked
+  Name: Gloomy Hair mk2 FORKED[1.4]
+  SteamWorkshopId: 2895002564
 - Id: jintuzilamian.hairstyle.afumenshairstyles
   Name: AFU男士发型_Men's hairstyles
   SteamWorkshopId: 2072106893
@@ -150,6 +153,9 @@ Mods:
 - Id: void.charactereditor
   Name: Character Editor
   SteamWorkshopId: 1874644848
+- Id: boundir.newgameplus
+  Name: New Game Plus
+  SteamWorkshopId: 2909126210
 - Id: sarg.smartspeed
   Name: Smart Speed
   SteamWorkshopId: 1504723424
