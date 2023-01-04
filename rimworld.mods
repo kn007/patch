@@ -378,6 +378,12 @@ Mods:
 - Id: com.github.alandariva.moreplanning
   Name: More Planning [1.4]
   SteamWorkshopId: 2551225702
+- Id: fluffy.blueprints
+  Name: Blueprints
+  SteamWorkshopId: 708455313
+- Id: rwzh.leafzxg.blueprints
+  Name: Blueprints_zh
+  SteamWorkshopId: 2905109743
 - Id: unlimitedhugs.allowtool
   Name: Allow Tool
   SteamWorkshopId: 761421485
@@ -714,6 +720,9 @@ Mods:
 - Id: rwzh.chinesepack.dresspatients
   Name: Dress_Patients_zh
   SteamWorkshopId: 2063186733
+- Id: bbbbilly.makereinforcedbarrel
+  Name: Make Reinforced Barrel
+  SteamWorkshopId: 2538773133
 - Id: fluffy.fluffybreakdowns
   Name: Fluffy Breakdowns
   SteamWorkshopId: 726244033
