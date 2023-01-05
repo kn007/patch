@@ -33,6 +33,9 @@ Mods:
 - Id: rwzh.chinesepack.hugslib
   Name: HugsLib_zh
   SteamWorkshopId: 1798770746
+- Id: superniquito.modoptionssort
+  Name: Mod Options Sort
+  SteamWorkshopId: 2910865748
 - Id: arandomkiwi.rimsaves
   Name: RimSaves
   SteamWorkshopId: 1713367505
