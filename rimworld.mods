@@ -600,6 +600,9 @@ Mods:
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
+- Id: murmur.fasterprojectiles
+  Name: Faster Projectiles
+  SteamWorkshopId: 2880014259
 - Id: gm.headsetwhelmet
   Name: Mechanitor Headset with Helmet
   SteamWorkshopId: 2881642669
