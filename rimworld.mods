@@ -726,6 +726,9 @@ Mods:
 - Id: rwzh.chinesepack.dresspatients
   Name: Dress_Patients_zh
   SteamWorkshopId: 2063186733
+- Id: kathanon.showweapontallies
+  Name: Show Weapon Tallies
+  SteamWorkshopId: 2901520677
 - Id: bbbbilly.makereinforcedbarrel
   Name: Make Reinforced Barrel
   SteamWorkshopId: 2538773133
