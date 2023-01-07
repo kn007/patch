@@ -144,6 +144,9 @@ Mods:
 - Id: oppey.goawayeyestrain
   Name: Go Away Eye Strain!
   SteamWorkshopId: 2895295315
+- Id: atom.tree
+  Name: Anima and Gauranlen Tree Retexture
+  SteamWorkshopId: 2662326639
 - Id: agentblac.makepawnsprisoners
   Name: 1.4 - Imprisonment On The Go! (Make Pawns Prisoners Without Beds)
   SteamWorkshopId: 1203903378
@@ -570,12 +573,21 @@ Mods:
 - Id: murmur.isid
   Name: Infestations Spawn in Darkness
   SteamWorkshopId: 2017514331
+- Id: murmur.fasterprojectiles
+  Name: Faster Projectiles
+  SteamWorkshopId: 2880014259
 - Id: crocodil.foodpoisoningcures
   Name: Food Poisoning Cures
   SteamWorkshopId: 2856335335
 - Id: zh.crocodil.foodpoisoningcures
   Name: Food Poisoning Cures_zh
   SteamWorkshopId: 2857544882
+- Id: eagle0600.dresspatients.1.4
+  Name: Dress Patients (1.4)
+  SteamWorkshopId: 2877763074
+- Id: rwzh.chinesepack.dresspatients
+  Name: Dress_Patients_zh
+  SteamWorkshopId: 2063186733
 - Id: gorymoon.closeall
   Name: CloseAll
   SteamWorkshopId: 2018479759
@@ -588,21 +600,15 @@ Mods:
 - Id: lbmaian.begonemessage
   Name: Begone, Message!
   SteamWorkshopId: 1951637504
+- Id: kathanon.showweapontallies
+  Name: Show Weapon Tallies
+  SteamWorkshopId: 2901520677
 - Id: dakkpasserida.animareplant
   Name: Replantable Anima Trees
   SteamWorkshopId: 2586765823
-- Id: atom.tree
-  Name: Anima and Gauranlen Tree Retexture
-  SteamWorkshopId: 2662326639
-- Id: vanya.agent.housemaidnukos
-  Name: '[L] House Maid Nukos'
-  SteamWorkshopId: 1418683071
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
-- Id: murmur.fasterprojectiles
-  Name: Faster Projectiles
-  SteamWorkshopId: 2880014259
 - Id: gm.headsetwhelmet
   Name: Mechanitor Headset with Helmet
   SteamWorkshopId: 2881642669
@@ -669,15 +675,6 @@ Mods:
 - Id: dracoix.doormat.r12a
   Name: Door Mat
   SteamWorkshopId: 1505423207
-- Id: owlchemist.modulartablesandchairs
-  Name: Modular Tables and Chairs
-  SteamWorkshopId: 2566288569
-- Id: balistafreak.standalonehotspring
-  Name: Standalone Hot Spring
-  SteamWorkshopId: 2205980094
-- Id: rwzh.chinesepack.standalonehotspring
-  Name: Standalone_Hot_Spring_zh
-  SteamWorkshopId: 2210994825
 - Id: notfood.mendandrecycle
   Name: MendAndRecycle
   SteamWorkshopId: 735241897
@@ -720,24 +717,36 @@ Mods:
 - Id: pzqaks.biosculptingplus.zh
   Name: BioSculptingPlus 简繁汉化包
   SteamWorkshopId: 2619378452
-- Id: eagle0600.dresspatients.1.4
-  Name: Dress Patients (1.4)
-  SteamWorkshopId: 2877763074
-- Id: rwzh.chinesepack.dresspatients
-  Name: Dress_Patients_zh
-  SteamWorkshopId: 2063186733
-- Id: kathanon.showweapontallies
-  Name: Show Weapon Tallies
-  SteamWorkshopId: 2901520677
-- Id: bbbbilly.makereinforcedbarrel
-  Name: Make Reinforced Barrel
-  SteamWorkshopId: 2538773133
-- Id: fluffy.fluffybreakdowns
-  Name: Fluffy Breakdowns
-  SteamWorkshopId: 726244033
+- Id: balistafreak.standalonehotspring
+  Name: Standalone Hot Spring
+  SteamWorkshopId: 2205980094
+- Id: rwzh.chinesepack.standalonehotspring
+  Name: Standalone_Hot_Spring_zh
+  SteamWorkshopId: 2210994825
+- Id: vanya.agent.housemaidnukos
+  Name: '[L] House Maid Nukos'
+  SteamWorkshopId: 1418683071
+- Id: mlie.prisonersshouldfearturrets
+  Name: Prisoners Should Fear Turrets
+  SteamWorkshopId: 2602436826
+- Id: bustedbunny.prisonersarenotswines
+  Name: Prisoners Are Not Swines
+  SteamWorkshopId: 2613966365
 - Id: doctorstupid.sofa
   Name: Literally just a sofa
   SteamWorkshopId: 2894560149
+- Id: fluffy.fluffybreakdowns
+  Name: Fluffy Breakdowns
+  SteamWorkshopId: 726244033
+- Id: mlie.enterhere
+  Name: Enter Here
+  SteamWorkshopId: 2824117092
+- Id: zh.enterhere.only
+  Name: Enter Here -- 客从此进 简繁汉化包
+  SteamWorkshopId: 2826779697
+- Id: bbbbilly.makereinforcedbarrel
+  Name: Make Reinforced Barrel
+  SteamWorkshopId: 2538773133
 - Id: neronix17.embrasures
   Name: Seamless Embrasures
   SteamWorkshopId: 2290689449
@@ -747,12 +756,6 @@ Mods:
 - Id: neceros.dws.simpleturrets
   Name: Simple Turrets
   SteamWorkshopId: 2559263455
-- Id: mlie.prisonersshouldfearturrets
-  Name: Prisoners Should Fear Turrets
-  SteamWorkshopId: 2602436826
-- Id: bustedbunny.prisonersarenotswines
-  Name: Prisoners Are Not Swines
-  SteamWorkshopId: 2613966365
 - Id: witek.mechscanhaultocharger
   Name: Mechs can haul to charger
   SteamWorkshopId: 2883113037
@@ -771,12 +774,6 @@ Mods:
 - Id: rwzh.chinesepack.ratys
   Name: RT_zh_pack
   SteamWorkshopId: 2015185500
-- Id: mlie.enterhere
-  Name: Enter Here
-  SteamWorkshopId: 2824117092
-- Id: zh.enterhere.only
-  Name: Enter Here -- 客从此进 简繁汉化包
-  SteamWorkshopId: 2826779697
 - Id: velcroboy333.outdoorlighting
   Name: Outdoor Lighting (continued)
   SteamWorkshopId: 2888755935
