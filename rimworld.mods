@@ -60,6 +60,9 @@ Mods:
 - Id: tinygrox.chs.graphicssettings
   Name: Graphics Settings CHS
   SteamWorkshopId: 2888729664
+- Id: kapitanoczywisty.minimallightcontrol
+  Name: Minimal Light Control
+  SteamWorkshopId: 1554307259
 - Id: oskarpotocki.vanillafactionsexpanded.core
   Name: Vanilla Expanded Framework
   SteamWorkshopId: 2023507013
