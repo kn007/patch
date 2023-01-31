@@ -612,6 +612,9 @@ Mods:
 - Id: ben.automaticnightowl
   Name: Automatic Night Owl
   SteamWorkshopId: 2056012179
+- Id: dninemfive.qualitycooldown
+  Name: Quality Cooldown
+  SteamWorkshopId: 1543069597
 - Id: gm.headsetwhelmet
   Name: Mechanitor Headset with Helmet
   SteamWorkshopId: 2881642669
@@ -735,6 +738,9 @@ Mods:
 - Id: bustedbunny.prisonersarenotswines
   Name: Prisoners Are Not Swines
   SteamWorkshopId: 2613966365
+- Id: hobtook.mortaraccuracy
+  Name: Mortar Accuracy
+  SteamWorkshopId: 1729446857
 - Id: doctorstupid.sofa
   Name: Literally just a sofa
   SteamWorkshopId: 2894560149
