@@ -282,6 +282,9 @@ Mods:
 - Id: qualcolor.zh
   Name: Quality Colors zh 简体中文汉化
   SteamWorkshopId: 2891521968
+- Id: owlchemist.perspectiveores
+  Name: 'Perspective: Ores'
+  SteamWorkshopId: 2923871543
 - Id: owlchemist.simplefx.vapor
   Name: 'Simple FX: Vapor'
   SteamWorkshopId: 2886571275
@@ -297,6 +300,9 @@ Mods:
 - Id: owlchemist.scatteredflames.zh.hc
   Name: Scattered Flames_zh
   SteamWorkshopId: 2711236044
+- Id: telardo.fireworks
+  Name: Fireworks
+  SteamWorkshopId: 2922179297
 - Id: fishbones.daylilyretexture
   Name: I Hate Daylilies
   SteamWorkshopId: 2878142283
