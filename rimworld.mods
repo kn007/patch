@@ -48,6 +48,12 @@ Mods:
 - Id: madeline.modmismatchformatter
   Name: Better ModMismatch Window
   SteamWorkshopId: 1872244972
+- Id: owlchemist.midsaversaver
+  Name: Mid-saver Saver
+  SteamWorkshopId: 2921585989
+- Id: chinesepackage.owlchemist.midsaversaver
+  Name: Mid-saver Saver_zh
+  SteamWorkshopId: 2924284353
 - Id: peppsen.pmusic
   Name: P-Music
   SteamWorkshopId: 725130005
@@ -186,6 +192,9 @@ Mods:
 - Id: zh.m00nl1ght.geologicallandforms
   Name: Geological Landforms_zh
   SteamWorkshopId: 2774968010
+- Id: mlie.savemaps
+  Name: Save Maps (Continued)
+  SteamWorkshopId: 2916523481
 - Id: murmur.threatpointcap
   Name: Threat Point Cap
   SteamWorkshopId: 2380491067
