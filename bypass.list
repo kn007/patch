@@ -6,6 +6,7 @@
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+*.openai.com
 *.twitch.tv
 *.bose.com
 *.worldofwarships.asia
