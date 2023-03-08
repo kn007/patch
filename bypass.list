@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2022/11/29
+; Date: 2023/03/08
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -300,6 +300,7 @@
 *.netlify.app
 *.netlify.com
 *.healthchecks.io
+*.mgstage.com
 
 ; ==============================================================================
 ; ==============================================================================
