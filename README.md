@@ -16,7 +16,7 @@ Test pass: 1.23.3
 
 Require: Nginx 1.21.4 or later.
 
-Test pass: 1.23.0 with [cloudflare/quiche@5077595](https://github.com/cloudflare/quiche/tree/5077595573b092b1fd8fb5b0cd277806f5c1f8f2)
+Test pass: 1.23.3 with [cloudflare/quiche@c9311a1](https://github.com/cloudflare/quiche/tree/c9311a18910c0277867c34c0acc4a9711b50b913)
 
 <b>Check your modules when build failed.</b>
 
