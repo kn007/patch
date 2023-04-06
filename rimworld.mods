@@ -339,9 +339,6 @@ Mods:
 - Id: jp.adjacentlight
   Name: Adjacent Light
   SteamWorkshopId: 2517853803
-- Id: insertkey.itemlistselector
-  Name: ItemListSelector
-  SteamWorkshopId: 1522414793
 - Id: leoltron.maxbuymaxsell
   Name: Max Buy, Max Sell
   SteamWorkshopId: 2889812094
