@@ -42,9 +42,6 @@ Mods:
 - Id: rwzh.chinesepack.rimsaves
   Name: RimSaves_zh
   SteamWorkshopId: 2199383843
-- Id: trinity.runtimegcupdated
-  Name: RuntimeGC [1.4]
-  SteamWorkshopId: 2559582557
 - Id: madeline.modmismatchformatter
   Name: Better ModMismatch Window
   SteamWorkshopId: 1872244972
@@ -249,6 +246,9 @@ Mods:
 - Id: mobius.royaltytweaks
   Name: Royalty Tweaks
   SteamWorkshopId: 2018384424
+- Id: enterprise.changeoperationsuccessratelimit
+  Name: 修改手术成功率上限-Change Operation Success Rate Limit
+  SteamWorkshopId: 2927674331
 - Id: mlie.allmemoriesfade
   Name: All Memories Fade
   SteamWorkshopId: 2800155563
@@ -523,11 +523,11 @@ Mods:
   Name: Share The Load zh 简体中文补丁
   SteamWorkshopId: 2892578913
 - Id: owlchemist.cleanpathfinding
-  Name: Clean Pathfinding
+  Name: Clean Pathfinding 2
   SteamWorkshopId: 2603765747
-- Id: owlchemist.cleanpathfinding.zh.hc
-  Name: Clean Pathfinding + Doorpathing_zh
-  SteamWorkshopId: 2711236834
+- Id: oninotamasi.owlchemist.cleanpathfinding.zh
+  Name: Clean Pathfinding 2繁簡漢化
+  SteamWorkshopId: 2947353787
 - Id: victor.wallsaresolid
   Name: Walls are solid
   SteamWorkshopId: 2896548513
