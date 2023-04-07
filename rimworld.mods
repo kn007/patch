@@ -189,6 +189,9 @@ Mods:
 - Id: zh.m00nl1ght.geologicallandforms
   Name: Geological Landforms_zh
   SteamWorkshopId: 2774968010
+- Id: thereallemon.mapreroll
+  Name: Map Reroll (1.4)
+  SteamWorkshopId: 2915575236
 - Id: mlie.savemaps
   Name: Save Maps (Continued)
   SteamWorkshopId: 2916523481
@@ -210,6 +213,9 @@ Mods:
 - Id: dubwise.dubsmintminimap
   Name: Dubs Mint Minimap
   SteamWorkshopId: 1662119905
+- Id: owlchemist.powertab
+  Name: Power Tab 2
+  SteamWorkshopId: 2952716728
 - Id: jaxe.bubbles
   Name: Interaction Bubbles
   SteamWorkshopId: 1516158345
