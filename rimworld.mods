@@ -639,9 +639,9 @@ Mods:
 - Id: wvc.sergkart.biotech.mechanoididleoptimization
   Name: Mechanoid Idle Optimization
   SteamWorkshopId: 2885792215
-- Id: relaxedotter.bettermechanoidloot
-  Name: Better Mechanoid Loot (continued)
-  SteamWorkshopId: 2886997332
+- Id: winds.bettermechanoidloot
+  Name: Better Mechanoid Loot (重写)
+  SteamWorkshopId: 2963175073
 - Id: kikohi.bettergroundpenetratingscanner
   Name: Better ground-penetrating scanner
   SteamWorkshopId: 2809972387
