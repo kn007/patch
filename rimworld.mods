@@ -609,6 +609,9 @@ Mods:
 - Id: rwzh.chinesepack.dresspatients
   Name: Dress_Patients_zh
   SteamWorkshopId: 2063186733
+- Id: kathanon.followthevein
+  Name: Follow the Vein
+  SteamWorkshopId: 2923356196
 - Id: gorymoon.closeall
   Name: CloseAll
   SteamWorkshopId: 2018479759
