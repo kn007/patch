@@ -795,6 +795,9 @@ Mods:
 - Id: witek.fabricorscanrepairmechs
   Name: Fabricors can repair mechs
   SteamWorkshopId: 2886185474
+- Id: overpl.drawnspots
+  Name: Drawn Spots
+  SteamWorkshopId: 2917791361
 - Id: ratys.rtfuse
   Name: RT Fuse
   SteamWorkshopId: 728314182
