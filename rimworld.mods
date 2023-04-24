@@ -465,9 +465,9 @@ Mods:
 - Id: kb.dropinventory
   Name: Drop All Inventory
   SteamWorkshopId: 2882490442
-- Id: tikubonn.dontblockdoor
-  Name: DontBlockDoor
-  SteamWorkshopId: 1691076769
+- Id: owlchemist.doorclearance
+  Name: Door Clearance
+  SteamWorkshopId: 2965544918
 - Id: mlie.nomoreautoroof
   Name: NoMoreAutoroof (Continued)
   SteamWorkshopId: 2026621806
@@ -483,9 +483,9 @@ Mods:
 - Id: tammybee.cutplantsbeforebuilding
   Name: Cut plants before building
   SteamWorkshopId: 1539025677
-- Id: mlie.lessstupidromanceattempt
-  Name: Less Stupid Romance Attempt (Continued)
-  SteamWorkshopId: 2014603702
+- Id: cedaro.nohopelessromance
+  Name: No Hopeless Romance
+  SteamWorkshopId: 2964282061
 - Id: wemd.whitepowerarmor
   Name: '[WD] White Power Armor'
   SteamWorkshopId: 1122453564
