@@ -444,6 +444,12 @@ Mods:
 - Id: frozensnowfox.filthvanisheswithrainandtime
   Name: '[FSF] Filth Vanishes With Rain And Time'
   SteamWorkshopId: 1508341791
+- Id: owlchemist.permeableterrain
+  Name: Permeable Terrain
+  SteamWorkshopId: 2629981384
+- Id: oninotamasi.owlchemist.permeableterrain.zh
+  Name: Permeable Terrain繁簡漢化
+  SteamWorkshopId: 2944952044
 - Id: mario1.3patch.metaldontburn
   Name: Metal Don't Burn (UNOFFICIAL 1.4 PATCH)
   SteamWorkshopId: 2557145474
