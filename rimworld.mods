@@ -1,8 +1,5 @@
 Version: 0
 Mods:
-- Id: rupal.rimpymodmanagerdatabase
-  Name: RimPy Mod Manager Database
-  SteamWorkshopId: 1847679158
 - Id: brrainz.harmony
   Name: Harmony
   SteamWorkshopId: 2009463077
@@ -837,9 +834,12 @@ Mods:
 - Id: rwzh.chinesepack.ratys
   Name: RT_zh_pack
   SteamWorkshopId: 2015185500
-- Id: velcroboy333.outdoorlighting
-  Name: Outdoor Lighting (continued)
-  SteamWorkshopId: 2888755935
+- Id: stormknight.outdoorlighting
+  Name: Outdoor Lighting
+  SteamWorkshopId: 1545708330
+- Id: chen.outdoorlighting.zh
+  Name: Outdoor Lighting-zh
+  SteamWorkshopId: 2902036198
 - Id: taranchuk.performanceoptimizer
   Name: Performance Optimizer
   SteamWorkshopId: 2664723367
