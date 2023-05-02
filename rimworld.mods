@@ -375,6 +375,12 @@ Mods:
 - Id: zephyr.dismisstraderzh
   Name: Dismiss Trader (Continued)简繁汉化
   SteamWorkshopId: 2081531370
+- Id: torann.caravanoptions
+  Name: CaravanOptions
+  SteamWorkshopId: 1501729394
+- Id: torann.caravanoptions.zh
+  Name: CaravanOptions 简体中文汉化 远行队选项
+  SteamWorkshopId: 2722022165
 - Id: hatena.animaldiscovery
   Name: Animal Discovery
   SteamWorkshopId: 2172166576
@@ -588,9 +594,6 @@ Mods:
 - Id: mlie.dynamiccarryingcapacity
   Name: Dynamic Carrying Capacity (Continued)
   SteamWorkshopId: 2967228692
-- Id: mlie.billysimprovedcaravanformation
-  Name: Billy's Improved Caravan Formation (Continued)
-  SteamWorkshopId: 2068456092
 - Id: vanya.tools.bulkcarrier
   Name: Bulk Carrier
   SteamWorkshopId: 1428989232
