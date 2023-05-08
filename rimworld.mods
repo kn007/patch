@@ -660,6 +660,9 @@ Mods:
 - Id: scherub.stonecuttingextended
   Name: Stonecutting Extended
   SteamWorkshopId: 2571676542
+- Id: lanking.syntheticchips
+  Name: Lanking's Synthetic Chips
+  SteamWorkshopId: 2971197280
 - Id: winds.bettermechanoidloot
   Name: Better Mechanoid Loot (重写)
   SteamWorkshopId: 2963175073
