@@ -48,6 +48,9 @@ Mods:
 - Id: chinesepackage.owlchemist.midsaversaver
   Name: Mid-saver Saver_zh
   SteamWorkshopId: 2924284353
+- Id: kenx00x.xenotypeandideologybuttonstitlescreen
+  Name: Xenotype And Ideology Buttons TitleScreen
+  SteamWorkshopId: 2973951983
 - Id: peppsen.pmusic
   Name: P-Music
   SteamWorkshopId: 725130005
@@ -213,6 +216,9 @@ Mods:
 - Id: owlchemist.powertab
   Name: Power Tab 2
   SteamWorkshopId: 2952716728
+- Id: hanami.chinesepack.owlchemist.powertab
+  Name: Power Tab 2个人汉化
+  SteamWorkshopId: 2972581353
 - Id: jaxe.bubbles
   Name: Interaction Bubbles
   SteamWorkshopId: 1516158345
