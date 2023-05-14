@@ -168,6 +168,9 @@ Mods:
 - Id: boundir.newgameplus
   Name: New Game Plus
   SteamWorkshopId: 2909126210
+- Id: zh.boundir.newgameplus
+  Name: New Game Plus_zh
+  SteamWorkshopId: 2921894258
 - Id: sarg.smartspeed
   Name: Smart Speed
   SteamWorkshopId: 1504723424
@@ -747,6 +750,9 @@ Mods:
 - Id: rwzh.chinesepack.qualitybuilder
   Name: QualityBuilder_zh
   SteamWorkshopId: 1783553525
+- Id: jgh.qualitybuilder
+  Name: QualityBuilder retexture
+  SteamWorkshopId: 2638388641
 - Id: vat.epoeforked
   Name: Expanded Prosthetics and Organ Engineering - Forked
   SteamWorkshopId: 1949064302
@@ -810,12 +816,15 @@ Mods:
 - Id: zh.enterhere.only
   Name: Enter Here -- 客从此进 简繁汉化包
   SteamWorkshopId: 2826779697
-- Id: frozensnowfox.nodefaultshelfstorage
-  Name: '[FSF] No Default Shelf Storage'
-  SteamWorkshopId: 945085502
 - Id: bbbbilly.makereinforcedbarrel
   Name: Make Reinforced Barrel
   SteamWorkshopId: 2538773133
+- Id: frozensnowfox.nodefaultshelfstorage
+  Name: '[FSF] No Default Shelf Storage'
+  SteamWorkshopId: 945085502
+- Id: maarx.assignedworkbenches
+  Name: AssignedWorkbenches
+  SteamWorkshopId: 2973942644
 - Id: neronix17.embrasures
   Name: Seamless Embrasures
   SteamWorkshopId: 2290689449
