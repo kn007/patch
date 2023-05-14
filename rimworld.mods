@@ -423,12 +423,6 @@ Mods:
 - Id: com.github.alandariva.moreplanning
   Name: More Planning [1.4]
   SteamWorkshopId: 2551225702
-- Id: fluffy.blueprints
-  Name: Blueprints
-  SteamWorkshopId: 708455313
-- Id: rwzh.leafzxg.blueprints
-  Name: Blueprints_zh
-  SteamWorkshopId: 2905109743
 - Id: unlimitedhugs.allowtool
   Name: Allow Tool
   SteamWorkshopId: 761421485
@@ -438,6 +432,12 @@ Mods:
 - Id: rwzh.chinesepack.unlimitedhugs
   Name: UnlimitedHugs_zh_pack
   SteamWorkshopId: 2016725307
+- Id: fluffy.blueprints
+  Name: Blueprints
+  SteamWorkshopId: 708455313
+- Id: rwzh.leafzxg.blueprints
+  Name: Blueprints_zh
+  SteamWorkshopId: 2905109743
 - Id: navyseal5.moreharvestdesignators
   Name: More Harvest Designators!
   SteamWorkshopId: 1541250497
@@ -546,6 +546,9 @@ Mods:
 - Id: aelanna.cleaningspeed
   Name: Cleaning Speed
   SteamWorkshopId: 2748222814
+- Id: zh.aelanna.cleaningspeed
+  Name: Cleaning Speed-汉化
+  SteamWorkshopId: 2748802839
 - Id: seekiworksmod.no11
   Name: Chop Wood with Other Skills
   SteamWorkshopId: 2811154414
@@ -765,6 +768,12 @@ Mods:
 - Id: rwzh.leafzxg.epoeforkedroyalty
   Name: EPOE-Forked_Royalty_DLC_expansion_zh
   SteamWorkshopId: 2026231230
+- Id: iexist.biotech.morebandwidth
+  Name: Bandwidth Enhancer
+  SteamWorkshopId: 2888505789
+- Id: zh.iexist.biotech.morebandwidth
+  Name: Bandwidth Enhancer-汉化
+  SteamWorkshopId: 2889649472
 - Id: inglix.fasterbiosculptingpod
   Name: Faster Biosculpter Pod
   SteamWorkshopId: 2576257954
