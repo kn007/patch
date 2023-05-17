@@ -258,6 +258,9 @@ Mods:
 - Id: mobius.royaltytweaks
   Name: Royalty Tweaks
   SteamWorkshopId: 2018384424
+- Id: insertkey.buildertweaks
+  Name: BuilderTweaks
+  SteamWorkshopId: 1600554794
 - Id: enterprise.changeoperationsuccessratelimit
   Name: 修改手术成功率上限-Change Operation Success Rate Limit
   SteamWorkshopId: 2927674331
@@ -558,12 +561,6 @@ Mods:
 - Id: puremj.mjrimmods.whileyouarenearby
   Name: While You Are Nearby
   SteamWorkshopId: 2784585275
-- Id: mehni.pickupandhaul
-  Name: Pick Up And Haul
-  SteamWorkshopId: 1279012058
-- Id: pickupandhaul.zh
-  Name: pick up and haul zh 中文补丁
-  SteamWorkshopId: 2891446654
 - Id: codeoptimist.jobsofopportunity
   Name: While You're Up / PUAH+
   SteamWorkshopId: 2034960453
