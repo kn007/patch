@@ -486,9 +486,21 @@ Mods:
 - Id: automatic.prisonerbedsetowner
   Name: Set Owner for Prisoner Beds
   SteamWorkshopId: 2053931388
+- Id: kathanon.dropsome
+  Name: Drop Some
+  SteamWorkshopId: 2823342374
+- Id: mlgm.dropsome.zh
+  Name: Drop Some zh 丢弃数量可选
+  SteamWorkshopId: 2974880246
 - Id: kb.dropinventory
   Name: Drop All Inventory
   SteamWorkshopId: 2882490442
+- Id: mlgm.dropinventory.zh
+  Name: Drop All Inventory_zh一键卸载库存
+  SteamWorkshopId: 2974881350
+- Id: velc.itemlist
+  Name: Pawn's Items List
+  SteamWorkshopId: 1507341718
 - Id: owlchemist.doorclearance
   Name: Door Clearance
   SteamWorkshopId: 2965544918
