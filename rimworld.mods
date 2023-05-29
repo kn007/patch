@@ -774,6 +774,9 @@ Mods:
 - Id: rwzh.leafzxg.epoeforkedroyalty
   Name: EPOE-Forked_Royalty_DLC_expansion_zh
   SteamWorkshopId: 2026231230
+- Id: nomadrw.turretvanillaretexturerestyle
+  Name: Turret Vanilla Retexture and Restyle
+  SteamWorkshopId: 2980467701
 - Id: iexist.biotech.morebandwidth
   Name: Bandwidth Enhancer
   SteamWorkshopId: 2888505789
