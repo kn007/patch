@@ -660,6 +660,9 @@ Mods:
 - Id: dakkpasserida.animareplant
   Name: Replantable Anima Trees
   SteamWorkshopId: 2586765823
+- Id: proxyer.anestheticpatch
+  Name: Anesthetic balance patch
+  SteamWorkshopId: 2038485179
 - Id: proxyer.steamgeyserbuilding
   Name: Geyser Deconstruct patch
   SteamWorkshopId: 2317497710
