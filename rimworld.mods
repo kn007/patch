@@ -783,6 +783,9 @@ Mods:
 - Id: nomadrw.turretvanillaretexturerestyle
   Name: Turret Vanilla Retexture and Restyle
   SteamWorkshopId: 2980467701
+- Id: mosi.bridgecolor2
+  Name: 'Bridge Color Tweak 2: Colorful Boogaloo'
+  SteamWorkshopId: 2985505036
 - Id: iexist.biotech.morebandwidth
   Name: Bandwidth Enhancer
   SteamWorkshopId: 2888505789
