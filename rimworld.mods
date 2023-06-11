@@ -897,6 +897,9 @@ Mods:
 - Id: gwinnbleidd.mothballedanddeadpawns
   Name: 'Better GC: Mothballed and World Pawns'
   SteamWorkshopId: 2982026860
+- Id: trinity.runtimegcfixed
+  Name: RuntimeGC [1.4]
+  SteamWorkshopId: 2983911897
 - Id: taranchuk.performanceoptimizer
   Name: Performance Optimizer
   SteamWorkshopId: 2664723367
