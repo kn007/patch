@@ -2,16 +2,6 @@
 
 ## Nginx
 
-### nginx.patch
-* Add HTTP2 HPACK Encoding Support.
-* Add Dynamic TLS Record Support.
-
-Require: Nginx 1.25.0 (this version only)
-
-Test pass: 1.25.0
-
-Since `Nginx` 1.25.1, HPACK encoding will not support because the HTTP/2 server push support has been removed.
-
 ### nginx_dynamic_tls_records.patch
 * Add Dynamic TLS Record Support.
 
@@ -24,7 +14,7 @@ Test pass: 1.25.1
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.25.0
+Test pass: 1.25.1
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -35,13 +25,15 @@ Test pass: 1.25.0
 
 Test pass: 1.23.4
 
-### nginx_for_1.23.4.patch (Deprecated)
+### nginx.patch (Discontinued)
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record Support.
 
-Require: Nginx version below 1.25.0
+Require: Nginx 1.25.0 (this version only)
 
-Test pass: 1.23.4
+Test pass: 1.25.0
+
+Since `Nginx` 1.25.1, HPACK encoding will not support because the HTTP/2 server push support has been removed.
 
 ### nginx_with_quic.patch (Discontinued)
 * Add HTTP3(QUIC) Support.
@@ -54,6 +46,14 @@ Require: Nginx 1.21.4 or later.
 Test pass: 1.23.3 with [cloudflare/quiche@c9311a1](https://github.com/cloudflare/quiche/tree/c9311a18910c0277867c34c0acc4a9711b50b913)
 
 <b>Check your modules when build failed.</b>
+
+### nginx_for_1.23.4.patch (Deprecated)
+* Add HTTP2 HPACK Encoding Support.
+* Add Dynamic TLS Record Support.
+
+Require: Nginx version below 1.25.0
+
+Test pass: 1.23.4
 
 ### nginx_with_quic_for_1.19.7_full.patch (Deprecated)
 * Add HTTP3(QUIC) Support.
@@ -95,7 +95,7 @@ Test pass: 1.17.9 with [cloudflare/quiche@9a8b3b](https://github.com/cloudflare/
 * Add BoringSSL's Equal Preference Support.
 * Add ChaCha20-Poly1305 Draft Version Support.
 
-Test pass: 1.1.1s
+Test pass: 1.1.1u
 
 ### ffmpeg-let-rtmp-flv-support-hevc-h265-opus.patch
 * FLV/RTMP Extensions For FFmpeg.
