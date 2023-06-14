@@ -6,11 +6,36 @@
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record Support.
 
-Require: Nginx 1.25.0 or later
+Require: Nginx 1.25.0 (this version only)
 
 Test pass: 1.25.0
 
-### nginx_for_1.23.4.patch
+Since `Nginx` 1.25.1, HPACK encoding will not support because the HTTP/2 server push support has been removed.
+
+### nginx_dynamic_tls_records.patch
+* Add Dynamic TLS Record Support.
+
+Require: Nginx 1.25.1
+
+Test pass: 1.25.1
+
+### use_openssl_md5_sha1.patch
+* Use the OpenSSL library instead of the Nginx original function.
+* Repack it because "patch unexpectedly ends in middle of line".
+    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
+
+Test pass: 1.25.0
+
+### Enable_BoringSSL_OCSP.patch
+* For BoringSSL support OCSP stapling.
+    - Using "ssl_stapling_file" to support.
+    - Only "ssl_stapling_file" with single cert is supported.
+    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
+    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
+
+Test pass: 1.23.4
+
+### nginx_for_1.23.4.patch (Deprecated)
 * Add HTTP2 HPACK Encoding Support.
 * Add Dynamic TLS Record Support.
 
@@ -29,22 +54,6 @@ Require: Nginx 1.21.4 or later.
 Test pass: 1.23.3 with [cloudflare/quiche@c9311a1](https://github.com/cloudflare/quiche/tree/c9311a18910c0277867c34c0acc4a9711b50b913)
 
 <b>Check your modules when build failed.</b>
-
-### use_openssl_md5_sha1.patch
-* Use the OpenSSL library instead of the Nginx original function.
-* Repack it because "patch unexpectedly ends in middle of line".
-    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
-
-Test pass: 1.25.0
-
-### Enable_BoringSSL_OCSP.patch
-* For BoringSSL support OCSP stapling.
-    - Using "ssl_stapling_file" to support.
-    - Only "ssl_stapling_file" with single cert is supported.
-    - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
-    - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
-
-Test pass: 1.23.4
 
 ### nginx_with_quic_for_1.19.7_full.patch (Deprecated)
 * Add HTTP3(QUIC) Support.
