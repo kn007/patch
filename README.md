@@ -115,6 +115,8 @@ Test pass: 4.3.1
 Test pass: 2019.02.14 version
 
 ## Links
+[聊聊Nginx 1.25和HTTP/3](https://kn007.net/topics/talk-about-nginx-1-25-and-http-3/)
+
 [Nginx 1.19.4新特性推荐](https://kn007.net/topics/nginx-1-19-4-new-feature-recommendation/)
 
 [让Nginx使用BoringSSL时支持OCSP Stapling](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)
