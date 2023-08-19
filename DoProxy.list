@@ -1,5 +1,10 @@
 # Basic on https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+DOMAIN-SUFFIX,subscriptionsmanagement-pa.googleapis.com
+DOMAIN-SUFFIX,subscriptionsmobile-pa.googleapis.com
+DOMAIN-SUFFIX,phosphor-pa.googleapis.com
+DOMAIN-SUFFIX,growth-pa.googleapis.com
+DOMAIN-SUFFIX,cloud.cupronickel.goog
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,bose.com
