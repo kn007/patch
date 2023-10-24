@@ -23,7 +23,7 @@ Test pass: 1.25.3
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.23.4
+Test pass: 1.25.3
 
 ### nginx.patch (Discontinued)
 * Add HTTP2 HPACK Encoding Support.
@@ -95,7 +95,7 @@ Test pass: 1.17.9 with [cloudflare/quiche@9a8b3b](https://github.com/cloudflare/
 * Add BoringSSL's Equal Preference Support.
 * Add ChaCha20-Poly1305 Draft Version Support.
 
-Test pass: 1.1.1v
+Test pass: 1.1.1w
 
 ### ffmpeg-let-rtmp-flv-support-hevc-h265-opus.patch
 * FLV/RTMP Extensions For FFmpeg.
