@@ -123,7 +123,7 @@ Mods:
 - Id: zh.moretraitgenes
   Name: More Genes简体中文汉化包
   SteamWorkshopId: 2884401339
-- Id: gloomyfacemk2.1.4.unofficial
+- Id: gloomy.face.mk2.unofficial
   Name: Gloomy Face mk2 Unofficial
   SteamWorkshopId: 2910048077
 - Id: nals.chibifacefemale
@@ -648,6 +648,9 @@ Mods:
 - Id: gorymoon.closeall
   Name: CloseAll
   SteamWorkshopId: 2018479759
+- Id: dani.dismissletters
+  Name: '[DN] Auto Dismiss Letters'
+  SteamWorkshopId: 2830610278
 - Id: sgc.quests
   Name: Quest Reward Rebalance
   SteamWorkshopId: 2312419897
