@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2023/11/11
+; Date: 2023/12/1
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -11,6 +11,8 @@ subscriptionsmanagement-pa.googleapis.com
 subscriptionsmobile-pa.googleapis.com
 phosphor-pa.googleapis.com
 growth-pa.googleapis.com
+*.csb.app
+*.codesandbox.io
 *.cloud.cupronickel.goog
 *.openai.com
 *.twitch.tv
