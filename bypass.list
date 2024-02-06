@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2024/1/27
+; Date: 2024/2/7
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 
@@ -216,6 +216,7 @@ growth-pa.googleapis.com
 *.jable.tv
 *.dmm.co.jp
 *.htpt.cc
+*.soulvoice.club
 *.m-team.cc
 *.m-team.io
 *.hdcmct.org
