@@ -7,14 +7,14 @@
 
 Require: Nginx 1.25.1
 
-Test pass: 1.25.4
+Test pass: 1.27.0
 
 ### use_openssl_md5_sha1.patch
 * Use the OpenSSL library instead of the Nginx original function.
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.25.4
+Test pass: 1.27.0
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
@@ -23,7 +23,7 @@ Test pass: 1.25.4
     - Auto-rebuild OCSP stapling file with shell and atd(at cron), you can read this [article](https://kn007.net/topics/let-nginx-support-ocsp-stapling-when-using-boringssl/)(Maybe you need a translation tool).
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/4).
 
-Test pass: 1.25.3
+Test pass: 1.25.5
 
 ### nginx.patch (Discontinued)
 * Add HTTP2 HPACK Encoding Support.
