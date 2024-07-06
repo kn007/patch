@@ -1,10 +1,11 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2024/6/17
+; Date: 2024/7/6
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+*.simaware.ca
 subscriptionsmanagement-pa.googleapis.com
 subscriptionsmobile-pa.googleapis.com
 phosphor-pa.googleapis.com
