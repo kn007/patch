@@ -1,5 +1,6 @@
 # Basic on https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+DOMAIN-SUFFIX,simaware.ca
 DOMAIN-SUFFIX,csb.app
 DOMAIN-SUFFIX,codesandbox.io
 DOMAIN-SUFFIX,subscriptionsmanagement-pa.googleapis.com
