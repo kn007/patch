@@ -5,7 +5,11 @@
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+
+
 *.simaware.ca
+*.arcgisonline.com
+*.rainviewer.com
 subscriptionsmanagement-pa.googleapis.com
 subscriptionsmobile-pa.googleapis.com
 phosphor-pa.googleapis.com
