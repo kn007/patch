@@ -1,5 +1,6 @@
 # Basic on https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+DOMAIN-SUFFIX,maxroll.gg
 DOMAIN-SUFFIX,simaware.ca
 DOMAIN-SUFFIX,arcgisonline.com
 DOMAIN-SUFFIX,rainviewer.com
