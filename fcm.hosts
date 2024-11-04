@@ -1,0 +1,24 @@
+127.0.0.1           localhost
+::1                 localhost
+
+
+108.177.125.188     mtalk.google.com
+64.233.188.188      alt1-mtalk.google.com
+74.125.24.188       alt2-mtalk.google.com
+74.125.200.188      alt3-mtalk.google.com
+173.194.174.188     alt4-mtalk.google.com
+172.217.194.188     alt5-mtalk.google.com
+142.250.4.188       alt6-mtalk.google.com
+142.251.175.188     alt7-mtalk.google.com
+108.177.97.188      alt8-mtalk.google.com
+
+
+2404:6800:4008:c1b::bc  mtalk.google.com
+2404:6800:4008:c01::bc  alt1-mtalk.google.com
+2404:6800:4008:c02::bc  alt2-mtalk.google.com
+2404:6800:4008:c03::bc  alt3-mtalk.google.com
+2404:6800:4003:c00::bc  alt4-mtalk.google.com
+2404:6800:4008:c07::bc  alt5-mtalk.google.com
+2404:6800:4003:c11::bc  alt6-mtalk.google.com
+2404:6800:4008:c13::bc  alt7-mtalk.google.com
+2404:6800:4008:c19::bc  alt8-mtalk.google.com
