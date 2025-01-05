@@ -18,6 +18,8 @@ DOMAIN-SUFFIX,smtp
 DOMAIN-KEYWORD,aria2
 DOMAIN-KEYWORD,announce
 DOMAIN-KEYWORD,tracker
+DOMAIN,injections.adguard.org
+DOMAIN,local.adguard.org
 PROCESS-NAME,aria2c.exe
 PROCESS-NAME,fdm.exe
 PROCESS-NAME,Folx.exe
