@@ -217,6 +217,7 @@ growth-pa.googleapis.com
 *.jable.tv
 *.dmm.co.jp
 *.rouman5.com
+*.rou.video
 *.htpt.cc
 *.soulvoice.club
 *.m-team.cc
@@ -328,6 +329,10 @@ growth-pa.googleapis.com
 *.sesexiaozhan.com
 *.biquge.tw
 *.acgnx.se
+*.combot.org
+HostRegex: ^.*\brmcdn\d+\.xyz$
+HostRegex: ^.*\brn\d+\.xyz$
+HostRegex: ^.*\broum\d+\.xyz$
 
 ; ==============================================================================
 ; ==============================================================================
