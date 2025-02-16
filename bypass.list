@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2024/7/26
+; Date: 2025/2/16
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
@@ -216,6 +216,7 @@ growth-pa.googleapis.com
 *.javtrust.com
 *.jable.tv
 *.dmm.co.jp
+*.rouman5.com
 *.htpt.cc
 *.soulvoice.club
 *.m-team.cc
@@ -324,6 +325,9 @@ growth-pa.googleapis.com
 *.gstatic.com
 *.googleapis.com
 *.gmodules.com
+*.sesexiaozhan.com
+*.biquge.tw
+*.acgnx.se
 
 ; ==============================================================================
 ; ==============================================================================
@@ -1733,6 +1737,7 @@ www.moneymanagerex.org
 *.gstatic.com
 *.doubleclick.net
 *.ahhhhfs.com
+*.gstatic.com
 *.x888x.me
 *.bing.com
 *.mirror.xyz
@@ -1784,3 +1789,43 @@ www.onenote.com
 *.ibbb.me
 *.caaba.me
 *.r3sub.com
+*.oaistatic.com
+*.4sqi.net
+*.ghgo.xyz
+*.fanmingming.com
+*.csp.withgoogle.com
+*.redd.it
+*.redditspace.com
+*.redditmedia.com
+*.xn--sss604efuw.top
+*.javrate.com
+*.fontawesome.com
+*.eroimg.net
+*.eroterest.net
+*.missav.com
+*.googletagmanager.com
+*.kakao.com
+*.kakaocorp.com
+*.bluesky-soft.com
+*.b-cdn.net
+copilot.microsoft.com
+*.z-lib.io
+*.z-lib.id
+*.jnn-pa.googleapis.com
+*.firebaseinstallations.googleapis.com
+*.firebase.googleapis.com
+*.hxmmdd.com
+*.heqrmudv.site
+*.translate.goog
+*.bahamut.com.tw
+*.speedtest.net
+assets.msn.cn
+*.hjwzw.com
+*.bg3.co
+*.x.com
+*.xhd.tw
+*.softonic.cn
+*.exifedit.com
+*.imgfor80.me
+*.chatgpt.com
+*.openai.com
