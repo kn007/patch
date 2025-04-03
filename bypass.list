@@ -332,6 +332,7 @@ growth-pa.googleapis.com
 *.acgnx.se
 *.combot.org
 *.tenor.com
+*.pixeldrain.com
 HostRegex: ^.*\brmcdn\d+\.xyz$
 HostRegex: ^.*\brn\d+\.xyz$
 HostRegex: ^.*\broum\d+\.xyz$
