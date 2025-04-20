@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2025/2/18
+; Date: 2025/4/20
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
@@ -333,6 +333,8 @@ growth-pa.googleapis.com
 *.combot.org
 *.tenor.com
 *.pixeldrain.com
+*.gamer.com.tw
+*.bahamut.com.tw
 HostRegex: ^.*\brmcdn\d+\.xyz$
 HostRegex: ^.*\brn\d+\.xyz$
 HostRegex: ^.*\broum\d+\.xyz$
