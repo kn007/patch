@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2025/5/9
+; Date: 2025/5/25
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
@@ -216,6 +216,7 @@ growth-pa.googleapis.com
 *.javtrust.com
 *.jable.tv
 *.dmm.co.jp
+*.tomyangsh.pw
 *.rouman5.com
 *.rou.video
 *.htpt.cc
