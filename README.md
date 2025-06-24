@@ -13,6 +13,7 @@ Test pass: 1.29.0
 * Add Dynamic TLS Record Support.
 
 Require: Nginx 1.27.5
+
 Test pass: 1.29.0
 
 ### Enable_BoringSSL_OCSP.patch
