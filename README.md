@@ -7,12 +7,13 @@
 * Repack it because "patch unexpectedly ends in middle of line".
     - Thanks [@CarterLi](https://github.com/kn007/patch/issues/5)
 
-Test pass: 1.27.5
+Test pass: 1.29.0
 
 ### nginx_dynamic_tls_records.patch
 * Add Dynamic TLS Record Support.
 
 Require: Nginx 1.27.5
+Test pass: 1.29.0
 
 ### Enable_BoringSSL_OCSP.patch
 * For BoringSSL support OCSP stapling.
