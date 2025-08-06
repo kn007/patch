@@ -338,6 +338,7 @@ growth-pa.googleapis.com
 *.bahamut.com.tw
 *.seiya-saiga.com
 *.ptpimg.me
+*.wiki.gg
 HostRegex: ^.*\brmcdn\d+\.xyz$
 HostRegex: ^.*\brn\d+\.xyz$
 HostRegex: ^.*\broum\d+\.xyz$
