@@ -2,7 +2,7 @@
 Name=Custom
 UseRegex=1
 Underline=[^A-Za-z_&-](http(s)?://[A-Za-z0-9_.&?=%~#{}()@+-]+:?[A-Za-z0-9_./&?=%~#{}()@+-]+)[^A-Za-z0-9_-]
-Red=[^A-Za-z0-9_\-](loss|down|deny|disabled?|unknown|fault|shutdown|disconnected|error|failed|denied|not permitted|disallowed|not allowed|refused|Attack occurred|problem|failure|not permitted|notconnect|service-type|forbidden-ip|excluded-ip-address|sysname|hostname|arp static|ip ((rpf-)?route(-static)?(-group)?|forward-broadcast)|user-bind static|static-bind|stp( global)?|lacp|reboot)[^A-Za-z0-9_\-]
+Red=[^A-Za-z0-9_\-](loss|down|deny|disabled?|unknown|fault|shutdown|disconnected|error|failed|denied|not permitted|disallowed|not allowed|refused|Attack occurred|problem|failure|not permitted|notconnect|service-type|forbidden-ip|excluded-ip-address|sysname|hostname|arp static|ip ((rpf-)?route(-static)?(-group)?|forward-broadcast)|user-bind static|static-bind|stp( global)?|lacp|reboot|(mac-address )?blackhole)[^A-Za-z0-9_\-]
 Green=[^A-Za-z0-9_\-](received|recovered|permit( vlan)?|(allow-pass|pvid|access|default|hybrid) vlan|allowed|enabled?|successful(ly)?|available|connected|up|yes|ok)[^A-Za-z0-9_\-]
 Yellow=[^A-Za-z0-9_\-]([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)[^A-Za-z0-9_\-]
 Blue=[^A-Za-z0-9]((interface )?(((X|Ten-|M-)?Gigabit|Fiber)?(Ethernet) ?|(100|40|25|X|F)?(G|T)?(E|i|ei)|(Twenty-Five|Forty|Hundred)?GigE ?|BAGG|NULL|LoopBack|Bridge-Aggregation|AggregatePort|Eth-Trunk|Vlan-interface|Vlanif)-?[0-9]+(\/[0-9]+)*|acl( (name [A-Za-z0-9&_-]+ [0-9]+|number ?[0-9]+))?|ospf( [0-9]+)?|(ip-pool|ip pool) [A-Za-z0-9 :"'\.\\\/&_\-]+)[^A-Za-z0-9]
