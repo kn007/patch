@@ -1,11 +1,11 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2025/7/31
+; Date: 2025/9/11
 ; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
 
 ; https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
-
+*.mixtape.moe
 *.maxroll.gg
 *.simaware.ca
 *.arcgisonline.com
