@@ -1,5 +1,6 @@
 # Basic on https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+DOMAIN-SUFFIX,catbox.moe
 DOMAIN-SUFFIX,mixtape.moe
 DOMAIN-SUFFIX,maxroll.gg
 DOMAIN-SUFFIX,simaware.ca
