@@ -1,5 +1,6 @@
 # Basic on https://raw.githubusercontent.com/kn007/patch/master/bypass.list
 
+DOMAIN-SUFFIX,c.gle
 DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,manhuagui.com
 DOMAIN-SUFFIX,catbox.moe
