@@ -1,0 +1,20 @@
+diff --color -uNr a/src/http/ngx_http_file_cache.c b/src/http/ngx_http_file_cache.c
+--- a/src/http/ngx_http_file_cache.c    2026-05-22 20:50:47.000000000 +0800
++++ b/src/http/ngx_http_file_cache.c    2026-06-14 11:19:36.477087553 +0800
+@@ -452,7 +452,7 @@
+
+     timer = c->wait_time - now;
+
+-    ngx_add_timer(&c->wait_event, (timer > 500) ? 500 : timer);
++    ngx_add_timer(&c->wait_event, (timer > 50) ? 50 : timer);
+
+     r->main->blocked++;
+
+@@ -531,7 +531,7 @@
+     ngx_shmtx_unlock(&cache->shpool->mutex);
+
+     if (wait) {
+-        ngx_add_timer(&c->wait_event, (timer > 500) ? 500 : timer);
++        ngx_add_timer(&c->wait_event, (timer > 50) ? 50 : timer);
+         return NGX_AGAIN;
+     }
