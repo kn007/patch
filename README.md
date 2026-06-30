@@ -17,7 +17,7 @@ Require: Nginx 1.25.0 (this version only)
 
 Test pass: 1.25.0
 
-Since `Nginx` 1.25.1, HPACK encoding will not support because the HTTP/2 server push support has been removed.
+Since Nginx `1.25.1`, HPACK encoding will not support because the HTTP/2 server push support has been removed.
 
 ### nginx_with_quic.patch (Discontinued)
 * Add HTTP3(QUIC) Support.
@@ -115,6 +115,8 @@ Test pass: 4.3.1
 Test pass: 2019.02.14 version
 
 ## Links
+[Nginx SSL配置杂谈](https://kn007.net/topics/nginx-ssl-configuration-talk/)
+
 [聊聊Nginx 1.25和HTTP/3](https://kn007.net/topics/talk-about-nginx-1-25-and-http-3/)
 
 [Nginx 1.19.4新特性推荐](https://kn007.net/topics/nginx-1-19-4-new-feature-recommendation/)
